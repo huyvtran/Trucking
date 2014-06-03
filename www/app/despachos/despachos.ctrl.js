@@ -47,10 +47,7 @@ angular.module('despachos.ctrl', [])
 
 
     $scope.selectDespacho = function () {
-      console.log(SEQ);
-      $state.go('ticket.truck', {'SEQ': SEQ});
+      $state.go('ticket.start', {location:'replace'});
     };
 
   });
-
-

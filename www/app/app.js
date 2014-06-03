@@ -2,8 +2,6 @@ angular.module('trucking', [
   'ionic',
   'autocomplete',
   'app.directives',
-  'PhoneGap',
-  //'ngCordova',
 
   // Login
   'login.ctrl',
@@ -13,10 +11,16 @@ angular.module('trucking', [
   'despachos.ctrl',
   'despachos.service',
 
-  // Ticket
-  'ticket.ctrl',
-  'ticket.service'
 
+  // truck
+  'ticket.truck.ctrl',
+  'ticket.driver.ctrl',
+  'ticket.weight.ctrl',
+  'ticket.batches.ctrl',
+  'ticket.photos.ctrl',
+  'ticket.finalize.ctrl',
+  'ticket.sideMenu.ctrl',
+  'ticket.service'
 ])
 
   .run(function ($ionicPlatform) {
@@ -75,64 +79,61 @@ angular.module('trucking', [
 
       // SIDEMENU TRUCK
 
-      .state('main', {
-        url: "/main",
-        abstract: true,
-        templateUrl: "app/main/main.html"
-      })
-
-      // the pet tab has its own child nav-view and history
-      .state('main.content', {
-        url: '/content',
-        views: {
-
-          // Side Menu
-          'side-view': {
-            templateUrl: 'app/main/sideMenu.html'
-          },
-
-          // Main Content
-          'content-view': {
-            templateUrl: 'app/main/mainView.html'
-          }
-        }
-      })
-
-      // Sub Menu
-      .state('main.submenu', {
-        url: '/content/submenu',
-        views: {
-          'side-view': {
-            templateUrl: 'app/main/subMenu.html'
-          }
-        }
-      })
-
-
-      // TRUCK
-
       .state('ticket', {
         url: "/ticket",
         abstract: true,
-        templateUrl: "app/ticket/tabs.html",
-        controller: 'TicketCtrl'
+        templateUrl: "app/ticket/ticket.html",
+        controller: ''
       })
 
-      .state('ticket.truck', {
+
+      .state('ticket.menu', {
+        url: '/menu',
+        views: {
+          'side-view': {
+            templateUrl: 'app/ticket/sideMenu.html',
+            controller: 'SideMenuCtrl'
+          }
+        }
+      })
+
+      .state('ticket.start', {
         url: '/truck',
         views: {
-          'ticket-truck': {
-            templateUrl: 'app/ticket/truck.html',
+          'side-view': {
+            templateUrl: 'app/ticket/sideMenu.html'
+          },
+          'content-view': {
+            templateUrl: 'app/ticket/truck/truck.html',
             controller: 'TruckCtrl'
           }
         }
       })
 
+      .state('ticket.truck', {
+        url: '/truck',
+        views: {
+          'side-view': {
+            templateUrl: 'app/ticket/truck/truckMenu.html',
+            controller: 'TruckCtrl'
+          },
+          'content-view': {
+            templateUrl: 'app/ticket/truck/truck.html',
+            controller: 'TruckCtrl'
+          }
+        }
+      })
+
+
       .state('ticket.driver', {
         url: '/driver',
         views: {
-          'ticket-driver': {
-            templateUrl: 'app/ticket/driver.html',
+          'side-view': {
+            templateUrl: 'app/ticket/driver/driverMenu.html',
+            controller: 'DriverCtrl'
+          },
+          'content-view': {
+            templateUrl: 'app/ticket/driver/driver.html',
             controller: 'DriverCtrl'
           }
         }
@@ -141,8 +142,13 @@ angular.module('trucking', [
       .state('ticket.weight', {
         url: '/weight',
         views: {
-          'ticket-weight': {
-            templateUrl: 'app/ticket/weight.html',
+          'side-view': {
+            templateUrl: 'app/ticket/weight/weightMenu.html',
+            controller: 'WeightCtrl'
+          },
+
+          'content-view': {
+            templateUrl: 'app/ticket/weight/weight.html',
             controller: 'WeightCtrl'
           }
         }
@@ -151,8 +157,12 @@ angular.module('trucking', [
       .state('ticket.batches', {
         url: '/batches',
         views: {
-          'ticket-batches': {
-            templateUrl: 'app/ticket/batches.html',
+          'side-view': {
+            templateUrl: 'app/ticket/batches/batchesMenu.html',
+            controller: 'BatchesCtrl'
+          },
+          'content-view': {
+            templateUrl: 'app/ticket/batches/batches.html',
             controller: 'BatchesCtrl'
           }
         }
@@ -161,26 +171,35 @@ angular.module('trucking', [
       .state('ticket.photos', {
         url: '/photos',
         views: {
-          'ticket-photos': {
-            templateUrl: 'app/ticket/photos.html',
+          'side-view': {
+            templateUrl: 'app/ticket/photos/photosMenu.html',
+            controller: 'PhotosCtrl'
+          },
+          'content-view': {
+            templateUrl: 'app/ticket/photos/photos.html',
             controller: 'PhotosCtrl'
           }
         }
       })
 
+
       .state('ticket.finalize', {
         url: '/finalize',
         views: {
-          'ticket-finalize': {
-            templateUrl: 'app/ticket/finalize.html',
+          'side-view': {
+            templateUrl: 'app/ticket/finalize/finalizeMenu.html',
+            controller: 'FinalizeCtrl'
+          },
+          'content-view': {
+            templateUrl: 'app/ticket/finalize/finalize.html',
             controller: 'FinalizeCtrl'
           }
         }
       });
 
 
-    //$urlRouterProvider.otherwise('/despachos/start');
-    $urlRouterProvider.otherwise('/main/content');
+    $urlRouterProvider.otherwise('/despachos/start');
+    //$urlRouterProvider.otherwise('/ticket/truck');
 
   });
 

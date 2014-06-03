@@ -6,7 +6,8 @@
 
     .menu {
         z-index: 2 !important;
-        box-shadow: -1px 0 2px rgba(0, 0, 0, .2), 1px 0 2px rgba(0, 0, 0, .2);
+        /* box-shadow: -1px 0 2px rgba(0, 0, 0, .2), 1px 0 2px rgba(0, 0, 0, .2); */
+        border-right: lightgrey solid 1px;
     }
 
     .bar-header button.ion-navicon {
