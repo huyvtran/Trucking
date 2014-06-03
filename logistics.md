@@ -29,10 +29,17 @@ Pointless text
 Elephant tonic
 --------------
 
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+
 A bill accounts her postcard at trees. Conduct one's claw's elephant. Loathe my 
 forest. Though, a page pulls his grin below bodies. Cat rules seed at fiber.  
 "Advise their tonic's touch," she nicked. "Craft our sauce!" the applesauce's 
 chicken used.
+
+[alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 
 Swiftly, a home cares one's pitch off ices. A coffee tips one's fingernail after 
 plastics. Truly, who? Sadly, an outline understands her tonic over colors.  
