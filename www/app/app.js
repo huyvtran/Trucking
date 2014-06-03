@@ -66,8 +66,44 @@ angular.module('trucking', [
         views: {
           'menuContent': {
             templateUrl: "app/despachos/despachos-detail.html",
-            controller: "DespachosDetailCtrl",
-            params: ['SEQ']
+            controller: "DespachosDetailCtrl"
+            //params: ['SEQ']
+          }
+        }
+      })
+
+
+      // SIDEMENU TRUCK
+
+      .state('main', {
+        url: "/main",
+        abstract: true,
+        templateUrl: "app/main/main.html"
+      })
+
+      // the pet tab has its own child nav-view and history
+      .state('main.content', {
+        url: '/content',
+        views: {
+
+          // Side Menu
+          'side-view': {
+            templateUrl: 'app/main/sideMenu.html'
+          },
+
+          // Main Content
+          'content-view': {
+            templateUrl: 'app/main/mainView.html'
+          }
+        }
+      })
+
+      // Sub Menu
+      .state('main.submenu', {
+        url: '/content/submenu',
+        views: {
+          'side-view': {
+            templateUrl: 'app/main/subMenu.html'
           }
         }
       })
@@ -81,7 +117,6 @@ angular.module('trucking', [
         templateUrl: "app/ticket/tabs.html",
         controller: 'TicketCtrl'
       })
-
 
       .state('ticket.truck', {
         url: '/truck',
@@ -144,7 +179,8 @@ angular.module('trucking', [
       });
 
 
-    $urlRouterProvider.otherwise('/despachos/start');
+    //$urlRouterProvider.otherwise('/despachos/start');
+    $urlRouterProvider.otherwise('/main/content');
 
   });
 
