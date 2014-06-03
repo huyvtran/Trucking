@@ -15,4 +15,11 @@ angular.module('ticket.ctrl', [])
 
     // Ticket.getAll();
 
+    // get: Truck ->
+    // get: Driver ->
+    // get: Weight ->
+    // get: Photos ->
+    // get: Batches ->
+    // get: ??????
+
   });
