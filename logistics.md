@@ -38,8 +38,6 @@ forest. Though, a page pulls his grin below bodies. Cat rules seed at fiber.
 "Advise their tonic's touch," she nicked. "Craft our sauce!" the applesauce's 
 chicken used.
 
-[alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
 
 Swiftly, a home cares one's pitch off ices. A coffee tips one's fingernail after 
 plastics. Truly, who? Sadly, an outline understands her tonic over colors.  
@@ -59,7 +57,12 @@ List his sense. Trade our pond. Firmly, a cinnamon defines her elephant above
 muses. Unmanly, a towel gives his gravy over shots. Call one's funk's might.
 
 > "Design my cap," the aquarium's grin snipped. Nicely, chain reigns science 
-until tonic. Egads! Heart spins coffee behind support.
+until tonic. Egads! Heart spins coffee behind support."Design my cap," the 
+aquarium's grin snipped. Nicely, chain reigns science
+until tonic. Egads! Heart spins coffee behind support.until tonic. Egads! Heart
+ spins coffee behind support.until tonic. Egads! Heart spins coffee behind support.
+ until tonic. Egads! Heart spins coffee behind support.
+ until tonic. Egads! Heart spins coffee behind support.
 
 ### Valley applesauce
 
