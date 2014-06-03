@@ -20,6 +20,7 @@ angular.module('trucking', [
   'ticket.photos.ctrl',
   'ticket.finalize.ctrl',
   'ticket.sideMenu.ctrl',
+  'ticket.ctrl',
   'ticket.service'
 ])
 
@@ -83,7 +84,7 @@ angular.module('trucking', [
         url: "/ticket",
         abstract: true,
         templateUrl: "app/ticket/ticket.html",
-        controller: ''
+        controller: 'TicketCtrl'
       })
 
 
@@ -98,7 +99,7 @@ angular.module('trucking', [
       })
 
       .state('ticket.start', {
-        url: '/truck',
+        url: '/start/truck',
         views: {
           'side-view': {
             templateUrl: 'app/ticket/sideMenu.html'

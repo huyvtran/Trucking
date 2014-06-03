@@ -12,15 +12,13 @@ angular.module('ticket.truck.ctrl', [])
   // Truck
   .controller('TruckCtrl', function ($scope, $state, Ticket) {
 
-    $scope.goBack = function () {
-      $state.go('main.menu');
-    };
+    //$ionicViewService.clearHistory();
 
     // base truck structure
     var ticket = Ticket.getTicket();
     $scope.truck = ticket.truck;
-
     $scope.photos = ticket.photos;
+
 
     // init with truck info
     Ticket.getTransCamion().then(function (d) {
@@ -46,7 +44,6 @@ angular.module('ticket.truck.ctrl', [])
 
 
     // select and fill
-    
     $scope.select = function (placa) {
       Ticket.getTransCamion_Placa(placa).then(function (d) {
         var camion = d[0];
@@ -59,19 +56,14 @@ angular.module('ticket.truck.ctrl', [])
     };
 
 
+    // capture photos
     $scope.capturePhoto = function (photo) {
       console.log(photo);
     };
 
 
-    $scope.exit = function () {
-      $state.go('despachosMenu.start');
-    };
-
-
-    $scope.clear = function () {
-      console.log($scope.truck);
-      Ticket.saveTruck($scope.truck);
-      console.log(Ticket.getTicket());
+    $scope.offFocus = function () {
+      console.log('No more focus!');
     }
+
   });

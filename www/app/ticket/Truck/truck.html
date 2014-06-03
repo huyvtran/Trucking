@@ -13,24 +13,25 @@
 						              attr-placeholder="VD 102 203"
 						              data="placa_numeros"
 						              on-type="updateNumeros"
-						              on-select="select">
+						              on-select="select"
+						              ng-blur="offFocus(truck.license.country)">
 						</autocomplete>
 					</label>
 					<label class="item item-input item-stacked-label">
 						<span class="input-label">License Country</span>
-						<input type="text" placeholder="BOL" ng-model="truck.license.country">
+						<input type="text" placeholder="BOL" ng-model="truck.license.country" ng-blur="offFocus()">
 					</label>
 					<label class="item item-input item-stacked-label">
 						<span class="input-label">Marca</span>
-						<input type="text" placeholder="Mercedes" ng-model="truck.marca">
+						<input type="text" placeholder="Mercedes" ng-model="truck.marca" ng-blur="offFocus()">
 					</label>
 					<label class="item item-input item-stacked-label">
 						<span class="input-label">Tipo</span>
-						<input type="text" placeholder="X5" ng-model="truck.tipo">
+						<input type="text" placeholder="X5" ng-model="truck.tipo" ng-blur="offFocus()">
 					</label>
 					<label class="item item-input item-stacked-label">
 						<span class="input-label">Ejes</span>
-						<input type="number" placeholder="4" ng-model="truck.ejes">
+						<input type="number" placeholder="4" ng-model="truck.ejes" ng-blur="offFocus()">
 					</label>
 				</form>
 			</div>

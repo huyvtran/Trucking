@@ -7,14 +7,12 @@
 // TODO: Implement barcode / QR scanner
 // TODO: Copy MySQL data into the form, save the data when you FINALIZE
 
-angular.module('ticket.sideMenu.ctrl', [])
+angular.module('ticket.ctrl', [])
 
-  .controller('SideMenuCtrl', function ($scope, $state, Ticket) {
+  .controller('TicketCtrl', function ($scope, $state, Ticket) {
 
-    $scope.exit = function () {
-      $state.go('despachosMenu.start')
-    };
+    // get all relevant data from MySQL and populate
 
-    $scope.icons = Ticket.getIcons();
+    // Ticket.getAll();
 
   });
