@@ -1,0 +1,22 @@
+<div class="autocomplete {{ attrs.class }}" id="{{ attrs.id }}">
+	<input
+		type="text"
+		ng-model="searchParam"
+		placeholder="{{ attrs.placeholder }}"
+		class="{{ attrs.inputclass }}"
+		id="{{ attrs.inputid }}"/>
+</div>
+
+<div class="input-dropdown" ng-show="completing">
+	<ul class="input-dropdown-menu" ng-repeat="suggestion in suggestions | filter:searchFilter | orderBy:'toString()' track by $index">
+		<li
+			suggestion
+			index="{{ $index }}"
+			val="{{ suggestion }}"
+			ng-class="{ active: ($index === selectedIndex) }"
+			ng-click="select(suggestion)"
+			ng-bind-html="suggestion | highlight:searchParam"></li>
+	</ul>
+</div>
+
+

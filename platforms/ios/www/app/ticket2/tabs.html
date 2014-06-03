@@ -1,0 +1,39 @@
+<ion-tabs class="tabs-icon-top">
+
+
+	<!-- Truck Tab -->
+	<ion-tab title="Truck" icon="icon ion-document-text " href="#/ticket/truck" class="{{iconStatus(icons.truck)}}">
+		<ion-nav-view name="ticket-truck"></ion-nav-view>
+	</ion-tab>
+
+
+	<!-- Driver Tab -->
+	<ion-tab title="Driver" icon="icon ion-ios7-personadd" href="#/ticket/driver" class="{{iconStatus(icons.driver)}}">
+		<ion-nav-view name="ticket-driver"></ion-nav-view>
+	</ion-tab>
+
+
+	<!-- Weight Tab -->
+	<ion-tab title="Weight" icon="icon ion-speedometer" href="#/ticket/weight" class="{{iconStatus(icons.weight)}}">
+		<ion-nav-view name="ticket-weight"></ion-nav-view>
+	</ion-tab>
+
+
+	<!-- Batches Tab -->
+	<ion-tab title="Batches" icon="icon ion-ios7-browsers" href="#/ticket/batches" class="{{iconStatus(icons.batches)}}" badge="3" badge-style="badge-assertive">
+		<ion-nav-view name="ticket-batches"></ion-nav-view>
+	</ion-tab>
+
+	<!-- Photos Tab -->
+	<ion-tab title="Photos" icon="icon ion-images" href="#/ticket/photos" class="{{iconStatus(icons.photos)}}">
+		<ion-nav-view name="ticket-photos"></ion-nav-view>
+	</ion-tab>
+
+
+	<!-- Finalize Tab -->
+	<ion-tab title="Finalize" icon="icon ion-ios7-checkmark" href="#/ticket/finalize" class="{{iconStatus(icons.finalize)}}">
+		<ion-nav-view name="ticket-finalize"></ion-nav-view>
+	</ion-tab>
+
+
+</ion-tabs>

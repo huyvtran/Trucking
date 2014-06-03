@@ -1,0 +1,40 @@
+<ion-view title="Despachos Detail">
+	<ion-content has-header="true" padding="true">
+
+
+		<h3>DESPACHO</h3>
+
+		<p>SEQ: {{despacho.SEQ}}</p>
+
+		<p>Venta SEQ: {{despacho.venta_SEQ}}</p>
+
+		<p>Cliente SEQ: {{despacho.cliente_SEQ}}</p>
+
+		<p>Transporte Empresa SEQ: {{despacho.transporte_empresa_SEQ}}</p>
+
+		<p>Fecha Pedido: {{despacho.fecha_pedido}}</p>
+
+		<p>Fecha Despacho: {{despacho.fecha_despacho}}</p>
+
+		<p>Fecha Llegada: {{despacho.fecha_llegada}}</p>
+
+
+		<h3>BATCHES</h3>
+
+		<div ng-repeat="batch in batches">
+			<h5>BATCH</h5>
+
+			<p>Batch Quantidad: {{batch_quantidad}}</p>
+
+			<p>SEQ: {{batch.SEQ}} Batch: {{batch.batch_codigo}}</p>
+
+			<p>Producto: {{batch.prod_codigo}} Calidad {{batch.calidad}}</p>
+		</div>
+
+
+		<div class="row row-bottom">
+			<button class="button button-dark button-bottom-left slide-in-right" ng-click="selectDespacho(detail.SEQ)">Complete Despacho</button>
+		</div>
+
+	</ion-content>
+</ion-view>

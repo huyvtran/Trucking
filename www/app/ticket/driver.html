@@ -1,0 +1,57 @@
+<ion-view title="Driver">
+
+	<ion-content class="has-header padding">
+		<h1>Driver</h1>
+
+
+		<div class="row">
+			<div class="list col-50">
+				<form>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Apellido</span>
+						<input type="text" placeholder="Paolo">
+					</label>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="Bernasconi">
+					</label>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">Telefono</span>
+						<input type="text" placeholder="Mercedes">
+					</label>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">License</span>
+						<input type="text" placeholder="X203A495">
+					</label>
+				</form>
+			</div>
+
+
+			<div class="col-40">
+				<div class="row ">
+					<div class="card card-photo col">
+						<div class="item" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.face.status]">
+							<h2>Driver Face</h2>
+						</div>
+
+						<div class="item item-image" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.face.status]">
+							<img ng-src="{{photos.driver.face.image}}" ng-click="capturePhoto(photos.driver.face)">
+						</div>
+					</div>
+
+					<div class="card card-photo col">
+						<div class="item" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.license_front.status]">
+							<h2>Driver License</h2>
+						</div>
+
+						<div class="item item-image" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.license_front.status]">
+							<img ng-src="{{photos.driver.license_front.image}}" ng-click="capturePhoto(photos.driver.license_front)">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</ion-content>
+</ion-view>
