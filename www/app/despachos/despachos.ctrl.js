@@ -47,7 +47,7 @@ angular.module('despachos.ctrl', [])
 
 
     $scope.selectDespacho = function () {
-      $state.go('ticket.start', {location:'replace'});
+      $state.go('ticket.start');
     };
 
   });
