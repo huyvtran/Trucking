@@ -14,7 +14,6 @@ angular.module('trucking', [
 
   // truck
   'ticket.truck.ctrl',
-  'ticket.driver.ctrl',
   'ticket.weight.ctrl',
   'ticket.batches.ctrl',
   'ticket.photos.ctrl',
@@ -71,8 +70,8 @@ angular.module('trucking', [
         views: {
           'menuContent': {
             templateUrl: "app/despachos/despachos-detail.html",
-            controller: "DespachosDetailCtrl"
-            //params: ['SEQ']
+            controller: "DespachosDetailCtrl",
+            params: ['SEQ']
           }
         }
       })
@@ -81,7 +80,7 @@ angular.module('trucking', [
       // SIDEMENU TRUCK
 
       .state('ticket', {
-        url: "/ticket",
+        url: "/:SEQ/ticket",
         abstract: true,
         templateUrl: "app/ticket/ticket.html",
         controller: 'TicketCtrl'
@@ -99,13 +98,15 @@ angular.module('trucking', [
       })
 
       .state('ticket.start', {
-        url: '/start/truck',
+        url: '/start',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/sideMenu.html'
+            templateUrl: 'app/ticket/sideMenu.html',
+            controller: 'TruckCtrl'
+
           },
           'content-view': {
-            templateUrl: 'app/ticket/truck/truck.html',
+            templateUrl: 'app/ticket/start/start.html',
             controller: 'TruckCtrl'
           }
         }
@@ -121,21 +122,6 @@ angular.module('trucking', [
           'content-view': {
             templateUrl: 'app/ticket/truck/truck.html',
             controller: 'TruckCtrl'
-          }
-        }
-      })
-
-
-      .state('ticket.driver', {
-        url: '/driver',
-        views: {
-          'side-view': {
-            templateUrl: 'app/ticket/driver/driverMenu.html',
-            controller: 'DriverCtrl'
-          },
-          'content-view': {
-            templateUrl: 'app/ticket/driver/driver.html',
-            controller: 'DriverCtrl'
           }
         }
       })

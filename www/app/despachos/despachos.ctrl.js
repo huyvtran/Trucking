@@ -2,17 +2,15 @@ angular.module('despachos.ctrl', [])
 
 
   //  MENU
-
   .controller('DespachosMenuCtrl', function ($scope, Despachos) {
 
-    Despachos.getDesp().then(function (d) {
+    Despachos.getAllDesp().then(function (d) {
       $scope.despachos = d;
     });
   })
 
 
   //  START
-
   .controller('DespachosStartCtrl', function ($scope, $state, Despachos) {
     $scope.go = function () {
       $state.go('ticket.truck');
@@ -25,8 +23,7 @@ angular.module('despachos.ctrl', [])
 
 
   // DETAIL
-
-  .controller('DespachosDetailCtrl', function ($scope, $stateParams, $state, Despachos) {
+  .controller('DespachosDetailCtrl', function ($scope, $stateParams, $state, Despachos, Ticket) {
     var SEQ = $stateParams.SEQ;
     $scope.batches = [];
 
@@ -47,7 +44,7 @@ angular.module('despachos.ctrl', [])
 
 
     $scope.selectDespacho = function () {
-      $state.go('ticket.start');
+      $state.go('ticket.start', {SEQ: SEQ});
     };
 
   });

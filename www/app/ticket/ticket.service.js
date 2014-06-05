@@ -3,6 +3,8 @@ angular.module('ticket.service', [])
 
   .service('Ticket', function ($http) {
 
+    var despachoSEQ = '';
+
     var ticket = {
       truck: {
         license: {
@@ -93,6 +95,14 @@ angular.module('ticket.service', [])
     };
 
     return {
+      setDespachoSEQ: function (SEQ) {
+        despachoSEQ = SEQ;
+      },
+
+
+      getDespachoSEQ: function () {
+        return despachoSEQ;
+      },
 
 
       saveTruck: function (t) {
@@ -109,13 +119,14 @@ angular.module('ticket.service', [])
       },
 
 
+      // DESPACHO
+
       // get ALL Despachos
-      getDesp: function () {
+      getAllDesp: function () {
         return $http.get('http://www.desa-net.com/TOTAI/db/despacho/').then(function (resp) {
           return resp.data;
         })
       },
-
 
       // get Despacho with SEQ #
       getDesp_SEQ: function (SEQ) {
@@ -125,8 +136,36 @@ angular.module('ticket.service', [])
       },
 
 
+
+      // DESPACHO BATCH
+
+      // get ALL Despacho Batches
+      getAllDespBatch: function () {
+        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/').then(function (resp) {
+          return resp.data;
+        })
+      },
+
+      // get ALL Despacho Batches WHERE despacho = SEQ
+      getDespBatchWHERE_SEQ: function (SEQ) {
+        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/get?despacho_SEQ=' + SEQ).then(function (resp) {
+          return resp.data;
+        })
+      },
+
+      // get Batch with SEQ
+      getBatch_SEQ: function (SEQ) {
+        return $http.get('http://www.desa-net.com/TOTAI/db/batch/' + SEQ).then(function (resp) {
+          return resp.data;
+        })
+      },
+
+
+
+      // TRANSPORT EMPRESA
+
       // get ALL Transport Empresas
-      getTransEmpresa: function () {
+      getAllTransEmpresa: function () {
         return $http.get('http://www.desa-net.com/TOTAI/db/transport_empresa/').then(function (resp) {
           return resp.data;
         });
@@ -140,6 +179,8 @@ angular.module('ticket.service', [])
         });
       },
 
+
+      // TRANSPORT CAMION
 
       // get ALL Transport Camion
       getTransCamion: function () {
@@ -160,30 +201,6 @@ angular.module('ticket.service', [])
       // get Transport Camion with placa number
       getTransCamion_Placa: function (placa) {
         return $http.get('http://www.desa-net.com/TOTAI/db/transport_camion/get?placa_numero=' + placa).then(function (resp) {
-          return resp.data;
-        })
-      },
-
-
-      // get ALL Despacho Batches
-      getDespBatch: function () {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/').then(function (resp) {
-          return resp.data;
-        })
-      },
-
-
-      // get ALL Despacho Batches WHERE despacho = SEQ
-      getDespBatchWHERE_SEQ: function (SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/get?despacho_SEQ=' + SEQ).then(function (resp) {
-          return resp.data;
-        })
-      },
-
-
-      // get Batch with SEQ
-      getBatch_SEQ: function (SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/batch/' + SEQ).then(function (resp) {
           return resp.data;
         })
       }

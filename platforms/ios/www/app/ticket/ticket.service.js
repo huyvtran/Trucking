@@ -110,7 +110,7 @@ angular.module('ticket.service', [])
 
 
       // get ALL Despachos
-      getDesp: function () {
+      getAllDesp: function () {
         return $http.get('http://www.desa-net.com/TOTAI/db/despacho/').then(function (resp) {
           return resp.data;
         })
@@ -126,7 +126,7 @@ angular.module('ticket.service', [])
 
 
       // get ALL Transport Empresas
-      getTransEmpresa: function () {
+      getAllTransEmpresa: function () {
         return $http.get('http://www.desa-net.com/TOTAI/db/transport_empresa/').then(function (resp) {
           return resp.data;
         });
@@ -166,7 +166,7 @@ angular.module('ticket.service', [])
 
 
       // get ALL Despacho Batches
-      getDespBatch: function () {
+      getAllDespBatch: function () {
         return $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/').then(function (resp) {
           return resp.data;
         })

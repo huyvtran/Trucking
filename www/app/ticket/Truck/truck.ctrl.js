@@ -9,13 +9,18 @@
 
 angular.module('ticket.truck.ctrl', [])
 
-  // Truck
-  .controller('TruckCtrl', function ($scope, $state, Ticket) {
+  .controller('TruckCtrl', function ($scope, $state, $stateParams, Ticket) {
 
-    //$ionicViewService.clearHistory();
+    var despacho_SEQ = $stateParams.SEQ;
+
+    var despacho = Ticket.getAllDesp();
+
+    var transportEmpressa_SEQ = 001; //Ticket.getDespachoSEQ();
 
     // base truck structure
     var ticket = Ticket.getTicket();
+
+
     $scope.truck = ticket.truck;
     $scope.photos = ticket.photos;
 
@@ -29,6 +34,13 @@ angular.module('ticket.truck.ctrl', [])
         $scope.placa_numeros.push(r.placa_numero);
       });
     });
+
+    Ticket.getTransEmpresa_SEQ(transportEmpressa_SEQ).then(function (d) {
+        $scope.empresa = d;
+      },
+      function (e) {
+        console.log(e)
+      });
 
 
     // update on typing
@@ -64,6 +76,16 @@ angular.module('ticket.truck.ctrl', [])
 
     $scope.offFocus = function () {
       console.log('No more focus!');
-    }
+    };
+
+
+    // DRIVER
+    $scope.driver = ticket.driver;
+
+    $scope.photos = ticket.photos;
+
+    $scope.capturePhoto = function (photo) {
+      console.log(photo);
+    };
 
   });

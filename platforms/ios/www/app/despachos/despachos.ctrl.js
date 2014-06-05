@@ -5,7 +5,7 @@ angular.module('despachos.ctrl', [])
 
   .controller('DespachosMenuCtrl', function ($scope, Despachos) {
 
-    Despachos.getDesp().then(function (d) {
+    Despachos.getAllDesp().then(function (d) {
       $scope.despachos = d;
     });
   })

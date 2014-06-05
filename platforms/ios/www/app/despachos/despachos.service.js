@@ -6,7 +6,7 @@ angular.module('despachos.service', [])
 
       // get ALL Despachos
 
-      getDesp: function () {
+      getAllDesp: function () {
         var promise = $http.get('http://www.desa-net.com/TOTAI/db/despacho/').then(function (resp) {
           return resp.data;
         });
@@ -46,7 +46,7 @@ angular.module('despachos.service', [])
 
       // get ALL Despacho Batches
 
-      getDespBatch: function () {
+      getAllDespBatch: function () {
         var promise = $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/').then(function (resp) {
           return resp.data;
         });
