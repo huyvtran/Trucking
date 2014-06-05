@@ -7,6 +7,18 @@ angular.module('despachos.ctrl', [])
     Despachos.getAllDesp().then(function (d) {
       $scope.despachos = d;
     });
+
+    $scope.doRefresh = function () {
+      Despachos.getAllDesp()
+        .then(function (d) {
+          $scope.despachos = d;
+        })
+        .finally(function () {
+          // Stop the ion-refresher from spinning
+          $scope.$broadcast('scroll.refreshComplete');
+        });
+
+    }
   })
 
 
