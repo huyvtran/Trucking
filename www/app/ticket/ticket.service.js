@@ -3,7 +3,53 @@ angular.module('ticket.service', [])
 
   .service('Ticket', function ($http) {
 
-    var despachoSEQ = '';
+
+    var despacho = {
+      SEQ: '',
+      venta_SEQ: '',
+      export_SEQ: '',
+      cliente_SEQ: '',
+      factura_num: '',
+      fecha_pedido: '',
+      fecha_despacho: '',
+      fecha_llegado: '',
+      contenador_num: '',
+      precintos: '',
+      puerto: '',
+      frontera: '',
+      destino: ''
+    };
+
+    var transport_empresa = {
+      SEQ: '',
+      codigo: '',
+      nombre: '',
+      contacto: '',
+      direccion: '',
+      telefono: ''
+    };
+
+    var transport_camion = {
+      SEQ: '',
+      placa_numero: '',
+      placa_pais: '',
+      empresa_SEQ: '',
+      marca: '',
+      tipo: '',
+      max_kg: '',
+      tara_kg: '',
+      ejes: '',
+      ejes_trailer: ''
+    };
+
+    var transport_chofer = {
+      SEQ: '',
+      codigo: '',
+      nombre: '',
+      contacto: '',
+      direccion: '',
+      telefono: ''
+    };
 
     var ticket = {
       truck: {
@@ -99,7 +145,6 @@ angular.module('ticket.service', [])
         despachoSEQ = SEQ;
       },
 
-
       getDespachoSEQ: function () {
         return despachoSEQ;
       },
@@ -113,96 +158,82 @@ angular.module('ticket.service', [])
         return icons;
       },
 
-
       getTicket: function () {
         return ticket;
-      },
-
-
-      // DESPACHO
-
-      // get ALL Despachos
-      getAllDesp: function () {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho/').then(function (resp) {
-          return resp.data;
-        })
-      },
-
-      // get Despacho with SEQ #
-      getDesp_SEQ: function (SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho/' + SEQ).then(function (resp) {
-          return resp.data;
-        })
-      },
-
-
-
-      // DESPACHO BATCH
-
-      // get ALL Despacho Batches
-      getAllDespBatch: function () {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/').then(function (resp) {
-          return resp.data;
-        })
-      },
-
-      // get ALL Despacho Batches WHERE despacho = SEQ
-      getDespBatchWHERE_SEQ: function (SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_batch/get?despacho_SEQ=' + SEQ).then(function (resp) {
-          return resp.data;
-        })
-      },
-
-      // get Batch with SEQ
-      getBatch_SEQ: function (SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/batch/' + SEQ).then(function (resp) {
-          return resp.data;
-        })
-      },
-
-
-
-      // TRANSPORT EMPRESA
-
-      // get ALL Transport Empresas
-      getAllTransEmpresa: function () {
-        return $http.get('http://www.desa-net.com/TOTAI/db/transport_empresa/').then(function (resp) {
-          return resp.data;
-        });
-      },
-
-
-      // get Transport Empresa with SEQ
-      getTransEmpresa_SEQ: function (SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/transport_empresa/' + SEQ).then(function (resp) {
-          return resp.data;
-        });
-      },
-
-
-      // TRANSPORT CAMION
-
-      // get ALL Transport Camion
-      getTransCamion: function () {
-        return $http.get('http://www.desa-net.com/TOTAI/db/transport_camion/').then(function (resp) {
-          return resp.data;
-        })
-      },
-
-
-      // get Transport Camion with SEQ
-      getTransCamion_SEQ: function (SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/transport_camion/' + SEQ).then(function (resp) {
-          return resp.data;
-        })
-      },
-
-
-      // get Transport Camion with placa number
-      getTransCamion_Placa: function (placa) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/transport_camion/get?placa_numero=' + placa).then(function (resp) {
-          return resp.data;
-        })
       }
     }
+  })
+
+
+  .factory('Despacho', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/despacho/:SEQ', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        update: {method: 'POST', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+  .factory('DespachoBatch', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/despacho_batch/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
+        update: {method: 'POST', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+  .factory('Batch', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/batch/:SEQ', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        update: {method: 'POST', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+
+  .factory('Empresa', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/transport_empresa/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '@placa'}, isArray: true},
+        update: {method: 'PUT', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+
+  .factory('Camion', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/transport_camion/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '@placa'}, isArray: true},
+        update: {method: 'PUT', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+
+  .factory('Chofer', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/transport_chofer/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '1'}},
+        update: {method: 'PUT', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
   });

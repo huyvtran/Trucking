@@ -6,27 +6,16 @@
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
-    <schema name="" catalog="desa_wine"/>
     <schema name="" catalog="desanet"/>
+    <schema name="" catalog="desanet_blob"/>
     <schema name="" catalog="information_schema"/>
-    <table name="wine" schema="" catalog="desa_wine" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="year" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="grapes" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="country" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="region" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
-      <column name="picture" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
     <table name="almacen" schema="" catalog="desanet" type="TABLE">
       <column name="SEQ" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
       <column name="categoria" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
       <column name="codigo" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
       <column name="descripcion" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <column name="direccion" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
-      <column name="ciudad" sqlType="CHAR" precision="12" scale="0" nullable="true" jdbcType="1" def="Jyc="/>
+      <column name="ciudad_codigo" sqlType="CHAR" precision="12" scale="0" nullable="true" jdbcType="1" def="Jyc="/>
       <primary-key name="PRIMARY" columns="SEQ"/>
       <index name="nombre" unique="true" columns="codigo"/>
     </table>
@@ -73,16 +62,14 @@
       <column name="SEQ" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="prev_SEQ" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="batch_SEQ" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="batch_total" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="alamacen_codigo" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
       <column name="nota_IN" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <column name="envases_IN" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="envases_OUT" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="envases_BAL" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
-      <column name="envases_reserva" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
-      <column name="kg" sqlType="DECIMAL" precision="7" scale="2" nullable="true" jdbcType="3"/>
+      <column name="kg_BAL" sqlType="DECIMAL" precision="7" scale="2" nullable="true" jdbcType="3"/>
       <column name="movida" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1"/>
-      <column name="export_SEQ" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="reserva_cliente_SEQ" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="despacho_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="fecha_inicio" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="fecha_ultima" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="fecha_cierre" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
@@ -130,18 +117,27 @@
       <column name="fecha" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="SEQ"/>
     </table>
+    <table name="batch_numero" schema="" catalog="desanet" type="TABLE">
+      <column name="SEQ" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="categoria" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="numero" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="prod_categoria" sqlType="VARCHAR" precision="12" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="SEQ"/>
+    </table>
     <table name="ciudad" schema="" catalog="desanet" type="TABLE">
       <column name="SEQ" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
-      <column name="codigo" sqlType="CHAR" precision="12" scale="0" nullable="true" jdbcType="1"/>
-      <column name="nombre" sqlType="CHAR" precision="24" scale="0" nullable="true" jdbcType="1"/>
-      <column name="pais" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
+      <column name="codigo" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="nombre" sqlType="CHAR" precision="24" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="pais" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="short" sqlType="VARCHAR" precision="7" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="destino" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1"/>
       <primary-key name="PRIMARY" columns="SEQ"/>
     </table>
     <table name="cliente" schema="" catalog="desanet" type="TABLE">
       <column name="SEQ" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
-      <column name="nombre" sqlType="VARCHAR" precision="26" scale="0" nullable="true" jdbcType="12"/>
-      <column name="pais" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1"/>
-      <column name="ciudad" sqlType="VARCHAR" precision="16" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="nombre" sqlType="VARCHAR" precision="26" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="pais" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="ciudad" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
       <primary-key name="PRIMARY" columns="SEQ"/>
     </table>
     <table name="contenedor" schema="" catalog="desanet" type="TABLE">
@@ -158,10 +154,6 @@
       <column name="venta_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="export_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="cliente_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
-      <column name="transport_empresa_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
-      <column name="trans_empresa_codigo" sqlType="VARCHAR" precision="11" scale="0" nullable="true" jdbcType="12"/>
-      <column name="transport_camion_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
-      <column name="transport_cofer_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="factura_num" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="fecha_pedido" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
       <column name="fecha_despacho" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
@@ -179,6 +171,17 @@
       <column name="batch_SEQ" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="batch_codigo" sqlType="VARCHAR" precision="8" scale="0" nullable="true" jdbcType="12"/>
       <column name="cantidad" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <primary-key name="PRIMARY" columns="SEQ"/>
+    </table>
+    <table name="despacho_transport" schema="" catalog="desanet" type="TABLE">
+      <column name="SEQ" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" autoIncrement="true"/>
+      <column name="despacho_SEQ" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="transport_empresa_SEQ" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="transport_camion_SEQ" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="transport_cofer_SEQ" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tara_kg" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="total_kg" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="net_kg" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="SEQ"/>
     </table>
     <table name="envase" schema="" catalog="desanet" type="TABLE">
@@ -441,12 +444,12 @@
     <table name="venta" schema="" catalog="desanet" type="TABLE">
       <column name="SEQ" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="cliente_SEQ" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="true" jdbcType="5"/>
-      <column name="descriptivo" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="comentar" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <column name="producto_codigo" sqlType="CHAR" precision="6" scale="0" nullable="true" jdbcType="1"/>
       <column name="cantidad_kg" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4"/>
       <column name="fecha_oferta" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
       <column name="fecha_vencido" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
-      <column name="fecha_confirmado" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="fecha_confirma" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
       <column name="fecha_inicio" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
       <column name="precio_USD" sqlType="DECIMAL UNSIGNED" precision="7" scale="2" nullable="true" jdbcType="3"/>
       <column name="precio_BOL" sqlType="DECIMAL UNSIGNED" precision="7" scale="2" nullable="true" jdbcType="3"/>
@@ -458,6 +461,17 @@
       <column name="venta_SEQ" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="true" jdbcType="4"/>
       <column name="comentar" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <primary-key name="PRIMARY" columns="SEQ"/>
+    </table>
+    <table name="document_BLOB" schema="" catalog="desanet_blob" type="TABLE">
+      <column name="SEQ" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id" sqlType="VARCHAR" precision="18" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="filetype" sqlType="CHAR" precision="3" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="created" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="name" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="database" sqlType="VARCHAR" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <column name="table" sqlType="VARCHAR" precision="16" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="SEQ"/>
+      <index name="id" unique="true" columns="id"/>
     </table>
     <table name="CHARACTER_SETS" schema="" catalog="information_schema" type="SYSTEM VIEW">
       <column name="CHARACTER_SET_NAME" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>

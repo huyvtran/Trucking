@@ -2,19 +2,17 @@ angular.module('despachos.ctrl', [])
 
 
   //  MENU
-  .controller('DespachosMenuCtrl', function ($scope, Despachos) {
+  .controller('DespachosMenuCtrl', function ($scope, Despacho) {
 
-    Despachos.getAllDesp().then(function (d) {
+    Despacho.getAll().$promise.then(function (d) {
       $scope.despachos = d;
     });
 
     $scope.doRefresh = function () {
-      Despachos.getAllDesp()
-        .then(function (d) {
+      Despacho.getAll().$promise.then(function (d) {
           $scope.despachos = d;
         })
         .finally(function () {
-          // Stop the ion-refresher from spinning
           $scope.$broadcast('scroll.refreshComplete');
         });
 
@@ -23,7 +21,7 @@ angular.module('despachos.ctrl', [])
 
 
   //  START
-  .controller('DespachosStartCtrl', function ($scope, $state, Despachos) {
+  .controller('DespachosStartCtrl', function ($scope, $state, Despacho) {
     $scope.go = function () {
       $state.go('ticket.truck');
     };
@@ -35,20 +33,20 @@ angular.module('despachos.ctrl', [])
 
 
   // DETAIL
-  .controller('DespachosDetailCtrl', function ($scope, $stateParams, $state, Despachos, Ticket) {
+  .controller('DespachosDetailCtrl', function ($scope, $stateParams, $state, Despacho, DespachoBatch, Batch) {
     var SEQ = $stateParams.SEQ;
     $scope.batches = [];
 
-    Despachos.getDesp_SEQ(SEQ).then(function (d) {
+    Despacho.getOne({SEQ:SEQ}).$promise.then(function (d) {
       $scope.despacho = d;
     });
 
-    Despachos.getDespBatchWHERE_SEQ(SEQ).then(function (d) {
+    DespachoBatch.getWithDespacho({despacho_SEQ: SEQ}).$promise.then(function (d) {
 
       angular.forEach(d, function (r) {
         $scope.batch_quantidad = r.batch_quantidad;
 
-        Despachos.getBatch_SEQ(r.batch_SEQ).then(function (resp) {
+        Batch.getOne({SEQ: r.batch_SEQ}).$promise.then(function (resp) {
           $scope.batches.push(resp);
         });
       });

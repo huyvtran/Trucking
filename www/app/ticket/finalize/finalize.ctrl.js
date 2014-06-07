@@ -9,11 +9,23 @@
 
 angular.module('ticket.finalize.ctrl', [])
 
-  .controller('FinalizeCtrl', function ($scope, Ticket) {
+  .controller('FinalizeCtrl', function ($scope, $ionicModal) {
 
-    console.log('finalize');
+    // ionic Modal with template
+    $ionicModal.fromTemplateUrl('/app/ticket/truck/signature.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
 
-    var ticket = Ticket.getTicket();
-    $scope.peso = ticket.peso;
+
+    $scope.sig1 = function () {
+      $scope.modal.show();
+    };
+
+    $scope.sig1 = function () {
+      $scope.modal.show();
+    };
 
   });

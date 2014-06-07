@@ -1,5 +1,6 @@
 angular.module('trucking', [
   'ionic',
+  'ngResource',
   'autocomplete',
   'app.directives',
 

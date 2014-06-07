@@ -4,51 +4,59 @@
 		<div class="row">
 			<div class="list col-50">
 				<form>
-					<h1>Truck</h1>
+					<div class="row">
+						<h1>Truck</h1>
+						<button class="button button-outline button-positive icon-right ion-ios7-plus-empty"
+						        style="position: absolute; right: 0"
+								ng-click="newCamion()">
+							New Truck
+						</button>
+					</div>
+
 					<label class="item item-input item-autocomplete">
 						<span class="input-label">License #</span>
-						<autocomplete ng-model="truck.license.number"
+						<autocomplete ng-model="camion.placa_numero"
 						              attr-placeholder="VD 102 203"
 						              data="placa_numeros"
 						              on-type="updateNumeros"
 						              on-select="select"
-						              ng-blur="offFocus(truck.license.country)">
+						              >
 						</autocomplete>
 					</label>
 					<label class="item item-input">
 						<span class="input-label">License Country</span>
-						<input type="text" placeholder="BOL" ng-model="truck.license.country" ng-blur="offFocus()">
+						<input type="text" placeholder="BOL" ng-model="camion.placa_pais" ng-blur="offFocus(0)">
 					</label>
 					<label class="item item-input">
 						<span class="input-label">Marca</span>
-						<input type="text" placeholder="Mercedes" ng-model="truck.marca" ng-blur="offFocus()">
+						<input type="text" placeholder="Mercedes" ng-model="camion.marca" ng-blur="offFocus(0)">
 					</label>
 					<label class="item item-input">
 						<span class="input-label">Tipo</span>
-						<input type="text" placeholder="X5" ng-model="truck.tipo" ng-blur="offFocus()">
+						<input type="text" placeholder="X5" ng-model="camion.tipo" ng-blur="offFocus(0)">
 					</label>
 					<label class="item item-input">
 						<span class="input-label">Ejes</span>
-						<input type="number" placeholder="4" ng-model="truck.ejes" ng-blur="offFocus()">
+						<input type="text" placeholder="4" ng-model="camion.ejes" ng-blur="offFocus(0)">
 					</label>
 
 
 					<h1>Driver</h1>
 					<label class="item item-input">
 						<span class="input-label">Apellido</span>
-						<input type="text" placeholder="Paolo">
+						<input type="text" placeholder="Paolo" ng-model="chofer.apellido" ng-blur="offFocus(1)">
 					</label>
-					<label class="item item-input ">
+					<label class="item item-input">
 						<span class="input-label">Nombre</span>
-						<input type="text" placeholder="Bernasconi">
+						<input type="text" placeholder="Bernasconi" ng-model="chofer.nombre" ng-blur="offFocus(1)">
 					</label>
-					<label class="item item-input ">
+					<label class="item item-input">
 						<span class="input-label">Telefono</span>
-						<input type="text" placeholder="Mercedes">
+						<input type="text" placeholder="Mercedes" ng-model="chofer.telefono" ng-blur="offFocus(1)">
 					</label>
-					<label class="item item-input ">
+					<label class="item item-input">
 						<span class="input-label">License</span>
-						<input type="text" placeholder="X203A495">
+						<input type="text" placeholder="X203A495" ng-model="chofer.patente" ng-blur="offFocus(1)">
 					</label>
 				</form>
 			</div>
