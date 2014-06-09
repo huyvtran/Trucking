@@ -4,19 +4,26 @@ angular.module('despachos.ctrl', [])
   //  MENU
   .controller('DespachosMenuCtrl', function ($scope, Despacho) {
 
+    $scope.search = { SEQ: '' };
+
     Despacho.getAll().$promise.then(function (d) {
       $scope.despachos = d;
     });
 
     $scope.doRefresh = function () {
       Despacho.getAll().$promise.then(function (d) {
-          $scope.despachos = d;
-        })
+        $scope.despachos = d;
+      })
         .finally(function () {
           $scope.$broadcast('scroll.refreshComplete');
         });
+    };
 
-    }
+    $scope.clearSearch = function () {
+      $scope.search.SEQ = '';
+    };
+
+
   })
 
 
@@ -37,7 +44,7 @@ angular.module('despachos.ctrl', [])
     var SEQ = $stateParams.SEQ;
     $scope.batches = [];
 
-    Despacho.getOne({SEQ:SEQ}).$promise.then(function (d) {
+    Despacho.getOne({SEQ: SEQ}).$promise.then(function (d) {
       $scope.despacho = d;
     });
 
