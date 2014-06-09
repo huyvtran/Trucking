@@ -242,84 +242,84 @@ angular.module('ticket.service', [])
         tipo: 'Truck',
         detaille: 'Empty',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Full',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Front',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'License',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Driver',
         detaille: 'Person',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Driver',
         detaille: 'License',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Right',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Right',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Right',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Right',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Right',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       },
       { tipo: 'Truck',
         detaille: 'Right',
         status: 0,
-        obligatorio: 0,
+        obligatorio: 1,
         progress: 0,
         image: './img/blank_img.jpg'
       }
@@ -329,8 +329,15 @@ angular.module('ticket.service', [])
 
       getAll: function () {
         return photoRequirements;
-      }
+      },
 
+      setImage: function (tipo, detaille) {
+        angular.forEach(photoRequirements, function (res) {
+          if (res.tipo === tipo && res.detaille === detaille ) {
+            res.image = 'HELLO';
+          }
+        });
+      }
     }
   })
 
