@@ -160,8 +160,7 @@ angular.module('trucking', [
         url: '/photos',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/photos/photosMenu.html',
-            controller: 'PhotosCtrl'
+            templateUrl: 'app/ticket/photos/photosMenu.html'
           },
           'content-view': {
             templateUrl: 'app/ticket/photos/photos.html',

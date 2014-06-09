@@ -63,4 +63,22 @@
     font-size: 15px;
 }
 
+.progressBar {
 
+    height: 119px;
+    width: 0%;
+    transition: width 0.1s ease;
+    background-color: #02be64;
+    background-image: -webkit-linear-gradient(top, #3ebe81, #02d974);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3ebe81), to(#02d974));
+    position: absolute;
+    z-index: -1;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.image-empty {
+    height: 112px;
+    width: 151px;
+    background-color: lightgrey;
+}

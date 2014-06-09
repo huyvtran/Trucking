@@ -81,25 +81,25 @@ angular.module('ticket.service', [])
             title: 'Empty Truck',
             status: 1,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           },
           full: {
             title: 'Full Truck',
             status: 2,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           },
           side_left: {
             title: 'Truck Sideview Left',
             status: 1,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           },
           side_right: {
             title: 'Truck Sideview Right',
             status: 0,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           }
         },
         driver: {
@@ -107,25 +107,25 @@ angular.module('ticket.service', [])
             title: 'Driver Face',
             status: 1,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           },
           license_front: {
             title: 'License Front',
             status: 1,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           },
           license_back: {
             title: 'License Back',
             status: 1,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           },
           driver_something: {
             title: 'Something Here',
             status: 1,
             required: 0,
-            image: 'http://placehold.it/200x150'
+            image: './img/blank_img.jpg'
           }
         }
       }
@@ -199,7 +199,6 @@ angular.module('ticket.service', [])
     );
   })
 
-
   .factory('Empresa', function ($resource) {
     return $resource('http://www.desa-net.com/TOTAI/db/transport_empresa/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
@@ -211,7 +210,6 @@ angular.module('ticket.service', [])
       }
     );
   })
-
 
   .factory('Camion', function ($resource) {
     return $resource('http://www.desa-net.com/TOTAI/db/transport_camion/:SEQ:verb', {}, {
@@ -225,7 +223,6 @@ angular.module('ticket.service', [])
     );
   })
 
-
   .factory('Chofer', function ($resource) {
     return $resource('http://www.desa-net.com/TOTAI/db/transport_chofer/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
@@ -238,13 +235,111 @@ angular.module('ticket.service', [])
     );
   })
 
+  .factory('PhotoRequirements', function ($resource) {
 
-  .factory('Photo', function ($resource, $q) {
-    var q = $q.defer();
-    var url = "http://www.desa-net.com/SunProd/fs/FILE/";
+    var photoRequirements = [
+      {
+        tipo: 'Truck',
+        detaille: 'Empty',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Full',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Front',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'License',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Driver',
+        detaille: 'Person',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Driver',
+        detaille: 'License',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Right',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Right',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Right',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Right',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Right',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      },
+      { tipo: 'Truck',
+        detaille: 'Right',
+        status: 0,
+        obligatorio: 0,
+        progress: 0,
+        image: './img/blank_img.jpg'
+      }
+    ];
+
+    return {
+
+      getAll: function () {
+        return photoRequirements;
+      }
+
+    }
+  })
+
+  .factory('Photo', function ($http, $q) {
 
     return {
       upload: function (imageData, options) {
+        var q = $q.defer();
+        var url = "http://www.desa-net.com/SunProd/fs/FILE/";
         var ft = new FileTransfer();
 
         ft.onprogress = function (progressEvent) {
@@ -259,13 +354,32 @@ angular.module('ticket.service', [])
 
         ft.upload(imageData, encodeURI(url), function (response) {
           q.resolve(response);
-          alert('Success : Response Code ' + response.responseCode + 'Response ' + response.response);
         }, function (error) {
           q.reject(error);
-          alert('ERROR' + error);
         }, options);
 
         return q.promise;
+      },
+
+      post: function (data) {
+        return $http.post('http://www.desa-net.com/TOTAI/db/despacho_fotos/X', data).then(function (resp) {
+            return resp.data;
+          },
+          function (error) {
+            return error;
+          });
+      },
+
+      getAll: function () {
+        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_fotos/').then(function (resp) {
+          return resp.data;
+        });
+      },
+
+      getWithDespacho: function (despacho_SEQ) {
+        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_fotos/get?despacho_SEQ=' + despacho_SEQ).then(function (resp) {
+          return resp.data;
+        });
       }
     }
   });

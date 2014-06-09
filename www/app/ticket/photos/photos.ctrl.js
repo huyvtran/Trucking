@@ -9,66 +9,24 @@
 
 angular.module('ticket.photos.ctrl', [])
 
-  .controller('PhotosCtrl', function ($scope, $stateParams, Photo, Ticket) {
-
+  .controller('PhotosCtrl', function ($scope, $stateParams, Photo, PhotoRequirements) {
     var despacho_SEQ = $stateParams.SEQ;
 
-    // status     0 - missing    1 - complete    2 - warning
-    // required   0 - no         1 - yes         2 - maybe??
-    $scope.photos = {
-      truck: {
-        empty: {
-          title: 'Empty Truck',
-          status: 1,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        },
-        full: {
-          title: 'Full Truck',
-          status: 2,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        },
-        side_left: {
-          title: 'Truck Sideview Left',
-          status: 1,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        },
-        side_right: {
-          title: 'Truck Sideview Right',
-          status: 0,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        }
-      },
-      driver: {
-        face: {
-          title: 'Driver Face',
-          status: 1,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        },
-        license_front: {
-          title: 'License Front',
-          status: 1,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        },
-        license_back: {
-          title: 'License Back',
-          status: 1,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        },
-        driver_something: {
-          title: 'Something Here',
-          status: 1,
-          required: 0,
-          image: 'http://placehold.it/200x150'
-        }
-      }
+    $scope.photoRequirements = PhotoRequirements.getAll();
 
+
+    Photo.getAll().then(function (data) {
+      var photosAll = data;
+    });
+
+    Photo.getWithDespacho(despacho_SEQ).then(function (data) {
+      angular.forEach(data, function (d) {
+        console.log('tipo: ' + d.tipo + ' detaille: ' + d.detaille);
+      })
+    });
+
+    $scope.progressStyle = function (photo) {
+      return {'width': ' ' + photo.progress + '%'};
     };
 
     $scope.capturePhoto = function (photo) {
@@ -81,18 +39,38 @@ angular.module('ticket.photos.ctrl', [])
 
         var options = new FileUploadOptions();
         options.fileKey = "file";
-        options.fileName = despacho_SEQ + '_customTitleHere_' + dateTime;
+        options.fileName = despacho_SEQ + '_' + photo.type + '_' + photo.detaille + '_' + dateTime;
         options.mimeType = "image/jpeg";
+        options.chunkedMode = false;
+        options.headers = {Connection: "close"};
         options.params = {
-          'despacho_SEQ' : despacho_SEQ
+          'despacho_SEQ': despacho_SEQ
         };
 
         Photo.upload(imageData, options).then(function (result) {
-          console.log(result);
+          photo.status = 1;
+
+          var thisPhoto = {};
+          thisPhoto.despacho_SEQ = despacho_SEQ;
+          thisPhoto.tipo = photo.tipo;
+          thisPhoto.detaille = photo.detaille;
+          thisPhoto.obligatorio = photo.obligatorio;
+          thisPhoto.status = photo.status;
+          thisPhoto.archivo_nombre = despacho_SEQ + '_' + thisPhoto.tipo + '_' + thisPhoto.detaille + '_' + dateTime;
+          thisPhoto.archivo_ruta = 'var/' + despacho_SEQ + '/' + thisPhoto.archivo_nombre;
+          thisPhoto.mime_type = "image/jpeg";
+          thisPhoto.fecha_hora = dateTime;
+
+          Photo.post(thisPhoto).then(function (result) {
+            console.log(result);
+          }, function (error) {
+            console.log(error);
+          });
+          alert('Code: ' + result.responseCode + '  Response ' + result.response);
         }, function (error) {
-          console.log(error)
+          alert('Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
         }, function (progress) {
-          console.log(progress);
+          photo.progress = progress;
         });
       }
 
@@ -101,11 +79,11 @@ angular.module('ticket.photos.ctrl', [])
       }
 
       navigator.camera.getPicture(onSuccess, onFail,
-        { quality: 50,
+        { quality: 20,
           allowEdit: false,
           encodingType: Camera.EncodingType.JPEG,
-          targetWidth: 600,
-          targetHeight: 600,
+          targetWidth: 700,
+          targetHeight: 700,
           saveToPhotoAlbum: false,
           sourceType: Camera.PictureSourceType.CAMERA,
           destinationType: Camera.DestinationType.FILE_URI

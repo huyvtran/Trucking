@@ -1,27 +1,19 @@
 <ion-view title="Photos">
 
 	<ion-content class="has-header padding">
+		<div ></div>
 
-		<div class="row">
-			<div class="card col card-photo" ng-repeat="item in photos.truck">
-				<div class="item" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[item.status]">
-					<h2>{{item.title}}</h2>
-				</div>
+		<div class="row" ng-repeat="rows in photoRequirements | partition: 4">
+			<div class="col" ng-repeat="item in rows">
+				<div class="card">
+					<div class="item" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[item.status]" >
+						<div class="progressBar" ng-style="progressStyle(item)"></div>
+						<h2>{{item.tipo + " " + item.detaille}}</h2>
+					</div>
 
-				<div class="item item-image" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[item.status]">
-					<img ng-src="{{item.image}}" ng-click="capturePhoto(item)">
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="card col card-photo" ng-repeat="item in photos.driver">
-				<div class="item" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[item.status]">
-					<h2>{{item.title}}</h2>
-				</div>
-
-				<div class="item item-image" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[item.status]">
-					<img ng-src="{{item.image}}" ng-click="capturePhoto(item)">
+					<div class="item item-image image-empty" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[item.status]">
+						<img ng-src="{{item.image}}" ng-click="capturePhoto(item)">
+					</div>
 				</div>
 			</div>
 		</div>
