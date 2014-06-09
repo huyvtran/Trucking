@@ -247,6 +247,16 @@ angular.module('ticket.service', [])
       upload: function (imageData, options) {
         var ft = new FileTransfer();
 
+        ft.onprogress = function (progressEvent) {
+          if (progressEvent.lengthComputable) {
+            var perc = Math.floor(progressEvent.loaded / progressEvent.total * 100);
+            q.notify(perc);
+          }
+          else {
+            console.log('+1');
+          }
+        };
+
         ft.upload(imageData, encodeURI(url), function (response) {
           q.resolve(response);
           alert('Success : Response Code ' + response.responseCode + 'Response ' + response.response);

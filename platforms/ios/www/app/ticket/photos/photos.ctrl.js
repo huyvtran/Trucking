@@ -83,11 +83,16 @@ angular.module('ticket.photos.ctrl', [])
         options.fileKey = "file";
         options.fileName = despacho_SEQ + '_customTitleHere_' + dateTime;
         options.mimeType = "image/jpeg";
+        options.params = {
+          'despacho_SEQ' : despacho_SEQ
+        };
 
         Photo.upload(imageData, options).then(function (result) {
           console.log(result);
         }, function (error) {
           console.log(error)
+        }, function (progress) {
+          console.log(progress);
         });
       }
 
@@ -96,11 +101,11 @@ angular.module('ticket.photos.ctrl', [])
       }
 
       navigator.camera.getPicture(onSuccess, onFail,
-        { quality: 5,
+        { quality: 50,
           allowEdit: false,
           encodingType: Camera.EncodingType.JPEG,
-          targetWidth: 250,
-          targetHeight: 200,
+          targetWidth: 600,
+          targetHeight: 600,
           saveToPhotoAlbum: false,
           sourceType: Camera.PictureSourceType.CAMERA,
           destinationType: Camera.DestinationType.FILE_URI
