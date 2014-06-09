@@ -2,12 +2,15 @@ angular.module('despachos.ctrl', [])
 
 
   //  MENU
-  .controller('DespachosMenuCtrl', function ($scope, Despacho) {
+  .controller('DespachosMenuCtrl', function ($scope, $ionicLoading, Despacho) {
 
     $scope.search = { SEQ: '' };
+    $ionicLoading.show({template: 'Loading Despachos'});
+
 
     Despacho.getAll().$promise.then(function (d) {
       $scope.despachos = d;
+      $ionicLoading.hide();
     });
 
     $scope.doRefresh = function () {

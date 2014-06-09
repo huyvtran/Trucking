@@ -103,12 +103,12 @@ angular.module('trucking', [
         views: {
           'side-view': {
             templateUrl: 'app/ticket/sideMenu.html',
-            controller: 'TruckCtrl'
+            controller: 'SideMenuCtrl'
 
           },
           'content-view': {
             templateUrl: 'app/ticket/start/start.html',
-            controller: 'TruckCtrl'
+            controller: 'SideMenuCtrl'
           }
         }
       })

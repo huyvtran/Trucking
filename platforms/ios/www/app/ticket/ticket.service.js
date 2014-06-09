@@ -236,4 +236,26 @@ angular.module('ticket.service', [])
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
       }
     );
+  })
+
+
+  .factory('Photo', function ($resource, $q) {
+    var q = $q.defer();
+    var url = "http://www.desa-net.com/SunProd/fs/FILE/";
+
+    return {
+      upload: function (imageData, options) {
+        var ft = new FileTransfer();
+
+        ft.upload(imageData, encodeURI(url), function (response) {
+          q.resolve(response);
+          alert('Success : Response Code ' + response.responseCode + 'Response ' + response.response);
+        }, function (error) {
+          q.reject(error);
+          alert('ERROR' + error);
+        }, options);
+
+        return q.promise;
+      }
+    }
   });

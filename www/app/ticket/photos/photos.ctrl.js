@@ -9,8 +9,9 @@
 
 angular.module('ticket.photos.ctrl', [])
 
-  .controller('PhotosCtrl', function ($scope, Ticket) {
+  .controller('PhotosCtrl', function ($scope, $stateParams, Photo, Ticket) {
 
+    var despacho_SEQ = $stateParams.SEQ;
 
     // status     0 - missing    1 - complete    2 - warning
     // required   0 - no         1 - yes         2 - maybe??
@@ -70,37 +71,24 @@ angular.module('ticket.photos.ctrl', [])
 
     };
 
-
-    $scope.clear = function (photo) {
-      console.log(photo);
-      photo.image = 'YOYOYOYOOY';
-    };
-
-
     $scope.capturePhoto = function (photo) {
 
       function onSuccess(imageData) {
         $scope.$apply(photo.image = imageData);
 
+        var now = new Date();
+        var dateTime = now.toISOString();
+
         var options = new FileUploadOptions();
         options.fileKey = "file";
-        options.fileName = 'customTitleHere';
+        options.fileName = despacho_SEQ + '_customTitleHere_' + dateTime;
         options.mimeType = "image/jpeg";
 
-
-        var ft = new FileTransfer();
-        var url = "http://www.desa-net.com/SunProd/fs/FILETEST/";
-        ft.upload(imageData,
-          encodeURI(url),
-          function (response) {
-            alert('Response Code ' + response.responseCode + 'Response ' + response.response);
-          },
-          function (error) {
-            alert('ERROR file uploaded taken');
-            alert('Response Code ' + error.code + 'Response ' + error.source + 'Target ' + error.target);
-          },
-          options);
-
+        Photo.upload(imageData, options).then(function (result) {
+          console.log(result);
+        }, function (error) {
+          console.log(error)
+        });
       }
 
       function onFail(message) {
@@ -108,11 +96,15 @@ angular.module('ticket.photos.ctrl', [])
       }
 
       navigator.camera.getPicture(onSuccess, onFail,
-        { quality: 10,
+        { quality: 5,
+          allowEdit: false,
+          encodingType: Camera.EncodingType.JPEG,
+          targetWidth: 400,
+          targetHeight: 400,
+          saveToPhotoAlbum: false,
           sourceType: Camera.PictureSourceType.CAMERA,
           destinationType: Camera.DestinationType.FILE_URI
         });
-
     }
 
   })

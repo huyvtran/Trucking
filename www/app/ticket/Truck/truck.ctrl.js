@@ -9,12 +9,14 @@
 
 angular.module('ticket.truck.ctrl', [])
 
-  .controller('TruckCtrl', function ($scope, $state, $stateParams, $ionicModal, Despacho, DespachoBatch, Empresa, Camion, Chofer) {
+  .controller('TruckCtrl', function ($scope, $state, $stateParams, $ionicModal, $ionicLoading, Despacho, DespachoBatch, Empresa, Camion, Chofer) {
 
     var despacho_SEQ = $stateParams.SEQ;
     var ticket = ""; //Ticket.getTicket();
     $scope.truck = ticket.truck;
     $scope.photos = ticket.photos;
+
+    $ionicLoading.show({template: 'Loading Data'});
 
     // init with data
     Despacho.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
@@ -33,22 +35,25 @@ angular.module('ticket.truck.ctrl', [])
 
       Chofer.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
         $scope.chofer = d;
+        $ionicLoading.hide();
       })
     });
 
 
-    // ionic Modal with template
     $ionicModal.fromTemplateUrl('/app/ticket/truck/newTruck.html', {
-      scope: $scope,
-      animation: 'slide-in-up'
+      scope: $scope
     }).then(function (modal) {
+      console.log('modal 1 open');
       $scope.modal = modal;
     });
 
 
     // add New Camion
     $scope.newCamion = function () {
-      $scope.modal.show();
+      console.log('modal 2 open');
+      $scope.modal.show().then(function () {
+        console.log('modal is shown');
+      })
     };
 
 

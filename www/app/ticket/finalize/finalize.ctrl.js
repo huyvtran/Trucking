@@ -47,7 +47,7 @@ angular.module('ticket.finalize.ctrl', [])
 
     $scope.sig1 = function () {
       var adminPopup = $ionicPopup.show({
-        template: '<input type="password" ng-model="pin.admin.pin">',
+        template: '<input type="password" ng-model="pin.admin.pin" autoFocus>',
         title: 'Enter PIN to Authorize',
         subTitle: 'Please use normal things',
         scope: $scope,
@@ -75,7 +75,7 @@ angular.module('ticket.finalize.ctrl', [])
 
     $scope.sig2 = function () {
       var adminPopup = $ionicPopup.show({
-        template: '<input type="password" ng-model="pin.office.pin">',
+        template: '<input type="password" ng-model="pin.office.pin" autoFocus>',
         title: 'Enter PIN to Authorize',
         subTitle: 'Please use normal things',
         scope: $scope,
