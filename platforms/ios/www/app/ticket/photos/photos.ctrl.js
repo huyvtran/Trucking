@@ -70,6 +70,7 @@ angular.module('ticket.photos.ctrl', [])
 
     };
 
+
     $scope.clear = function (photo) {
       console.log(photo);
       photo.image = 'YOYOYOYOOY';
@@ -80,6 +81,26 @@ angular.module('ticket.photos.ctrl', [])
 
       function onSuccess(imageData) {
         $scope.$apply(photo.image = imageData);
+
+        var options = new FileUploadOptions();
+        options.fileKey = "file";
+        options.fileName = 'customTitleHere';
+        options.mimeType = "image/jpeg";
+
+
+        var ft = new FileTransfer();
+        var url = "http://www.desa-net.com/SunProd/fs/FILETEST/";
+        ft.upload(imageData,
+          encodeURI(url),
+          function (response) {
+            alert('Response Code ' + response.responseCode + 'Response ' + response.response);
+          },
+          function (error) {
+            alert('ERROR file uploaded taken');
+            alert('Response Code ' + error.code + 'Response ' + error.source + 'Target ' + error.target);
+          },
+          options);
+
       }
 
       function onFail(message) {
@@ -87,11 +108,12 @@ angular.module('ticket.photos.ctrl', [])
       }
 
       navigator.camera.getPicture(onSuccess, onFail,
-        { quality: 20,
+        { quality: 10,
           sourceType: Camera.PictureSourceType.CAMERA,
-          destinationType: Camera.DestinationType.FILE_URL
+          destinationType: Camera.DestinationType.FILE_URI
         });
 
     }
 
-  });
+  })
+;

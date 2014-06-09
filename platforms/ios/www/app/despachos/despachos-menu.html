@@ -8,12 +8,30 @@
 
 	<ion-side-menu side="left">
 		<ion-header-bar class="bar-stable nav-title-slide-ios7">
-			<h1 class="title">Left Menu</h1>
+			<h1 class="title">Despachos by SEQ</h1>
 		</ion-header-bar>
+
+		<ion-header-bar class="bar-subheader item-input-inset">
+			<label class="item-input-wrapper">
+				<i class="icon ion-ios7-search placeholder-icon"></i>
+				<input type="search" placeholder="Search">
+			</label>
+			<button class="button button-small button-positive button-clear">Clear</button>
+		</ion-header-bar>
+
 		<ion-content>
-			<ul class="list" >
-				<a href="#/despachos/{{desp.SEQ}}" class="item" ng-repeat="desp in despachos">{{desp.SEQ}}</a>
-			</ul>
+			<ion-refresher
+				pulling-text="Pull to refresh"
+				pulling-icon="ion-ios7-arrow-thin-up"
+				refreshing-icon="ion-ios7-reloading"
+				refreshing-text="Refreshing Despachos"
+				on-refresh="doRefresh()">
+			</ion-refresher>
+
+
+			<ion-list>
+				<ion-item ng-repeat="desp in despachos" href="#/despachos/{{desp.SEQ}}">{{desp.SEQ}}</ion-item>
+			</ion-list>
 		</ion-content>
 	</ion-side-menu>
 

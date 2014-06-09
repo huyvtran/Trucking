@@ -9,68 +9,91 @@
 
 angular.module('ticket.truck.ctrl', [])
 
-  // Truck
-  .controller('TruckCtrl', function ($scope, $state, Ticket) {
+  .controller('TruckCtrl', function ($scope, $state, $stateParams, $ionicModal, Despacho, DespachoBatch, Empresa, Camion, Chofer) {
 
-    $scope.goBack = function () {
-      $state.go('main.menu');
-    };
-
-    // base truck structure
-    var ticket = Ticket.getTicket();
+    var despacho_SEQ = $stateParams.SEQ;
+    var ticket = ""; //Ticket.getTicket();
     $scope.truck = ticket.truck;
-
     $scope.photos = ticket.photos;
 
-    // init with truck info
-    Ticket.getTransCamion().then(function (d) {
-      $scope.placa_numeros = [];
-      $scope.transCamions = d;
-
-      angular.forEach(d, function (r) {
-        $scope.placa_numeros.push(r.placa_numero);
+    // init with data
+    Despacho.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
+      $scope.despacho = d;
+      Empresa.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
+        $scope.empresa = d;
       });
+
+      Camion.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
+        $scope.camion = d;
+        console.log(d);
+        $scope.placa_numeros = [];
+        angular.forEach(d, function (r) {
+          $scope.placa_numeros.push(r.placa_numero);
+        });
+      });
+
+      Chofer.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
+        $scope.chofer = d;
+      })
     });
+
+
+    // ionic Modal with template
+    $ionicModal.fromTemplateUrl('/app/ticket/truck/newTruck.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
+
+
+    // add New Camion
+    $scope.newCamion = function () {
+      $scope.modal.show();
+    };
 
 
     // update on typing
     $scope.updateNumeros = function (typed) {
-      $scope.newNumeros = Ticket.getTransCamion().then(function (d) {
+      $scope.newNumeros = Camion.getAll().$promise.then(function (d) {
         $scope.placa_numeros = [];
 
         angular.forEach(d, function (r) {
           $scope.placa_numeros.push(r.placa_numero);
-        })
+        });
       });
     };
 
 
     // select and fill
     $scope.select = function (placa) {
-      Ticket.getTransCamion_Placa(placa).then(function (d) {
-        var camion = d[0];
-        $scope.truck.license.number = camion.placa_numero;
-        $scope.truck.license.country = camion.placa_pais;
-        $scope.truck.marca = camion.marca;
-        $scope.truck.tipo = camion.tipo;
-        $scope.truck.ejes = camion.ejes;
+      Camion.getWithPlaca({placa_numero: placa}).$promise.then(function (d) {
+        $scope.camion = d[0];
       });
     };
 
 
+    // capture photos
     $scope.capturePhoto = function (photo) {
       console.log(photo);
     };
 
 
-    $scope.exit = function () {
-      $state.go('despachosMenu.start');
+    // get off focus event
+    $scope.offFocus = function (type) {
+      switch (type) {
+        case 0:  // camion
+          Camion.update($scope.camion).$promise.then(function (response) {
+            //console.log(response);
+          });
+          break;
+
+        case 1: // chofer
+          Chofer.update($scope.chofer).$promise.then(function (response) {
+            //console.log(response);
+          });
+          break;
+      }
     };
 
-
-    $scope.clear = function () {
-      console.log($scope.truck);
-      Ticket.saveTruck($scope.truck);
-      console.log(Ticket.getTicket());
-    }
   });

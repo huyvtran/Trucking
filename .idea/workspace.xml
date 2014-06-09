@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b0732f7-5f90-4bad-a8e0-06403c46aea9" name="Default" comment="" />
+    <list default="true" id="3b0732f7-5f90-4bad-a8e0-06403c46aea9" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/subMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/driver/driver.ctrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/driver/driver.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/driver/subMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/finalize/subMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/subMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/subMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/weight/subMenu.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcuserdata/paolob.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcuserdata/paolob.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcshareddata/Trucking.xccheckout" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcshareddata/Trucking.xccheckout" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/config.xml" afterPath="$PROJECT_DIR$/platforms/ios/Trucking/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos-detail.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos-menu.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos-menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" afterPath="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/finalize/finalize.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/finalize/finalize.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/finalize/finalize.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/finalize/finalize.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/finalize/finalize.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/finalize/finalize.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/finalize/finalize.html" afterPath="$PROJECT_DIR$/www/app/ticket/finalize/finalize.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/ios.json" afterPath="$PROJECT_DIR$/plugins/ios.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photos.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photos.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/ticket.service.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/ticket.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.html" />
+    </list>
     <ignored path="trucking.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,119 +96,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="truck.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.html">
+      <file leaf-file-name="despachos-menu.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0" vertical-offset="210" max-vertical-offset="2100">
-              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+            <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="645">
+              <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photos.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photos.ctrl.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+              <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
               <folding>
-                <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="e#617#1934#0" expanded="false" />
+                <element signature="e#1974#2041#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="despachos.ctrl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="975">
-              <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newTruck.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/newTruck.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="585">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finalize.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalize.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
-              <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finalize.ctrl.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalize.ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23195876" vertical-offset="0" max-vertical-offset="776">
-              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signature.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/signature.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="255">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="truck.ctrl.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="truck.ctrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1455">
-              <caret line="52" column="6" selection-start-line="40" selection-start-column="4" selection-end-line="52" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="1440">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticket.service.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1965">
-              <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
-              <folding>
-                <element signature="e#100#389#0" expanded="false" />
-                <element signature="e#420#538#0" expanded="false" />
-                <element signature="e#798#916#0" expanded="false" />
-                <element signature="e#936#2726#0" expanded="false" />
-                <element signature="e#2745#2855#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</OriginalElement>
-              <nodes>
-                <node x="0.0" y="428.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</node>
-                <node x="0.0" y="0.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch</node>
-                <node x="508.0" y="0.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
-                <node x="362.0" y="724.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_empresa</node>
-                <node x="422.0" y="428.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_transport</node>
-                <node x="694.0" y="724.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_batch</node>
-                <node x="0.0" y="724.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_chofer</node>
-              </nodes>
-              <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="0.8547595537467554" x="188.78071657460083" y="142.78071657460083" />
-              <SelectedNodes>
-                <node>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
             </state>
           </provider>
         </entry>
@@ -214,7 +173,6 @@
         <option value="$PROJECT_DIR$/www/app/ticket/weight/weight.ctrl.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/finalize/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/photos/subMenu.html" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/www/app/ticket/main.html" />
@@ -232,18 +190,19 @@
         <option value="$PROJECT_DIR$/www/app/ticket/sideMenu.html" />
         <option value="$PROJECT_DIR$/www/app/despachos/despachos-detail.html" />
         <option value="$PROJECT_DIR$/www/app/ticket/start/start.html" />
-        <option value="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" />
         <option value="$PROJECT_DIR$/www/app/ticket/truck/truckMenu.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/app/app.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/truck/truck.html" />
         <option value="$PROJECT_DIR$/www/app/ticket/ticket.service.js" />
         <option value="$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/truck/newTruck.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/finalize/finalize.html" />
         <option value="$PROJECT_DIR$/www/app/ticket/finalize/signature.html" />
+        <option value="$PROJECT_DIR$/www/app/ticket/finalize/finalize.html" />
         <option value="$PROJECT_DIR$/www/app/ticket/finalize/finalize.ctrl.js" />
+        <option value="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" />
+        <option value="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" />
+        <option value="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" />
       </list>
     </option>
   </component>
@@ -308,99 +267,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trucking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trucking" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trucking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trucking" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticket" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trucking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trucking" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticket" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="truck" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trucking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Trucking" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticket" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finalize" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -840,7 +707,7 @@
       <workItem from="1401740137059" duration="36000" />
       <workItem from="1401740184639" duration="9207000" />
       <workItem from="1401798618163" duration="1893000" />
-      <workItem from="1401807073052" duration="56615000" />
+      <workItem from="1401807073052" duration="70688000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1401821611018</created>
@@ -858,7 +725,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140298000" />
+    <option name="totallyTimeSpent" value="154371000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -882,13 +749,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2176617" sideWeight="0.6069652" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2176617" sideWeight="0.6069652" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19098713" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -905,7 +772,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21816881" sideWeight="0.39303482" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21816881" sideWeight="0.39303482" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -964,13 +831,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7299412" vertical-offset="884" max-vertical-offset="1395">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/lib/plugins/Storage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14677104" vertical-offset="0" max-vertical-offset="511">
@@ -1056,26 +916,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21941489" vertical-offset="0" max-vertical-offset="752">
-          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/autocomplete.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="630">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1085,16 +929,6 @@
         <state vertical-scroll-proportion="0.27061856" vertical-offset="0" max-vertical-offset="1080">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5463917" vertical-offset="754" max-vertical-offset="1530">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,14 +1084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31914893" vertical-offset="0" max-vertical-offset="752">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1284,14 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15957446" vertical-offset="0" max-vertical-offset="795">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="16" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44194108" vertical-offset="0" max-vertical-offset="900">
@@ -1309,14 +1127,6 @@
       </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truckMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.583333" vertical-offset="133" max-vertical-offset="960">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/weight/weight.html">
@@ -1359,69 +1169,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</OriginalElement>
-          <nodes>
-            <node x="0.0" y="428.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</node>
-            <node x="0.0" y="0.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch</node>
-            <node x="508.0" y="0.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
-            <node x="362.0" y="724.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_empresa</node>
-            <node x="422.0" y="428.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_transport</node>
-            <node x="694.0" y="724.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_batch</node>
-            <node x="0.0" y="724.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_chofer</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8547595537467554" x="188.78071657460083" y="142.78071657460083" />
-          <SelectedNodes>
-            <node>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0" vertical-offset="210" max-vertical-offset="2100">
-          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1965">
-          <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
-          <folding>
-            <element signature="e#100#389#0" expanded="false" />
-            <element signature="e#420#538#0" expanded="false" />
-            <element signature="e#798#916#0" expanded="false" />
-            <element signature="e#936#2726#0" expanded="false" />
-            <element signature="e#2745#2855#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.1984536" vertical-offset="469" max-vertical-offset="1245">
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="975">
-          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1434,34 +1185,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalize.html">
+    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1455">
-          <caret line="52" column="6" selection-start-line="40" selection-start-column="4" selection-end-line="52" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.7420965" vertical-offset="199" max-vertical-offset="975">
+          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/signature.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="255">
+        <state vertical-scroll-proportion="0.12998267" vertical-offset="0" max-vertical-offset="577">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truckMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7660312" vertical-offset="383" max-vertical-offset="960">
+          <caret line="55" column="14" selection-start-line="9" selection-start-column="8" selection-end-line="55" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375" vertical-offset="645" max-vertical-offset="2100">
+          <caret line="66" column="137" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="137" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#form#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25" vertical-offset="765" max-vertical-offset="1470">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalize.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23195876" vertical-offset="0" max-vertical-offset="776">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state vertical-scroll-proportion="2.0715475" vertical-offset="0" max-vertical-offset="1530">
+          <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54908484" vertical-offset="585" max-vertical-offset="1965">
+          <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
+          <folding>
+            <element signature="e#100#389#0" expanded="false" />
+            <element signature="e#420#538#0" expanded="false" />
+            <element signature="e#798#916#0" expanded="false" />
+            <element signature="e#936#2726#0" expanded="false" />
+            <element signature="e#2745#2855#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</OriginalElement>
+          <nodes>
+            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</node>
+            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch</node>
+            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
+            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_empresa</node>
+            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_transport</node>
+            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_batch</node>
+            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_chofer</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8547595537467554" x="547.3610900334139" y="197.7669402371268" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0918545" vertical-offset="0" max-vertical-offset="795">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28596187" vertical-offset="0" max-vertical-offset="577">
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="645">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/ios.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7340425" vertical-offset="1491" max-vertical-offset="2055">
+          <caret line="127" column="56" selection-start-line="127" selection-start-column="56" selection-end-line="127" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+          <folding>
+            <element signature="e#617#1934#0" expanded="false" />
+            <element signature="e#1974#2041#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="1440">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>

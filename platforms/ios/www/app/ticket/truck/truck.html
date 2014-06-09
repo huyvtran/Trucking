@@ -1,36 +1,62 @@
 <ion-view title="Truck">
 
 	<ion-content class="has-header padding">
-		<h1>Truck</h1>
-
-
 		<div class="row">
 			<div class="list col-50">
 				<form>
-					<label class="item item-input item-stacked-label item-autocomplete">
+					<div class="row">
+						<h1>Truck</h1>
+						<button class="button button-outline button-positive icon-right ion-ios7-plus-empty"
+						        style="position: absolute; right: 0"
+								ng-click="newCamion()">
+							New Truck
+						</button>
+					</div>
+
+					<label class="item item-input item-autocomplete">
 						<span class="input-label">License #</span>
-						<autocomplete ng-model="truck.license.number"
+						<autocomplete ng-model="camion.placa_numero"
 						              attr-placeholder="VD 102 203"
 						              data="placa_numeros"
 						              on-type="updateNumeros"
-						              on-select="select">
+						              on-select="select"
+						              >
 						</autocomplete>
 					</label>
-					<label class="item item-input item-stacked-label">
+					<label class="item item-input">
 						<span class="input-label">License Country</span>
-						<input type="text" placeholder="BOL" ng-model="truck.license.country">
+						<input type="text" placeholder="BOL" ng-model="camion.placa_pais" ng-blur="offFocus(0)">
 					</label>
-					<label class="item item-input item-stacked-label">
+					<label class="item item-input">
 						<span class="input-label">Marca</span>
-						<input type="text" placeholder="Mercedes" ng-model="truck.marca">
+						<input type="text" placeholder="Mercedes" ng-model="camion.marca" ng-blur="offFocus(0)">
 					</label>
-					<label class="item item-input item-stacked-label">
+					<label class="item item-input">
 						<span class="input-label">Tipo</span>
-						<input type="text" placeholder="X5" ng-model="truck.tipo">
+						<input type="text" placeholder="X5" ng-model="camion.tipo" ng-blur="offFocus(0)">
 					</label>
-					<label class="item item-input item-stacked-label">
+					<label class="item item-input">
 						<span class="input-label">Ejes</span>
-						<input type="number" placeholder="4" ng-model="truck.ejes">
+						<input type="text" placeholder="4" ng-model="camion.ejes" ng-blur="offFocus(0)">
+					</label>
+
+
+					<h1>Driver</h1>
+					<label class="item item-input">
+						<span class="input-label">Apellido</span>
+						<input type="text" placeholder="Paolo" ng-model="chofer.apellido" ng-blur="offFocus(1)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="Bernasconi" ng-model="chofer.nombre" ng-blur="offFocus(1)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Telefono</span>
+						<input type="text" placeholder="Mercedes" ng-model="chofer.telefono" ng-blur="offFocus(1)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">License</span>
+						<input type="text" placeholder="X203A495" ng-model="chofer.patente" ng-blur="offFocus(1)">
 					</label>
 				</form>
 			</div>
@@ -76,6 +102,27 @@
 
 						<div class="item item-image" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.truck.side_right.status]">
 							<img ng-src="{{photos.truck.side_right.image}}" ng-click="capturePhoto(photos.truck.side_right)">
+						</div>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="card card-photo col">
+						<div class="item" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.face.status]">
+							<h2>Driver Face</h2>
+						</div>
+
+						<div class="item item-image" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.face.status]">
+							<img ng-src="{{photos.driver.face.image}}" ng-click="capturePhoto(photos.driver.face)">
+						</div>
+					</div>
+
+					<div class="card card-photo col">
+						<div class="item" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.license_front.status]">
+							<h2>Driver License</h2>
+						</div>
+
+						<div class="item item-image" ng-class="{ 0: 'border-red',  1: 'border-green', 2: 'border-yellow'}[photos.driver.license_front.status]">
+							<img ng-src="{{photos.driver.license_front.image}}" ng-click="capturePhoto(photos.driver.license_front)">
 						</div>
 					</div>
 				</div>

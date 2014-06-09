@@ -1,0 +1,59 @@
+<ion-view title="Truck Sub Menu">
+	<ion-nav-buttons side="left">
+		<button class="button button-positive button-clear " ui-sref="ticket.menu">
+			<i class="icon ion-ios7-arrow-back"></i>
+			Back
+		</button>
+	</ion-nav-buttons>
+	<ion-content has-header="true" padding="true">
+
+		<div class="card">
+			<div class="item item-divider">
+				Despacho
+			</div>
+			<div class="item">
+				Venta SEQ: {{despacho.venta_SEQ}}<br>
+				Cliente SEQ: {{despacho.cliente_SEQ}}<br>
+				Fecha Pedido: {{despacho.fecha_pedido}}<br>
+				Fecha Despacho: {{despacho.fecha_despacho}}<br>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="item item-divider">
+				Empresa
+			</div>
+			<div class="item">
+				{{empresa.nombre}} <br>
+				{{empresa.contacto}} <br>
+				{{empresa.direccion}} <br>
+				{{empresa.telefono}} <br>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="item item-divider">
+				Camion
+			</div>
+			<div class="item">
+				{{camion.placa_numero}} <br>
+				{{camion.placa_pais}} <br>
+				{{camion.marca}} <br>
+				{{camion.tipo}} <br>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="item item-divider">
+				Chofer
+			</div>
+			<div class="item">
+				{{chofer.apellido}} <br>
+				{{chofer.nombre}} <br>
+				{{chofer.patente}} <br>
+				{{chofer.telefono}} <br>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

@@ -13,6 +13,8 @@ angular.module('ticket.sideMenu.ctrl', [])
 
     $scope.exit = function () {
       $state.go('despachosMenu.start')
-    }
+    };
+
+    $scope.icons = Ticket.getIcons();
 
   });

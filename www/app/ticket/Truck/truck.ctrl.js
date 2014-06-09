@@ -16,7 +16,7 @@ angular.module('ticket.truck.ctrl', [])
     $scope.truck = ticket.truck;
     $scope.photos = ticket.photos;
 
-    //
+    // init with data
     Despacho.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
       $scope.despacho = d;
       Empresa.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
@@ -25,7 +25,6 @@ angular.module('ticket.truck.ctrl', [])
 
       Camion.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
         $scope.camion = d;
-        console.log(d);
         $scope.placa_numeros = [];
         angular.forEach(d, function (r) {
           $scope.placa_numeros.push(r.placa_numero);
