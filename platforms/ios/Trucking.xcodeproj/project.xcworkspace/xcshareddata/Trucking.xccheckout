@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E87F1635-360F-4726-BB31-57E0029AC5A2</string>
+	<string>C93372FC-FDAA-4A18-8329-6B8074822151</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Trucking</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7BF4EDD4-F622-4595-8DE5-0C1E0D4B8B58</key>
+		<key>2C98C038-CF57-45CC-BB14-B8F3E09A55AF</key>
 		<string>https://github.com/pbernasconi/Trucking.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>platforms/ios/Trucking.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7BF4EDD4-F622-4595-8DE5-0C1E0D4B8B58</key>
+		<key>2C98C038-CF57-45CC-BB14-B8F3E09A55AF</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7BF4EDD4-F622-4595-8DE5-0C1E0D4B8B58</string>
+	<string>2C98C038-CF57-45CC-BB14-B8F3E09A55AF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7BF4EDD4-F622-4595-8DE5-0C1E0D4B8B58</string>
+			<string>2C98C038-CF57-45CC-BB14-B8F3E09A55AF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Trucking</string>
 		</dict>

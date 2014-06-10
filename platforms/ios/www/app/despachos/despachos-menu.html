@@ -28,9 +28,16 @@
 				on-refresh="doRefresh()">
 			</ion-refresher>
 
+			<!--ng-href="#/despachos/{{desp.SEQ}}"
+				ng-class="{active : isItemActive(item)}"-->
+
 
 			<ion-list>
-				<ion-item ng-repeat="desp in despachos | filter: search" href="#/despachos/{{desp.SEQ}}">{{desp.SEQ}}</ion-item>
+				<ion-item ng-repeat="desp in despachos | filter: search"
+				          ui-sref="despachosMenu.SEQ({SEQ: desp.SEQ })"
+				          ui-sref-active="active">
+					{{desp.SEQ}}
+				</ion-item>
 			</ion-list>
 		</ion-content>
 	</ion-side-menu>

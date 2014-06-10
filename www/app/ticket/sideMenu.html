@@ -1,4 +1,4 @@
-<ion-view title="Side Menu">
+<ion-view title="{{despacho_SEQ}}">
 
 	<ion-nav-buttons>
 		<button class="button button-assertive button-clear" ng-click="exit()"> EXIT</button>
@@ -8,7 +8,7 @@
 
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.truck"
-			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.status]">
+			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.truck]">
 				<i class="icon ion-document-text"></i>
 				Truck
 			</a>
@@ -18,7 +18,7 @@
 		<!-- Weight Tab -->
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.weight"
-			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.status]">
+			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.weight]">
 				<i class="icon ion-speedometer"></i>
 				Weight
 			</a>
@@ -28,7 +28,7 @@
 		<!-- Batches Tab -->
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.batches"
-			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.status]">
+			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.batches]">
 				<i class="icon ion-ios7-browsers"></i>
 				Batches
 			</a>
@@ -37,7 +37,7 @@
 		<!-- Photos Tab -->
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.photos"
-			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.status]">
+			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.photos]">
 				<i class="icon ion-images"></i>
 				Photos
 			</a>
@@ -47,7 +47,7 @@
 		<!-- Finalize Tab -->
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.finalize"
-			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.status]">
+			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.finalize]">
 				<i class="icon ion-ios7-checkmark"></i>
 				Finalize
 			</a>

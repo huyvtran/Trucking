@@ -1,23 +1,28 @@
-// TODO: Use SEQ number to obtain initial values
-// TODO: Update info to MySql server, on loss of focus
 // TODO: Create init function for each controller
-// TODO: Validation with tab icons
-// TODO: Implement photos
-// TODO: Exit and Clear button for each header
 // TODO: Implement barcode / QR scanner
 // TODO: Copy MySQL data into the form, save the data when you FINALIZE
 
 angular.module('ticket.photos.ctrl', [])
 
-  .controller('PhotosCtrl', function ($scope, $stateParams, Photo, PhotoRequirements) {
+  .controller('PhotosCtrl', function ($scope, $stateParams, $ionicLoading, Photo, PhotoRequirements) {
+
     var despacho_SEQ = $stateParams.SEQ;
+    $ionicLoading.show({template: 'Loading Data'});
+
+
+    $scope.progressStyle = function (photo) {
+      return {'width': ' ' + photo.progress + '%'};
+    };
+
 
     $scope.photoRequirements = PhotoRequirements.getAll();
 
 
     Photo.getAll().then(function (data) {
       var photosAll = data;
+      $ionicLoading.hide();
     });
+
 
     Photo.getWithDespacho(despacho_SEQ).then(function (data) {
       angular.forEach(data, function (d) {
@@ -25,12 +30,11 @@ angular.module('ticket.photos.ctrl', [])
       })
     });
 
+
     PhotoRequirements.setImage('Truck', 'Empty');
 
-    $scope.progressStyle = function (photo) {
-      return {'width': ' ' + photo.progress + '%'};
-    };
 
+    // capture + upload + mysql record
     $scope.capturePhoto = function (photo) {
 
       function onSuccess(imageData) {
@@ -54,19 +58,19 @@ angular.module('ticket.photos.ctrl', [])
 
         Photo.upload(imageData, options).then(function (result) {
 
-          var thisPhoto = {
+          var newPhoto = {
             despacho_SEQ: despacho_SEQ,
             tipo: photo.tipo,
             detaille: photo.detaille,
-            obligatorio : photo.obligatorio,
-            status : 1,
-            archivo_nombre : filename,
-            archivo_ruta : 'var/' + despacho_SEQ + '/' + filename,
-            mime_type : "image/jpeg",
-            fecha_hora : dateTime
+            obligatorio: photo.obligatorio,
+            status: 1,
+            archivo_nombre: filename,
+            archivo_ruta: 'var/' + despacho_SEQ + '/' + filename,
+            mime_type: "image/jpeg",
+            fecha_hora: dateTime
           };
 
-          Photo.post(thisPhoto).then(function (result) {
+          Photo.post(newPhoto).then(function (result) {
             console.log(result);
           }, function (error) {
             console.log(error);

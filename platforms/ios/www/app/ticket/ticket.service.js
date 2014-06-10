@@ -368,6 +368,39 @@ angular.module('ticket.service', [])
         return q.promise;
       },
 
+      donwload: function (url) {
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystemSuccess, fileSystemFail);
+
+        function fileSystemSuccess(fileSystem) {
+          var download_link = encodeURI(URL);
+          ext = download_link.substr(download_link.lastIndexOf('.') + 1); //Get extension of URL
+
+          var directoryEntry = fileSystem.root; // to get root path of directory
+          directoryEntry.getDirectory(Folder_Name, { create: true, exclusive: false }, onDirectorySuccess, onDirectoryFail); // creating folder in sdcard
+          var rootdir = fileSystem.root;
+          var fp = rootdir.fullPath; // Returns Fulpath of local directory
+
+          fp = fp + "/" + Folder_Name + "/" + File_Name + "." + ext; // fullpath and name of the file which we want to give
+          // download function call
+          filetransfer(download_link, fp);
+        }
+
+        function onDirectorySuccess(parent) {
+          // Directory created successfuly
+        }
+
+        function onDirectoryFail(error) {
+          //Error while creating directory
+          alert("Unable to create new directory: " + error.code);
+        }
+
+        function fileSystemFail(evt) {
+          //Unable to access file system
+          alert(evt.target.error.code);
+        }
+
+      },
+
       post: function (data) {
         return $http.post('http://www.desa-net.com/TOTAI/db/despacho_fotos/X', data).then(function (resp) {
             return resp.data;

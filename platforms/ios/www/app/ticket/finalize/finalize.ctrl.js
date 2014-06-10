@@ -9,9 +9,12 @@
 
 angular.module('ticket.finalize.ctrl', [])
 
-  .controller('FinalizeCtrl', function ($scope, $stateParams, $ionicPopup, Despacho, DespachoBatch, Empresa, Camion, Chofer) {
+  .controller('FinalizeCtrl', function ($scope, $stateParams, $ionicLoading, Despacho, DespachoBatch, Empresa, Camion, Chofer) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $ionicLoading.show({template: 'Loading Data'});
+
+
 
     Despacho.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
       $scope.despacho = d;
@@ -30,6 +33,7 @@ angular.module('ticket.finalize.ctrl', [])
 
       Chofer.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
         $scope.chofer = d;
+        $ionicLoading.hide();
       })
     });
 
@@ -45,60 +49,25 @@ angular.module('ticket.finalize.ctrl', [])
       }
     };
 
-    $scope.sig1 = function () {
-      var adminPopup = $ionicPopup.show({
-        template: '<input type="password" ng-model="pin.admin.pin" autoFocus>',
-        title: 'Enter PIN to Authorize',
-        subTitle: 'Please use normal things',
-        scope: $scope,
-        buttons: [
-          { text: 'Cancel' },
-          {text: '<b>Authorize</b>',
-            type: 'button-positive',
-            onTap: function (e) {
-              if (!$scope.pin.admin.pin) {
-                e.preventDefault();
-              }
-              else {
-                $scope.pin.admin.status = 1;
-                return $scope.pin.admin.pin;
-              }
-            }
-          }
-        ]
-      });
+    $scope.sign = function () {
 
-      adminPopup.then(function (res) {
-        console.log('Tapped!', res);
-      });
-    };
+      function onPrompt(results) {
+        if (results.buttonIndex === 2) {
+          $scope.pin.officer.status = 1;
+          console.log($scope.pin.officer.pin);
+        }
+        alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+      }
 
-    $scope.sig2 = function () {
-      var adminPopup = $ionicPopup.show({
-        template: '<input type="password" ng-model="pin.office.pin" autoFocus>',
-        title: 'Enter PIN to Authorize',
-        subTitle: 'Please use normal things',
-        scope: $scope,
-        buttons: [
-          { text: 'Cancel' },
-          {text: '<b>Authorize</b>',
-            type: 'button-positive',
-            onTap: function (e) {
-              if (!$scope.pin.officer) {
-                //don't allow the user to close unless he enters wifi password
-                e.preventDefault();
-              } else {
-                $scope.pin.officer.status = 1;
-                return $scope.pin.officer.pin;
-              }
-            }
-          }
-        ]
-      });
-
-      adminPopup.then(function (res) {
-        console.log('Tapped!', res);
-      });
+      navigator.notification.prompt(
+        'Enter PIN to Authorize',
+        onPrompt,
+        'Finalize - Authentication',
+        ['Cancel','Authorize'],
+        '',
+        'password',
+        ''
+      );
     };
 
   });

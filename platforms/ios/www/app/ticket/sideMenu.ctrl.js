@@ -9,7 +9,17 @@
 
 angular.module('ticket.sideMenu.ctrl', [])
 
-  .controller('SideMenuCtrl', function ($scope, $state, Ticket) {
+  .controller('SideMenuCtrl', function ($scope, $state, $stateParams, Ticket) {
+
+    $scope.despacho_SEQ = $stateParams.SEQ;
+
+    $scope.item = {
+      truck : 0,
+      weight: 1,
+      batches: 2,
+      photos: 1,
+      finalize: 0
+    };
 
     $scope.exit = function () {
       $state.go('despachosMenu.start')

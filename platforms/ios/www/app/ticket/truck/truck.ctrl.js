@@ -40,11 +40,11 @@ angular.module('ticket.truck.ctrl', [])
     });
 
 
-    $ionicModal.fromTemplateUrl('/app/ticket/truck/newTruck.html', {
-      scope: $scope
-    }).then(function (modal) {
-      console.log('modal 1 open');
+    $ionicModal.fromTemplateUrl('modal.html', function (modal) {
       $scope.modal = modal;
+    }, {
+      animation: 'slide-in-up',
+      focusFirstInput: true
     });
 
 

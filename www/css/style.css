@@ -82,3 +82,8 @@
     width: 151px;
     background-color: lightgrey;
 }
+
+.badge-left {
+    left: 10px;
+    right: auto !important;
+}

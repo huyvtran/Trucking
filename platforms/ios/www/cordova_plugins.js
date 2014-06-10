@@ -64,6 +64,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
+        "id": "org.apache.cordova.dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -230,6 +237,7 @@ module.exports.metadata =
     "org.apache.cordova.camera": "0.2.10-dev",
     "org.apache.cordova.console": "0.2.8",
     "org.apache.cordova.device": "0.2.9",
+    "org.apache.cordova.dialogs": "0.2.7",
     "org.apache.cordova.file": "1.1.0",
     "org.apache.cordova.file-transfer": "0.4.3",
     "org.apache.cordova.network-information": "0.2.8"

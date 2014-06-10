@@ -2,10 +2,14 @@ angular.module('despachos.ctrl', [])
 
 
   //  MENU
-  .controller('DespachosMenuCtrl', function ($scope, $ionicLoading, Despacho) {
+  .controller('DespachosMenuCtrl', function ($scope, $ionicLoading, $location, Despacho) {
 
     $scope.search = { SEQ: '' };
     $ionicLoading.show({template: 'Loading Despachos'});
+
+    $scope.isItemActive = function(item) {
+      return $location.path().indexOf(item.href) > -1;
+    };
 
 
     Despacho.getAll().$promise.then(function (d) {

@@ -5,7 +5,14 @@
 			Back
 		</button>
 	</ion-nav-buttons>
-	<ion-content has-header="true" padding="true">
-		<p>weigh me</p>
+	<ion-content has-header="true">
+		<ion-list>
+			<ion-item class="item-icon-left item-icon-right" ng-repeat="photo in photoRequirements">
+				<span class=" badge badge-assertive badge-left">{{photo.obligatorio | obligatorioFilter}}</span>
+				{{photo.tipo + ' - ' + photo.detaille }}
+				<!--<span class="item-note"> {{photo.obligatorio | obligatorioFilter}}</span>-->
+				<i class="icon" ng-class="{0: 'ion-ios7-close-outline assertive', 1 : 'ion-ios7-checkmark-outline positive'}[photo.status]"></i>
+			</ion-item>
+		</ion-list>
 	</ion-content>
 </ion-view>
