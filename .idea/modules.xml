@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Trucking.iml" filepath="$PROJECT_DIR$/.idea/Trucking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phonegap.iml" filepath="$PROJECT_DIR$/phonegap.iml" />
     </modules>
   </component>
 </project>

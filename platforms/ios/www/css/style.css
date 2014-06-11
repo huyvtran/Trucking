@@ -82,3 +82,37 @@
     width: 151px;
     background-color: lightgrey;
 }
+
+.badge-left {
+    left: 10px;
+    right: auto !important;
+}
+
+.list-header {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    min-height: 30px;
+    background-color: #f5f5f5;
+    color: #222;
+    font-weight: bold;
+}
+
+.list-header-title {
+}
+
+.list-header-button {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.modal {
+    top: 10%;
+}
+
+@media (max-height: 704px) {
+    .modal {
+        top: 10%;
+        bottom: 10%;
+    }
+}

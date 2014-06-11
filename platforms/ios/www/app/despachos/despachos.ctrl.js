@@ -7,10 +7,6 @@ angular.module('despachos.ctrl', [])
     $scope.search = { SEQ: '' };
     $ionicLoading.show({template: 'Loading Despachos'});
 
-    $scope.isItemActive = function(item) {
-      return $location.path().indexOf(item.href) > -1;
-    };
-
 
     Despacho.getAll().$promise.then(function (d) {
       $scope.despachos = d;
@@ -47,9 +43,13 @@ angular.module('despachos.ctrl', [])
 
 
   // DETAIL
-  .controller('DespachosDetailCtrl', function ($scope, $stateParams, $state, Despacho, DespachoBatch, Batch) {
+  .controller('DespachosDetailCtrl', function ($scope, $stateParams, $state, $ionicLoading, Despacho, DespachoBatch, Batch) {
     var SEQ = $stateParams.SEQ;
     $scope.batches = [];
+
+    $ionicLoading.show({template: 'Loading Despacho #' + SEQ});
+
+
 
     Despacho.getOne({SEQ: SEQ}).$promise.then(function (d) {
       $scope.despacho = d;
@@ -62,6 +62,7 @@ angular.module('despachos.ctrl', [])
 
         Batch.getOne({SEQ: r.batch_SEQ}).$promise.then(function (resp) {
           $scope.batches.push(resp);
+          $ionicLoading.hide();
         });
       });
     });

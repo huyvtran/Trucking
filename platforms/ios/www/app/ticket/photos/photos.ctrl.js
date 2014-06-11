@@ -101,4 +101,8 @@ angular.module('ticket.photos.ctrl', [])
     }
 
   })
-;
+
+
+  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, PhotoRequirements) {
+    $scope.photoRequirements = PhotoRequirements.getAll()
+  });

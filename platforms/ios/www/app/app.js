@@ -3,6 +3,7 @@ angular.module('trucking', [
   'ngResource',
   'autocomplete',
   'app.directives',
+  'app.filters',
 
   // Login
   'login.ctrl',
@@ -118,7 +119,7 @@ angular.module('trucking', [
         views: {
           'side-view': {
             templateUrl: 'app/ticket/truck/truckMenu.html',
-            controller: 'TruckCtrl'
+            controller: 'TruckMenuCtrl'
           },
           'content-view': {
             templateUrl: 'app/ticket/truck/truck.html',
@@ -160,7 +161,8 @@ angular.module('trucking', [
         url: '/photos',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/photos/photosMenu.html'
+            templateUrl: 'app/ticket/photos/photosMenu.html',
+            controller: 'PhotosMenuCtrl'
           },
           'content-view': {
             templateUrl: 'app/ticket/photos/photos.html',

@@ -217,7 +217,7 @@ angular.module('ticket.service', [])
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '@placa'}, isArray: true},
         update: {method: 'PUT', params: {SEQ: '@SEQ'}},
-        new: {method: 'POST'},
+        new: {method: 'POST', params: {verb: 'X'}},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
       }
     );
@@ -228,6 +228,18 @@ angular.module('ticket.service', [])
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '1'}},
+        update: {method: 'PUT', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+  .factory('Persona', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/persona/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithName: {method: 'GET', params: {verb: 'get', nombre: ''}},
         update: {method: 'PUT', params: {SEQ: '@SEQ'}},
         new: {method: 'POST'},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}

@@ -14,7 +14,7 @@ angular.module('ticket.sideMenu.ctrl', [])
     $scope.despacho_SEQ = $stateParams.SEQ;
 
     $scope.item = {
-      truck : 0,
+      truck: 0,
       weight: 1,
       batches: 2,
       photos: 1,

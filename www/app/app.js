@@ -119,7 +119,7 @@ angular.module('trucking', [
         views: {
           'side-view': {
             templateUrl: 'app/ticket/truck/truckMenu.html',
-            controller: 'TruckCtrl'
+            controller: 'TruckMenuCtrl'
           },
           'content-view': {
             templateUrl: 'app/ticket/truck/truck.html',
