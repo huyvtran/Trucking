@@ -188,6 +188,27 @@ angular.module('ticket.service', [])
     );
   })
 
+  .factory('DespachoFoto', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/despacho_foto/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
+        update: {method: 'POST', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+  .factory('DespachoFotoTipo', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/despacho_foto_tipo/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithCliente: {method: 'GET', params: {verb: 'get', cliente_SEQ: '@cliente'}, isArray: true}
+      }
+    );
+  })
+
   .factory('Batch', function ($resource) {
     return $resource('http://www.desa-net.com/TOTAI/db/batch/:SEQ', {}, {
         getAll: {method: 'GET', isArray: true},
@@ -246,6 +267,19 @@ angular.module('ticket.service', [])
       }
     );
   })
+
+  .factory('Blob', function ($resource) {
+    return $resource('http://www.desa-net.com/TOTAI/db/blob/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        update: {method: 'PUT', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+
 
   .factory('PhotoRequirements', function ($resource) {
 
@@ -414,7 +448,7 @@ angular.module('ticket.service', [])
       },
 
       post: function (data) {
-        return $http.post('http://www.desa-net.com/TOTAI/db/despacho_fotos/X', data).then(function (resp) {
+        return $http.post('http://www.desa-net.com/TOTAI/db/despacho_foto/X', data).then(function (resp) {
             return resp.data;
           },
           function (error) {
@@ -423,13 +457,13 @@ angular.module('ticket.service', [])
       },
 
       getAll: function () {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_fotos/').then(function (resp) {
+        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_foto/').then(function (resp) {
           return resp.data;
         });
       },
 
       getWithDespacho: function (despacho_SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_fotos/get?despacho_SEQ=' + despacho_SEQ).then(function (resp) {
+        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_foto/get?despacho_SEQ=' + despacho_SEQ).then(function (resp) {
           return resp.data;
         });
       }

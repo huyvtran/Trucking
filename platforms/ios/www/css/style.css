@@ -32,9 +32,9 @@
 }
 
 .button-bottom-left {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+    position: absolute !important;
+    right: 40px !important;
+    bottom: 40px !important;
 }
 
 .item-autocomplete {
@@ -107,12 +107,13 @@
 }
 
 .modal {
-    top: 10%;
+    top: 20%;
+    bottom: 40%;
 }
 
 @media (max-height: 704px) {
     .modal {
         top: 10%;
-        bottom: 10%;
+        bottom: 0%;
     }
 }

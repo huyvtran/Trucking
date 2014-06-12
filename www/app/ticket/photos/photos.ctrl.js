@@ -4,34 +4,18 @@
 
 angular.module('ticket.photos.ctrl', [])
 
-  .controller('PhotosCtrl', function ($scope, $stateParams, $ionicLoading, Photo, PhotoRequirements) {
+  .controller('PhotosCtrl', function ($scope, $stateParams, Photo, DespachoFotoTipo) {
 
     var despacho_SEQ = $stateParams.SEQ;
-    $ionicLoading.show({template: 'Loading Data'});
-
 
     $scope.progressStyle = function (photo) {
       return {'width': ' ' + photo.progress + '%'};
     };
 
 
-    $scope.photoRequirements = PhotoRequirements.getAll();
-
-
-    Photo.getAll().then(function (data) {
-      var photosAll = data;
-      $ionicLoading.hide();
+    DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
+      $scope.fotoTipos = data;
     });
-
-
-    Photo.getWithDespacho(despacho_SEQ).then(function (data) {
-      angular.forEach(data, function (d) {
-        console.log('tipo: ' + d.tipo + ' detaille: ' + d.detaille);
-      })
-    });
-
-
-    PhotoRequirements.setImage('Truck', 'Empty');
 
 
     // capture + upload + mysql record
@@ -103,6 +87,10 @@ angular.module('ticket.photos.ctrl', [])
   })
 
 
-  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, PhotoRequirements) {
-    $scope.photoRequirements = PhotoRequirements.getAll()
+  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFotoTipo) {
+
+    DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
+      $scope.fotoTipos = data;
+    });
+
   });

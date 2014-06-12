@@ -41123,7 +41123,7 @@ function($animate, $rootScope) {
  * @usage
  *
  * ```html
- * <body ng-app="trucking">
+ * <body ng-app="starter">
  *   <!-- The nav bar that will be updated as we navigate -->
  *   <ion-nav-bar class="bar-positive nav-title-slide-ios7">
  *   </ion-nav-bar>
@@ -42465,7 +42465,6 @@ function($rootScope, $animate, $ionicBind, $compile) {
         attrStr('icon-off', attr.iconOff) +
         attrStr('badge', attr.badge) +
         attrStr('badge-style', attr.badgeStyle) +
-        attrStr('class', attr.class) +
         '></ion-tab-nav>';
 
       //Remove the contents of the element so we can compile them later, if tab is selected
@@ -42489,7 +42488,7 @@ function($rootScope, $animate, $ionicBind, $compile) {
           onDeselect: '&',
           title: '@',
           uiSref: '@',
-          href: '@'
+          href: '@',
         });
 
         tabsCtrl.add($scope);
@@ -42544,7 +42543,7 @@ IonicModule
     require: ['^ionTabs', '^ionTab'],
     template:
     '<a ng-class="{\'tab-item-active\': isTabActive(), \'has-badge\':badge}" ' +
-      ' class="tab-item {{class}}">' +
+      ' class="tab-item">' +
       '<span class="badge {{badgeStyle}}" ng-if="badge">{{badge}}</span>' +
       '<i class="icon {{getIconOn()}}" ng-if="getIconOn() && isTabActive()"></i>' +
       '<i class="icon {{getIconOff()}}" ng-if="getIconOff() && !isTabActive()"></i>' +
@@ -42556,8 +42555,7 @@ IonicModule
       iconOn: '@',
       iconOff: '@',
       badge: '=',
-      badgeStyle: '@',
-      class: '@'
+      badgeStyle: '@'
     },
     compile: function(element, attr, transclude) {
       return function link($scope, $element, $attrs, ctrls) {

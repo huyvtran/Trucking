@@ -4,6 +4,7 @@ angular.module('trucking', [
   'autocomplete',
   'app.directives',
   'app.filters',
+  'ngCordova',
 
   // Login
   'login.ctrl',

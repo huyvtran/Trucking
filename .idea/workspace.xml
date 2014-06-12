@@ -1,34 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b0732f7-5f90-4bad-a8e0-06403c46aea9" name="Default" comment="">
+    <list default="true" id="8bc23403-cd81-4fa0-a56e-11be54a1d8f1" name="Default" comment="fresh commit">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular-ui/angular-ui-router.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular-ui/angular-ui-router.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular-animate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/version.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Accelerometer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Camera.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Capture.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Compass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Contacts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Geolocation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Globalization.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/PhoneGap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Splashscreen.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/plugins/Storage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular-ui/angular-ui-router.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular-ui/angular-ui-router.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular-animate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/js/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/ionic/version.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Accelerometer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Camera.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Capture.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Compass.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Contacts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Geolocation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Globalization.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Notification.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/PhoneGap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Splashscreen.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/lib/plugins/Storage.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcuserdata/paolob.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcuserdata/paolob.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcshareddata/Trucking.xccheckout" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcshareddata/Trucking.xccheckout" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-animation.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-animation.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-font.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-font.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/_ionicons-variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/_reset.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/_reset.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/app.js" afterPath="$PROJECT_DIR$/www/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/config.xml" afterPath="$PROJECT_DIR$/platforms/ios/Trucking/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batches.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batches.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/batches/batches.html" afterPath="$PROJECT_DIR$/www/app/ticket/batches/batches.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batchesMenu.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batchesMenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" afterPath="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos-menu.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos-menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" afterPath="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/directives.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/filters.js" afterPath="$PROJECT_DIR$/www/app/filters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/finalize/finalize.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/finalize/finalize.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js" afterPath="$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photos.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photos.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photosMenu.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photosMenu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/sideMenu.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/sideMenu.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/ionic-angular.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/ionic-angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/ionic.bundle.js" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/ionic/js/ionic.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/ionicons.scss" afterPath="$PROJECT_DIR$/www/lib/ionic/scss/ionicons/ionicons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/photos/photos.html" afterPath="$PROJECT_DIR$/www/app/ticket/photos/photos.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html" afterPath="$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/css/style.css" afterPath="$PROJECT_DIR$/platforms/ios/www/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/ticket.service.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/ticket.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/ticket.service.js" afterPath="$PROJECT_DIR$/www/app/ticket/ticket.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/truck/truck.html" afterPath="$PROJECT_DIR$/www/app/ticket/truck/truck.html" />
     </list>
-    <ignored path="trucking.iws" />
+    <ignored path="Trucking.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,69 +128,43 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="trucking" />
+    <favorites_list name="Trucking" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="photos.ctrl.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="photosMenu.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photos.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="405">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photos.ctrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="919" max-vertical-offset="1695">
-              <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="truck.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="48.75" vertical-offset="1545" max-vertical-offset="2145">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.28462997" vertical-offset="0" max-vertical-offset="1515">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
               <folding>
-                <element signature="tag#div#1;tag#ion-content#0;tag#ion-view#0" expanded="false" />
-                <element signature="tag#div#2;tag#ion-content#0;tag#ion-view#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="truck.ctrl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="2385">
-              <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
-              <folding>
-                <element signature="e#523#1143#0" expanded="false" />
-                <element signature="e#2818#3302#0" expanded="false" />
-                <element signature="e#3399#3432#0" expanded="false" />
-                <element signature="e#3501#3878#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5939086" vertical-offset="1209" max-vertical-offset="1860">
-              <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -150,9 +172,13 @@
       <file leaf-file-name="ticket.service.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="6630">
-              <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="4" />
-              <folding />
+            <state vertical-scroll-proportion="-19.115385" vertical-offset="2428" max-vertical-offset="3165">
+              <caret line="460" column="27" selection-start-line="460" selection-start-column="27" selection-end-line="460" selection-end-column="27" />
+              <folding>
+                <element signature="e#77#3159#0" expanded="false" />
+                <element signature="e#100#389#0" expanded="false" />
+                <element signature="e#7783#10086#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,66 +196,24 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/www/app/main/mainView.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/tabs.html" />
-        <option value="$PROJECT_DIR$/www/app/main/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/main/sideMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket2/ticket.service.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket2/ticket.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/Truck/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/Truck/ticket.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/driver/driver.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/truck/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/weight/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/weight/weight.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/finalize/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/photos/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/main.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/batches/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/driver/subMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/driver/driver.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/finalize/finalizeMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/weight/weightMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/driver/driverMenu.html" />
-        <option value="$PROJECT_DIR$/www/lib/autocomplete/autocomplete.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/ticket.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/start/start.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/truck/truckMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/finalize/signature.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/photos/photos.html" />
-        <option value="$PROJECT_DIR$/www/app/despachos/despachos-start.html" />
-        <option value="$PROJECT_DIR$/www/app/despachos/despachos-detail.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/sideMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/finalize/finalize.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/truck/newTruck.html" />
         <option value="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" />
-        <option value="$PROJECT_DIR$/plugins/org.apache.cordova.dialogs/www/notification.js" />
-        <option value="$PROJECT_DIR$/plugins/org.apache.cordova.dialogs/src/ios/CDVNotification.m" />
-        <option value="$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/directives.js" />
+        <option value="$PROJECT_DIR$/www/app/ticket/batches/batches.html" />
+        <option value="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" />
         <option value="$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/finalize/finalize.ctrl.js" />
-        <option value="$PROJECT_DIR$/www/app/filters.js" />
-        <option value="$PROJECT_DIR$/www/app/app.js" />
-        <option value="$PROJECT_DIR$/www/app/ticket/sideMenu.ctrl.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/ticket.service.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/truck/truck.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" />
-        <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/www/app/ticket/photos/photos.html" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
+        <option value="$PROJECT_DIR$/www/app/app.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -257,17 +241,18 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trucking" />
+              <option name="myItemId" value="Trucking" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trucking" />
+              <option name="myItemId" value="Trucking" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -275,136 +260,62 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="preferences.updates" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ng-cordova" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings />
-    </option>
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/www/app" />
-      <recent name="$PROJECT_DIR$/www/app/ticket/finalize" />
-      <recent name="$PROJECT_DIR$/www/app/ticket/start" />
-      <recent name="$PROJECT_DIR$/www/app/ticket" />
-      <recent name="$PROJECT_DIR$/www/app/ticket/photos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/www/app/ticket/driver" />
-      <recent name="$PROJECT_DIR$/www/app/ticket/Truck" />
-      <recent name="$PROJECT_DIR$/www/app/main" />
-      <recent name="$PROJECT_DIR$/www/app" />
-      <recent name="$PROJECT_DIR$/www/lib/plugins" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trucking" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trucking" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trucking" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -413,9 +324,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -446,9 +354,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <method />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -462,24 +367,19 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trucking" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -503,196 +403,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trucking" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trucking" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trucking" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <list size="0" />
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -705,118 +415,42 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3b0732f7-5f90-4bad-a8e0-06403c46aea9" name="Default" comment="" />
-      <created>1401297407931</created>
-      <updated>1401297407931</updated>
-      <workItem from="1401297408763" duration="49928000" />
-      <workItem from="1401587500654" duration="22030000" />
-      <workItem from="1401729169375" duration="14000" />
-      <workItem from="1401735995767" duration="575000" />
-      <workItem from="1401740137059" duration="36000" />
-      <workItem from="1401740184639" duration="9207000" />
-      <workItem from="1401798618163" duration="1893000" />
-      <workItem from="1401807073052" duration="99533000" />
-      <workItem from="1402356114001" duration="12182000" />
-      <workItem from="1402400471582" duration="12287000" />
+      <changelist id="8bc23403-cd81-4fa0-a56e-11be54a1d8f1" name="Default" comment="" />
+      <created>1402489955634</created>
+      <updated>1402489955634</updated>
+      <workItem from="1402489956213" duration="3095000" />
+      <workItem from="1402559258710" duration="5934000" />
     </task>
-    <task id="LOCAL-00001" summary="first commit">
-      <created>1401821611018</created>
-      <updated>1401821611018</updated>
-    </task>
-    <task id="LOCAL-00002" summary="commit new ctrls">
-      <created>1401838614774</created>
-      <updated>1401838614774</updated>
-    </task>
-    <task id="LOCAL-00003" summary="more edits">
-      <created>1401979352044</created>
-      <updated>1401979352044</updated>
-    </task>
-    <task id="LOCAL-00004" summary="big comm">
-      <created>1402346903099</created>
-      <updated>1402346903099</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207685000" />
-  </component>
-  <component name="TodoView" selected-index="1">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="9029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2300995" sideWeight="0.6069652" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19098713" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3018598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21816881" sideWeight="0.39303482" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3097015" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19670959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2176617" sideWeight="0.6069652" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19098713" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3018598" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21816881" sideWeight="0.39303482" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.m" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -833,505 +467,140 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="first commit" />
-    <MESSAGE value="big commit with all files" />
-    <MESSAGE value="commit new ctrls" />
-    <MESSAGE value="more edits" />
-    <MESSAGE value="signature + refractor db" />
-    <MESSAGE value="big comm" />
-    <option name="LAST_COMMIT_MESSAGE" value="big comm" />
+    <MESSAGE value="fresh commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="fresh commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/lib/plugins/Camera.js">
+    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="810">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/plugins/Notification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52837574" vertical-offset="0" max-vertical-offset="570">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/plugins/PhoneGap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49902153" vertical-offset="0" max-vertical-offset="511">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33289647" vertical-offset="97216" max-vertical-offset="119070">
-          <caret line="6510" column="11" selection-start-line="6510" selection-start-column="11" selection-end-line="6510" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099734046" vertical-offset="0" max-vertical-offset="752">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/autocomplete.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="630">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalizeMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="240">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/weight/weightMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="150" max-vertical-offset="795">
-          <caret line="11" column="76" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/autocomplete/autocomplete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2820" max-vertical-offset="3870">
-          <caret line="106" column="10" selection-start-line="95" selection-start-column="6" selection-end-line="106" selection-end-column="10" />
-          <folding>
-            <element signature="e#504#561#0" expanded="false" />
-            <element signature="e#601#669#0" expanded="false" />
-            <element signature="e#711#761#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12998267" vertical-offset="0" max-vertical-offset="577">
-          <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/lib/autocomplete/ac_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5544148" vertical-offset="0" max-vertical-offset="487">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="525">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23396881" vertical-offset="0" max-vertical-offset="577">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.schema:desanet">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>59b9d650-ba47-47d1-b0a5-1940f76f30c6.schema:desanet</OriginalElement>
-          <nodes>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.labo_analitica</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.seguridad_puerta</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch_muestra_mov</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch_mov</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.seguridad_permiso</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.servicio</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.mantener_log</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.mantener</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.mant_equipo</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch_mov_log</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.producto</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.almacen</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch_muestra</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.users</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_empresa</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.labo_COA_analisis</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_chofer</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.contenedor</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.mant_equipo_tipo</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.equipo_tipo</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.equipo</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.cliente</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.naviera_contacto</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.persona_foto</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.almacen_movida</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.envase</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.venta</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_batch</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.venta_observaciones</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.migrations</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.naviera</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.labo_COA</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.almacen_posicion</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.persona</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.sessions</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.ciudad</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.pais</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch_notas</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.seguridad_entrada</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.2852882703777336" x="988.0" y="996.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</OriginalElement>
-          <nodes>
-            <node x="508.0" y="450.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</node>
-            <node x="0.0" y="450.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch</node>
-            <node x="0.0" y="0.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
-            <node x="362.0" y="878.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_empresa</node>
-            <node x="694.0" y="878.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_batch</node>
-            <node x="0.0" y="878.0">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_chofer</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6936700149972962" x="111.0" y="344.0" />
-          <SelectedNodes>
-            <node>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/weight/weight.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="776">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/weight/weight.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32860824" vertical-offset="0" max-vertical-offset="776">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1984536" vertical-offset="469" max-vertical-offset="1245">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truckMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7660312" vertical-offset="383" max-vertical-offset="960">
-          <caret line="55" column="14" selection-start-line="9" selection-start-column="8" selection-end-line="55" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</OriginalElement>
-          <nodes>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_camion</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.batch</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_empresa</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_transport</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.despacho_batch</node>
-            <node x="" y="">59b9d650-ba47-47d1-b0a5-1940f76f30c6.table:desanet.transport_chofer</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8547595537467554" x="547.0" y="198.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/start/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11968085" vertical-offset="0" max-vertical-offset="752">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3327787" vertical-offset="1780" max-vertical-offset="7740">
-          <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="570">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-start.html">
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025996534" vertical-offset="0" max-vertical-offset="577">
-          <caret line="1" column="63" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025996534" vertical-offset="0" max-vertical-offset="840">
-          <caret line="1" column="65" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/sideMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8058925" vertical-offset="270" max-vertical-offset="915">
-          <caret line="49" column="104" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.125" vertical-offset="906" max-vertical-offset="1470">
-          <caret line="83" column="92" selection-start-line="83" selection-start-column="92" selection-end-line="83" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/ios.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7659575" vertical-offset="1473" max-vertical-offset="2355">
-          <caret line="127" column="10" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="420">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/newTruck.html">
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="615">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/org.apache.cordova.dialogs/src/ios/CDVNotification.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53488374" vertical-offset="258" max-vertical-offset="645">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/org.apache.cordova.dialogs/src/ios/CDVNotification.m">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5669782" vertical-offset="1468" max-vertical-offset="2745">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/org.apache.cordova.dialogs/www/notification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58715594" vertical-offset="962" max-vertical-offset="1770">
-          <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/org.apache.cordova.dialogs/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.685567" vertical-offset="1308" max-vertical-offset="2445">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="409" max-vertical-offset="1200">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.740038" vertical-offset="0" max-vertical-offset="527">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79787236" vertical-offset="0" max-vertical-offset="752">
-          <caret line="40" column="23" selection-start-line="34" selection-start-column="12" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33909574" vertical-offset="0" max-vertical-offset="752">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43882978" vertical-offset="0" max-vertical-offset="752">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="919" max-vertical-offset="1695">
-          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
+        <state vertical-scroll-proportion="-9.708333" vertical-offset="277" max-vertical-offset="780">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/finalize/finalize.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8311856" vertical-offset="0" max-vertical-offset="780">
-          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
-          <folding>
-            <element signature="e#1440#1944#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/ios/cordova/run">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.646098" vertical-offset="1654" max-vertical-offset="2475">
-          <caret line="134" column="43" selection-start-line="134" selection-start-column="43" selection-end-line="134" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.13518886" vertical-offset="67" max-vertical-offset="570">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/filters.js">
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05283505" vertical-offset="484" max-vertical-offset="1275">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.119284295" vertical-offset="0" max-vertical-offset="503">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/sideMenu.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/www/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38659793" vertical-offset="0" max-vertical-offset="776">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46391752" vertical-offset="1320" max-vertical-offset="3000">
-          <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.5412371" vertical-offset="1005" max-vertical-offset="1845">
+          <caret line="95" column="22" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="6630">
-          <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="4" />
+        <state vertical-scroll-proportion="-19.115385" vertical-offset="2428" max-vertical-offset="3165">
+          <caret line="460" column="27" selection-start-line="460" selection-start-column="27" selection-end-line="460" selection-end-column="27" />
+          <folding>
+            <element signature="e#77#3159#0" expanded="false" />
+            <element signature="e#100#389#0" expanded="false" />
+            <element signature="e#7783#10086#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="405">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44973546" vertical-offset="0" max-vertical-offset="915">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47713718" vertical-offset="0" max-vertical-offset="915">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.html">
+    <entry file="file://$PROJECT_DIR$/www/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="48.75" vertical-offset="1545" max-vertical-offset="2145">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        <state vertical-scroll-proportion="-0.31309298" vertical-offset="270" max-vertical-offset="3030">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28462997" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
           <folding>
-            <element signature="tag#div#1;tag#ion-content#0;tag#ion-view#0" expanded="false" />
-            <element signature="tag#div#2;tag#ion-content#0;tag#ion-view#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="2385">
-          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
-          <folding>
-            <element signature="e#523#1143#0" expanded="false" />
-            <element signature="e#2818#3302#0" expanded="false" />
-            <element signature="e#3399#3432#0" expanded="false" />
-            <element signature="e#3501#3878#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5939086" vertical-offset="1209" max-vertical-offset="1860">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>

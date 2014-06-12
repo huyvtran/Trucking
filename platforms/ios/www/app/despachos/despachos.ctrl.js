@@ -31,10 +31,12 @@ angular.module('despachos.ctrl', [])
 
 
   //  START
-  .controller('DespachosStartCtrl', function ($scope, $state, Despacho) {
+  .controller('DespachosStartCtrl', function ($scope, $state, Despacho, $cordovaNetwork) {
     $scope.go = function () {
       $state.go('ticket.truck');
     };
+
+    alert($cordovaNetwork.getNetwork());
 
     $scope.goSidemenu = function () {
       $state.go('');

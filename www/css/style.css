@@ -32,9 +32,9 @@
 }
 
 .button-bottom-left {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+    position: absolute !important;
+    right: 40px !important;
+    bottom: 40px !important;
 }
 
 .item-autocomplete {
@@ -79,7 +79,6 @@
 
 .image-empty {
     height: 112px;
-    width: 151px;
     background-color: lightgrey;
 }
 
