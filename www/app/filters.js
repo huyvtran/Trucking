@@ -21,6 +21,25 @@ angular.module('app.filters', [])
     return filter;
   })
 
+  .filter('category', function () {
+    var cache = {};
+    var filter = function (arr) {
+      if (!arr) return;
+
+      var newArr = _.groupBy(arr, 'categoria');
+      var arrString = JSON.stringify(arr);
+      var fromCache = cache[arrString];
+
+      if (JSON.stringify(fromCache) === JSON.stringify(newArr)) {
+        return fromCache;
+      }
+      cache[arrString] = newArr;
+      return newArr;
+    };
+
+    return filter;
+  })
+
   .filter('obligatorioFilter', function () {
     return function (input) {
       if (input === 0) {

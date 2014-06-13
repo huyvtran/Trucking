@@ -273,12 +273,75 @@ angular.module('ticket.service', [])
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         update: {method: 'PUT', params: {SEQ: '@SEQ'}},
+        getWithID: {method: 'GET', params: {verb: 'get', id: '@id'}, isArray:false},
         new: {method: 'POST'},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
       }
     );
   })
 
+
+  .factory('Photo', function ($http, $q) {
+
+    return {
+      upload: function (imageData, options) {
+        var q = $q.defer();
+        var url = "http://www.desa-net.com/TOTAI/db/despacho_foto/";
+        var ft = new FileTransfer();
+
+        ft.onprogress = function (progressEvent) {
+          if (progressEvent.lengthComputable) {
+            var perc = Math.floor(progressEvent.loaded / progressEvent.total * 100);
+            q.notify(perc);
+          }
+          else {
+            console.log('error');
+          }
+        };
+
+        ft.upload(imageData, encodeURI(url), function (response) {
+          q.resolve(response);
+        }, function (error) {
+          q.reject(error);
+        }, options);
+
+        return q.promise;
+      },
+
+      donwload: function (url) {
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystemSuccess, fileSystemFail);
+
+        function fileSystemSuccess(fileSystem) {
+          var download_link = encodeURI(URL);
+          ext = download_link.substr(download_link.lastIndexOf('.') + 1); //Get extension of URL
+
+          var directoryEntry = fileSystem.root; // to get root path of directory
+          directoryEntry.getDirectory(Folder_Name, { create: true, exclusive: false }, onDirectorySuccess, onDirectoryFail); // creating folder in sdcard
+          var rootdir = fileSystem.root;
+          var fp = rootdir.fullPath; // Returns Fulpath of local directory
+
+          fp = fp + "/" + Folder_Name + "/" + File_Name + "." + ext; // fullpath and name of the file which we want to give
+          // download function call
+          filetransfer(download_link, fp);
+        }
+
+        function onDirectorySuccess(parent) {
+          // Directory created successfuly
+        }
+
+        function onDirectoryFail(error) {
+          //Error while creating directory
+          alert("Unable to create new directory: " + error.code);
+        }
+
+        function fileSystemFail(evt) {
+          //Unable to access file system
+          alert(evt.target.error.code);
+        }
+
+      }
+    }
+  })
 
 
   .factory('PhotoRequirements', function ($resource) {
@@ -379,93 +442,11 @@ angular.module('ticket.service', [])
 
       setImage: function (tipo, detaille) {
         angular.forEach(photoRequirements, function (res) {
-          if (res.tipo === tipo && res.detaille === detaille ) {
+          if (res.tipo === tipo && res.detaille === detaille) {
             res.image = 'HELLO';
           }
         });
       }
     }
   })
-
-  .factory('Photo', function ($http, $q) {
-
-    return {
-      upload: function (imageData, options) {
-        var q = $q.defer();
-        var url = "http://www.desa-net.com/SunProd/fs/FILE/";
-        var ft = new FileTransfer();
-
-        ft.onprogress = function (progressEvent) {
-          if (progressEvent.lengthComputable) {
-            var perc = Math.floor(progressEvent.loaded / progressEvent.total * 100);
-            q.notify(perc);
-          }
-          else {
-            console.log('+1');
-          }
-        };
-
-        ft.upload(imageData, encodeURI(url), function (response) {
-          q.resolve(response);
-        }, function (error) {
-          q.reject(error);
-        }, options);
-
-        return q.promise;
-      },
-
-      donwload: function (url) {
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystemSuccess, fileSystemFail);
-
-        function fileSystemSuccess(fileSystem) {
-          var download_link = encodeURI(URL);
-          ext = download_link.substr(download_link.lastIndexOf('.') + 1); //Get extension of URL
-
-          var directoryEntry = fileSystem.root; // to get root path of directory
-          directoryEntry.getDirectory(Folder_Name, { create: true, exclusive: false }, onDirectorySuccess, onDirectoryFail); // creating folder in sdcard
-          var rootdir = fileSystem.root;
-          var fp = rootdir.fullPath; // Returns Fulpath of local directory
-
-          fp = fp + "/" + Folder_Name + "/" + File_Name + "." + ext; // fullpath and name of the file which we want to give
-          // download function call
-          filetransfer(download_link, fp);
-        }
-
-        function onDirectorySuccess(parent) {
-          // Directory created successfuly
-        }
-
-        function onDirectoryFail(error) {
-          //Error while creating directory
-          alert("Unable to create new directory: " + error.code);
-        }
-
-        function fileSystemFail(evt) {
-          //Unable to access file system
-          alert(evt.target.error.code);
-        }
-
-      },
-
-      post: function (data) {
-        return $http.post('http://www.desa-net.com/TOTAI/db/despacho_foto/X', data).then(function (resp) {
-            return resp.data;
-          },
-          function (error) {
-            return error;
-          });
-      },
-
-      getAll: function () {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_foto/').then(function (resp) {
-          return resp.data;
-        });
-      },
-
-      getWithDespacho: function (despacho_SEQ) {
-        return $http.get('http://www.desa-net.com/TOTAI/db/despacho_foto/get?despacho_SEQ=' + despacho_SEQ).then(function (resp) {
-          return resp.data;
-        });
-      }
-    }
-  });
+;

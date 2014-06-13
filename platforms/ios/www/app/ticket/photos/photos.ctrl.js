@@ -4,83 +4,84 @@
 
 angular.module('ticket.photos.ctrl', [])
 
-  .controller('PhotosCtrl', function ($scope, $stateParams, $ionicLoading, Photo, PhotoRequirements) {
+  .controller('PhotosCtrl', function ($scope, $stateParams, $http, Photo, DespachoFoto, DespachoFotoTipo, Blob) {
 
     var despacho_SEQ = $stateParams.SEQ;
-    $ionicLoading.show({template: 'Loading Data'});
-
 
     $scope.progressStyle = function (photo) {
       return {'width': ' ' + photo.progress + '%'};
     };
 
+    Blob.getAll().$promise.then(function (result) {
+      //console.log(result);
+    }, function (error) {
+      console.log(error);
+    });
 
-    $scope.photoRequirements = PhotoRequirements.getAll();
+    DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
+      $scope.fotoTipos = data;
 
+      angular.forEach(data, function (res) {
+        console.log(res.SEQ);
+      });
 
-    Photo.getAll().then(function (data) {
-      var photosAll = data;
-      $ionicLoading.hide();
+      DespachoFoto.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
+        var fotoID = [];
+        angular.forEach(data, function (res) {
+          fotoID.push(res.foto_id);
+        });
+
+        var i =0;
+        angular.forEach($scope.fotoTipos, function (each) {
+          each.photo = 'http://www.desa-net.com/TOTAI/db/blob/get?id=' + fotoID[i];
+          i++;
+        });
+
+      }, function (error) {
+        console.log(error);
+      });
+    }, function (error) {
+      console.log(error);
     });
 
 
-    Photo.getWithDespacho(despacho_SEQ).then(function (data) {
-      angular.forEach(data, function (d) {
-        console.log('tipo: ' + d.tipo + ' detaille: ' + d.detaille);
-      })
-    });
-
-
-    PhotoRequirements.setImage('Truck', 'Empty');
 
 
     // capture + upload + mysql record
     $scope.capturePhoto = function (photo) {
 
       function onSuccess(imageData) {
-        $scope.$apply(photo.image = imageData);
-
-        var now = new Date();
-        var dateTime = now.toISOString();
-        var filename = despacho_SEQ + '_' + photo.tipo + '_' + photo.detaille;
+        $scope.$apply(photo.photo = imageData);
+        photo.progress = 0;
 
         var options = new FileUploadOptions();
+        console.log(FileUploadOptions);
         options.fileKey = "file";
-        options.fileName = filename;
+        options.fileName = 'filename';
         options.mimeType = "image/jpeg";
         options.chunkedMode = false;
         options.headers = {Connection: "close"};
         options.params = {
-          'despacho_SEQ': despacho_SEQ
+          despacho_SEQ: despacho_SEQ,
+          categoria: photo.categoria,
+          detaille: photo.detaille,
+          filetype: 'JPG',
+          db: 'desanet',
+          tabla: 'despacho_foto',
+          tipo_SEQ: photo.SEQ
         };
 
-        photo.progress = 0;
 
-        Photo.upload(imageData, options).then(function (result) {
-
-          var newPhoto = {
-            despacho_SEQ: despacho_SEQ,
-            tipo: photo.tipo,
-            detaille: photo.detaille,
-            obligatorio: photo.obligatorio,
-            status: 1,
-            archivo_nombre: filename,
-            archivo_ruta: 'var/' + despacho_SEQ + '/' + filename,
-            mime_type: "image/jpeg",
-            fecha_hora: dateTime
-          };
-
-          Photo.post(newPhoto).then(function (result) {
-            console.log(result);
-          }, function (error) {
-            console.log(error);
+        Photo.upload(imageData, options).then(
+          function (result) {
+            alert('Code: ' + result.responseCode + '  Response:  ' + result.response);
+          },
+          function (error) {
+            alert('ERROR:   Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
+          },
+          function (progress) {
+            photo.progress = progress;
           });
-          alert('Code: ' + result.responseCode + '  Response ' + result.response);
-        }, function (error) {
-          alert('Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
-        }, function (progress) {
-          photo.progress = progress;
-        });
       }
 
       function onFail(message) {
@@ -89,7 +90,7 @@ angular.module('ticket.photos.ctrl', [])
 
       navigator.camera.getPicture(onSuccess, onFail,
         { quality: 10,
-          allowEdit: false,
+          allowEdit: true,
           encodingType: Camera.EncodingType.JPEG,
           targetWidth: 600,
           targetHeight: 600,
@@ -103,6 +104,10 @@ angular.module('ticket.photos.ctrl', [])
   })
 
 
-  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, PhotoRequirements) {
-    $scope.photoRequirements = PhotoRequirements.getAll()
+  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFotoTipo) {
+
+    DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
+      $scope.fotoTipos = data;
+    });
+
   });

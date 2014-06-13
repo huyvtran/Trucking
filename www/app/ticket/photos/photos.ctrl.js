@@ -4,7 +4,7 @@
 
 angular.module('ticket.photos.ctrl', [])
 
-  .controller('PhotosCtrl', function ($scope, $stateParams, Photo, DespachoFotoTipo) {
+  .controller('PhotosCtrl', function ($scope, $stateParams, $http, Photo, DespachoFoto, DespachoFotoTipo, Blob) {
 
     var despacho_SEQ = $stateParams.SEQ;
 
@@ -12,59 +12,78 @@ angular.module('ticket.photos.ctrl', [])
       return {'width': ' ' + photo.progress + '%'};
     };
 
+    Blob.getAll().$promise.then(function (result) {
+      //console.log(result);
+    }, function (error) {
+      console.log(error);
+    });
 
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
       $scope.fotoTipos = data;
+
+      angular.forEach(data, function (res) {
+        console.log(res.SEQ);
+      });
+
+      DespachoFoto.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
+        var fotoID = [];
+        var fotoTipoSEQ = [];
+        angular.forEach(data, function (res) {
+          fotoID.push(res.foto_id);
+          fotoTipoSEQ.push(res.tipo_SEQ);
+        });
+
+        var i =0;
+        angular.forEach($scope.fotoTipos, function (each) {
+          each.photo = 'http://www.desa-net.com/TOTAI/db/blob/get?id=' + fotoID[i];
+          i++;
+        });
+
+      }, function (error) {
+        console.log(error);
+      });
+    }, function (error) {
+      console.log(error);
     });
+
+
 
 
     // capture + upload + mysql record
     $scope.capturePhoto = function (photo) {
 
       function onSuccess(imageData) {
-        $scope.$apply(photo.image = imageData);
-
-        var now = new Date();
-        var dateTime = now.toISOString();
-        var filename = despacho_SEQ + '_' + photo.tipo + '_' + photo.detaille;
+        $scope.$apply(photo.photo = imageData);
+        photo.progress = 0;
 
         var options = new FileUploadOptions();
+        console.log(FileUploadOptions);
         options.fileKey = "file";
-        options.fileName = filename;
+        options.fileName = 'filename';
         options.mimeType = "image/jpeg";
         options.chunkedMode = false;
         options.headers = {Connection: "close"};
         options.params = {
-          'despacho_SEQ': despacho_SEQ
+          despacho_SEQ: despacho_SEQ,
+          categoria: photo.categoria,
+          detaille: photo.detaille,
+          filetype: 'JPG',
+          db: 'desanet',
+          tabla: 'despacho_foto',
+          tipo_SEQ: photo.SEQ
         };
 
-        photo.progress = 0;
 
-        Photo.upload(imageData, options).then(function (result) {
-
-          var newPhoto = {
-            despacho_SEQ: despacho_SEQ,
-            tipo: photo.tipo,
-            detaille: photo.detaille,
-            obligatorio: photo.obligatorio,
-            status: 1,
-            archivo_nombre: filename,
-            archivo_ruta: 'var/' + despacho_SEQ + '/' + filename,
-            mime_type: "image/jpeg",
-            fecha_hora: dateTime
-          };
-
-          Photo.post(newPhoto).then(function (result) {
-            console.log(result);
-          }, function (error) {
-            console.log(error);
+        Photo.upload(imageData, options).then(
+          function (result) {
+            alert('Code: ' + result.responseCode + '  Response:  ' + result.response);
+          },
+          function (error) {
+            alert('ERROR:   Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
+          },
+          function (progress) {
+            photo.progress = progress;
           });
-          alert('Code: ' + result.responseCode + '  Response ' + result.response);
-        }, function (error) {
-          alert('Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
-        }, function (progress) {
-          photo.progress = progress;
-        });
       }
 
       function onFail(message) {
@@ -73,7 +92,7 @@ angular.module('ticket.photos.ctrl', [])
 
       navigator.camera.getPicture(onSuccess, onFail,
         { quality: 10,
-          allowEdit: false,
+          allowEdit: true,
           encodingType: Camera.EncodingType.JPEG,
           targetWidth: 600,
           targetHeight: 600,

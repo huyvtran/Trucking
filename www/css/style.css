@@ -78,7 +78,7 @@
 }
 
 .image-empty {
-    height: 112px;
+    height: 152px;
     background-color: lightgrey;
 }
 
@@ -115,4 +115,36 @@
         top: 10%;
         bottom: 0%;
     }
+}
+
+.card-fixed-width {
+
+    width : 249px;
+}
+
+.badge-right {
+    right: 10px !important;
+}
+
+.title-stretch {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-top: solid #cccccc 1px;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 1px;
+    background-color: #F5F5F5;
+}
+
+.item-text-left-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.align-right {
+    float: right;
 }
