@@ -165,8 +165,8 @@ angular.module('ticket.service', [])
   })
 
 
-  .factory('Despacho', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/despacho/:SEQ', {}, {
+  .factory('Despacho', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'despacho/:SEQ', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         update: {method: 'POST', params: {SEQ: '@SEQ'}},
@@ -176,20 +176,8 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('DespachoBatch', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/despacho_batch/:SEQ:verb', {}, {
-        getAll: {method: 'GET', isArray: true},
-        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
-        getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
-        update: {method: 'POST', params: {SEQ: '@SEQ'}},
-        new: {method: 'POST'},
-        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
-      }
-    );
-  })
-
-  .factory('DespachoFoto', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/despacho_foto/:SEQ:verb', {}, {
+  .factory('DespachoBatch', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'despacho_batch/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
@@ -200,8 +188,21 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('DespachoFotoTipo', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/despacho_foto_tipo/:SEQ:verb', {}, {
+  .factory('DespachoFoto', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'despacho_foto/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
+        getWithTipoSEQ: {method: 'GET', params: {verb: 'get', tipo_SEQ: '@tipo_SEQ'}, isArray: true},
+        update: {method: 'POST', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+  .factory('DespachoFotoTipo', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'despacho_foto_tipo/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithCliente: {method: 'GET', params: {verb: 'get', cliente_SEQ: '@cliente'}, isArray: true}
@@ -209,8 +210,8 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('Batch', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/batch/:SEQ', {}, {
+  .factory('Batch', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'batch/:SEQ', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         update: {method: 'POST', params: {SEQ: '@SEQ'}},
@@ -220,8 +221,8 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('Empresa', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/transport_empresa/:SEQ:verb', {}, {
+  .factory('Empresa', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'transport_empresa/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '@placa'}, isArray: true},
@@ -232,8 +233,8 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('Camion', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/transport_camion/:SEQ:verb', {}, {
+  .factory('Camion', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'transport_camion/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '@placa'}, isArray: true},
@@ -244,8 +245,8 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('Chofer', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/transport_chofer/:SEQ:verb', {}, {
+  .factory('Chofer', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'transport_chofer/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithPlaca: {method: 'GET', params: {verb: 'get', placa_numero: '1'}},
@@ -256,8 +257,8 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('Persona', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/persona/:SEQ:verb', {}, {
+  .factory('Persona', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'persona/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithName: {method: 'GET', params: {verb: 'get', nombre: ''}},
@@ -268,12 +269,12 @@ angular.module('ticket.service', [])
     );
   })
 
-  .factory('Blob', function ($resource) {
-    return $resource('http://www.desa-net.com/TOTAI/db/blob/:SEQ:verb', {}, {
+  .factory('Blob', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'blob/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         update: {method: 'PUT', params: {SEQ: '@SEQ'}},
-        getWithID: {method: 'GET', params: {verb: 'get', id: '@id'}, isArray:false},
+        getWithID: {method: 'GET', params: {verb: 'get', id: '@id'}, isArray: false},
         new: {method: 'POST'},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
       }
@@ -286,7 +287,7 @@ angular.module('ticket.service', [])
     return {
       upload: function (imageData, options) {
         var q = $q.defer();
-        var url = "http://www.desa-net.com/TOTAI/db/despacho_foto/";
+        var url = $rootScope.DB_URL + 'despacho_foto/';
         var ft = new FileTransfer();
 
         ft.onprogress = function (progressEvent) {

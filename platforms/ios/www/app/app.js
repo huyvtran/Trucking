@@ -27,7 +27,7 @@ angular.module('trucking', [
   'ticket.service'
 ])
 
-  .run(function ($ionicPlatform) {
+  .run(function ($rootScope, $ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (window.cordova && window.cordova.plugins.Keyboard) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -36,6 +36,8 @@ angular.module('trucking', [
         StatusBar.styleDefault();
       }
     });
+
+    $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
   })
 
   .config(function ($stateProvider, $urlRouterProvider) {

@@ -37,14 +37,14 @@
 
 
 <script id="viewPhotos.html" type="text/ng-template">
-	<div class="modal" ng-controller="ViewPhotosCtrl">
+	<div class="modal modal-photo" ng-controller="ViewPhotosCtrl">
 		<ion-header-bar class="bar-secondary">
 			<h1 class="title">Photos</h1>
-			<button class="button button-clear button-positive" ng-click="modal.hide()">Cancel</button>
+			<button class="button button-clear button-positive" ng-click="closeModal()">Cancel</button>
 		</ion-header-bar>
 		<ion-slide-box class="content">
-			<ion-slide class="has-header" ng-repeat="item in modalPhotos">
-				<img ng-src="{{item}}">
+			<ion-slide class="has-header" ng-repeat="item in slidePhotos">
+				<img ng-src="{{item}}" >
 			</ion-slide>
 		</ion-slide-box>
 	</div>

@@ -193,6 +193,7 @@ angular.module('ticket.service', [])
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
+        getWithTipoSEQ: {method: 'GET', params: {verb: 'get', tipo_SEQ: '@tipo_SEQ'}, isArray: true},
         update: {method: 'POST', params: {SEQ: '@SEQ'}},
         new: {method: 'POST'},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}

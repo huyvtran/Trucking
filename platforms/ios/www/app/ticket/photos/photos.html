@@ -20,20 +20,32 @@
 							<img ng-src="{{item.photo}}">
 						</div>
 
-						<div class="item tabs tabs-secondary tabs-icon-left">
-							<div class="tab-item" ng-click="expandPhoto(item)">
+						<div class="item tabs tabs-secondary">
+							<div class="tab-item" ng-click="expandPhotos(item)">
 								<i class="icon ion-arrow-expand"></i>
-								View All
 							</div>
 							<div class="tab-item" ng-click="capturePhoto(item)">
-								<i class="icon ion-ios7-plus"></i>
-								New Photo
+								<i class="icon ion-ios7-camera"></i>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</ion-content>
 </ion-view>
+
+
+<script id="viewPhotos.html" type="text/ng-template">
+	<div class="modal modal-photo" ng-controller="ViewPhotosCtrl">
+		<ion-header-bar class="bar-secondary">
+			<h1 class="title">Photos</h1>
+			<button class="button button-clear button-positive" ng-click="closeModal()">Cancel</button>
+		</ion-header-bar>
+		<ion-slide-box class="content">
+			<ion-slide class="has-header" ng-repeat="item in slidePhotos">
+				<img ng-src="{{item}}" >
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+</script>

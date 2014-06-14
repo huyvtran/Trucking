@@ -1,40 +1,43 @@
-// TODO: Create init function for each controller
-// TODO: Implement barcode / QR scanner
-// TODO: Copy MySQL data into the form, save the data when you FINALIZE
-
 angular.module('ticket.photos.ctrl', [])
 
-  .controller('PhotosCtrl', function ($scope, $stateParams, $http, Photo, DespachoFoto, DespachoFotoTipo, Blob) {
+  // main photo controller
+  .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, DespachoFoto, DespachoFotoTipo, Blob) {
 
+    // get global despacho SEQ
     var despacho_SEQ = $stateParams.SEQ;
 
+    // set progress with width
     $scope.progressStyle = function (photo) {
       return {'width': ' ' + photo.progress + '%'};
     };
 
+    // get all blobs
     Blob.getAll().$promise.then(function (result) {
       //console.log(result);
     }, function (error) {
       console.log(error);
     });
 
+    // get foto requirements
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
       $scope.fotoTipos = data;
 
-      angular.forEach(data, function (res) {
-        console.log(res.SEQ);
-      });
-
+      // get fotos stored in db
       DespachoFoto.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
-        var fotoID = [];
-        angular.forEach(data, function (res) {
-          fotoID.push(res.foto_id);
-        });
 
-        var i =0;
+        var groupedDespachoFoto = _.groupBy(data, 'tipo_SEQ');
+
+
+        // TODO: get number of photos taken
+        // TODO: set net = required - taken
+
+        // set foto id for each to latest photo
         angular.forEach($scope.fotoTipos, function (each) {
-          each.photo = 'http://www.desa-net.com/TOTAI/db/blob/get?id=' + fotoID[i];
-          i++;
+          angular.forEach(groupedDespachoFoto, function (d) {
+            if (each.SEQ == d[0].tipo_SEQ) {
+              each.photo = 'http://www.desa-net.com/TOTAI/db/blob/get?id=' + d[d.length - 1].foto_id;
+            }
+          });
         });
 
       }, function (error) {
@@ -44,16 +47,40 @@ angular.module('ticket.photos.ctrl', [])
       console.log(error);
     });
 
+    $scope.expandPhotos = function (photo) {
+      $scope.modal.show();
 
+        $scope.slidePhotos = [];
+        DespachoFoto.getWithTipoSEQ({tipo_SEQ: photo.SEQ}).$promise.then(function (data) {
+          angular.forEach(data, function (d) {
+            $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
+            $timeout(function () {
+              $ionicSlideBoxDelegate.slide(0);
+              $ionicSlideBoxDelegate.update();
+            }, 500);
+          });
+
+        });
+    };
+
+    $ionicModal.fromTemplateUrl('viewPhotos.html', {
+      scope: $scope,
+      animation: 'slide-in-up',
+      backdropClickToClose: false
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
 
 
     // capture + upload + mysql record
     $scope.capturePhoto = function (photo) {
 
-      function onSuccess(imageData) {
+      // photo success
+      function cameraSuccess(imageData) {
         $scope.$apply(photo.photo = imageData);
         photo.progress = 0;
 
+        // upload options
         var options = new FileUploadOptions();
         console.log(FileUploadOptions);
         options.fileKey = "file";
@@ -68,10 +95,13 @@ angular.module('ticket.photos.ctrl', [])
           filetype: 'JPG',
           db: 'desanet',
           tabla: 'despacho_foto',
-          tipo_SEQ: photo.SEQ
+          tipo_SEQ: photo.SEQ,
+          producto: photo.requerido,
+          etapa: photo.etapa
         };
 
 
+        // upload photo w/ imageData
         Photo.upload(imageData, options).then(
           function (result) {
             alert('Code: ' + result.responseCode + '  Response:  ' + result.response);
@@ -79,16 +109,20 @@ angular.module('ticket.photos.ctrl', [])
           function (error) {
             alert('ERROR:   Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
           },
+          // progress of upload
           function (progress) {
             photo.progress = progress;
           });
       }
 
-      function onFail(message) {
+      // photo error
+      function cameraError(message) {
         alert('Failed because: ' + message);
       }
 
-      navigator.camera.getPicture(onSuccess, onFail,
+      // take picture
+      navigator.camera.getPicture(cameraSuccess, cameraError,
+        // options
         { quality: 10,
           allowEdit: true,
           encodingType: Camera.EncodingType.JPEG,
@@ -104,10 +138,25 @@ angular.module('ticket.photos.ctrl', [])
   })
 
 
+  .controller('ViewPhotosCtrl', function ($scope, $timeout, $stateParams, $ionicLoading, Photo, DespachoFotoTipo) {
+
+    $scope.closeModal = function () {
+      $scope.slidePhotos.length = 0;
+      $scope.modal.hide();
+    };
+
+  })
+
+  // photo sidemenu controller
   .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFotoTipo) {
 
+    // get all foto requirements
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
       $scope.fotoTipos = data;
     });
+  })
+;
 
-  });
+
+
+
