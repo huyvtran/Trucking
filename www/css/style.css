@@ -107,7 +107,7 @@
 
 .modal {
     top: 20%;
-    bottom: 40%;
+    /*bottom: 40%;*/
 }
 
 @media (max-height: 704px) {
@@ -147,4 +147,12 @@
 
 .align-right {
     float: right;
+}
+
+.slider{
+    height: 100%;
+}
+
+.slider-slide {
+    min-height: 200px
 }
