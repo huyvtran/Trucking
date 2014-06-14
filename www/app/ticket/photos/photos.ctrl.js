@@ -25,14 +25,23 @@ angular.module('ticket.photos.ctrl', [])
     // get foto requirements
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
       $scope.fotoTipos = data;
+      //console.log(data);
 
       // get foto SEQ for each requirement
       angular.forEach(data, function (res) {
-        console.log(res.SEQ);
+        //console.log(res.SEQ);
       });
 
       // get fotos stored in db
       DespachoFoto.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
+
+        var groupedDespachoFoto = _.groupBy(data, 'tipo_SEQ');
+
+        angular.forEach(groupedDespachoFoto, function (d) {
+          console.log(d[0].categoria + ' ' + d[0].detaille  + ' - taken: ' + d.length);
+        });
+
+
         var fotoID = [];
         var fotoTipoSEQ = [];
         angular.forEach(data, function (res) {
@@ -40,9 +49,14 @@ angular.module('ticket.photos.ctrl', [])
           fotoTipoSEQ.push(res.tipo_SEQ);
         });
 
+        //console.log(fotoTipoSEQ);
+
         // set foto id for each
         var i = 0;
         angular.forEach($scope.fotoTipos, function (each) {
+          if ($scope.fotoTipos.tipo_SEQ == 'x' ) {
+
+          }
           each.photo = 'http://www.desa-net.com/TOTAI/db/blob/get?id=' + fotoID[i];
           i++;
         });
