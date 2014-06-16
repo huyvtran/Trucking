@@ -17,6 +17,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"LowLatencyAudio\"><param name=\"ios-package\" value=\"LowLatencyAudio\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
                             "count": 1
                         },
@@ -43,11 +47,9 @@
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
                             "count": 1
-                        }
-                    ],
-                    "/widget": [
+                        },
                         {
-                            "xml": "<feature name=\"ScanditSDK\"><param name=\"ios-package\" value=\"ScanditSDK\" /></feature>",
+                            "xml": "<feature name=\"Toast\"><param name=\"ios-package\" value=\"Toast\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -55,75 +57,13 @@
             },
             "framework": {
                 "parents": {
-                    "AudioToolbox.framework": [
+                    "libiconv.dylib": [
                         {
                             "xml": "false",
-                            "count": 1
-                        },
-                        {
-                            "xml": "true",
                             "count": 1
                         }
                     ],
                     "AVFoundation.framework": [
-                        {
-                            "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "CoreGraphics.framework": [
-                        {
-                            "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "CoreLocation.framework": [
-                        {
-                            "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "CoreMedia.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "CoreVideo.framework": [
-                        {
-                            "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "QuartzCore.framework": [
-                        {
-                            "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "SystemConfiguration.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        },
-                        {
-                            "xml": "true",
-                            "count": 1
-                        }
-                    ],
-                    "libiconv.dylib": [
-                        {
-                            "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "libz.dylib": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "libc++.dylib": [
                         {
                             "xml": "false",
                             "count": 1
@@ -135,9 +75,33 @@
                             "count": 4
                         }
                     ],
+                    "CoreVideo.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "QuartzCore.framework": [
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
                     "ImageIO.framework": [
                         {
                             "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": "false",
                             "count": 1
                         }
                     ],
@@ -145,6 +109,18 @@
                         {
                             "xml": "false",
                             "count": 2
+                        }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
                         }
                     ]
                 }
@@ -155,10 +131,10 @@
         "com.ionic.keyboard": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
-        "com.mirasense.scanditsdk.plugin": {
+        "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
-        "com.phonegap.plugins.barcodescanner": {
+        "com.rjfun.cordova.plugin.lowlatencyaudio": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "org.apache.cordova.camera": {
@@ -180,6 +156,9 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "nl.x-services.plugins.toast": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         }
     },

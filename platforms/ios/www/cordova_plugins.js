@@ -15,6 +15,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.rjfun.cordova.plugin.lowlatencyaudio/www/LowLatencyAudio.js",
+        "id": "com.rjfun.cordova.plugin.lowlatencyaudio.LowLatencyAudio",
+        "clobbers": [
+            "window.plugins.LowLatencyAudio"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.camera/www/CameraConstants.js",
         "id": "org.apache.cordova.camera.Camera",
         "clobbers": [
@@ -227,21 +234,29 @@ module.exports = [
         "clobbers": [
             "Connection"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.toast/www/Toast.js",
+        "id": "nl.x-services.plugins.toast.Toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "com.ionic.keyboard": "0.0.1",
-    "com.mirasense.scanditsdk.plugin": "1.1.0",
     "com.phonegap.plugins.barcodescanner": "1.0.1",
+    "com.rjfun.cordova.plugin.lowlatencyaudio": "1.0",
     "org.apache.cordova.camera": "0.2.10-dev",
     "org.apache.cordova.console": "0.2.8",
     "org.apache.cordova.device": "0.2.9",
     "org.apache.cordova.dialogs": "0.2.7",
     "org.apache.cordova.file": "1.1.0",
     "org.apache.cordova.file-transfer": "0.4.3",
-    "org.apache.cordova.network-information": "0.2.8"
+    "org.apache.cordova.network-information": "0.2.8",
+    "nl.x-services.plugins.toast": "2.0"
 }
 // BOTTOM OF METADATA
 });

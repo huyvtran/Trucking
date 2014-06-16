@@ -2,29 +2,102 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bc23403-cd81-4fa0-a56e-11be54a1d8f1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/cordova/console.log" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/successBeep.mp3" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK/ScanditSDKBarcodePicker.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK/ScanditSDKOverlayController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDK/libscanditsdk-iphone-4.0.1.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDKRotatingBarcodePicker.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.mirasense.scanditsdk.plugin/ScanditSDKRotatingBarcodePicker.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/beep.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/camera-swap-icon-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/camera-swap-icon-pressed@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/camera-swap-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/camera-swap-icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/empty.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-off-icon-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-off-icon-pressed@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-off-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-off-icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-on-icon-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-on-icon-pressed@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-on-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/flashlight-turn-on-icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/poweredby.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Resources/poweredby@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/.fetch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/com/mirasense/scanditsdk/plugin/ScanditSDK.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/com/mirasense/scanditsdk/plugin/ScanditSDKActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/libs/armeabi-v7a/libscanditsdk-android-4.0.1.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/libs/armeabi/libscanditsdk-android-4.0.1.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/libs/scanditsdk-barcodepicker-android-4.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/libs/x86/libscanditsdk-android-4.0.1.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/beep.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/camera_swap_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/camera_swap_icon_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/flashlight_turn_off_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/flashlight_turn_off_icon_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/flashlight_turn_on_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/flashlight_turn_on_icon_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/ic_btn_search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/raw/poweredby2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/values-de/scanditsdk.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/values/arrays.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/values/scanditsdk.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/android/scanditsdk-community-android_4.0.1/res/xml/preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDK.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDK.mm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDKRotatingBarcodePicker.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDKRotatingBarcodePicker.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/CHANGELOG.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/LICENSE-2.0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/RELEASE_NOTES.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/ScanditSDKBarcodePicker.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/ScanditSDKOverlayController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/beep.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/camera-swap-icon-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/camera-swap-icon-pressed@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/camera-swap-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/camera-swap-icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/de.lproj/scanditsdk.strings" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/empty.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/en.lproj/scanditsdk.strings" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-off-icon-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-off-icon-pressed@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-off-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-off-icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-on-icon-pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-on-icon-pressed@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-on-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/flashlight-turn-on-icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/libscanditsdk-iphone-4.0.1.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/poweredby.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/poweredby@2x.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcuserdata/paolob.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcuserdata/paolob.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.phonegap.plugins.barcodescanner/CDVBarcodeScanner.mm" afterPath="$PROJECT_DIR$/platforms/ios/Trucking/Plugins/com.phonegap.plugins.barcodescanner/CDVBarcodeScanner.mm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/ios/CDVBarcodeScanner.mm" afterPath="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/ios/CDVBarcodeScanner.mm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/Trucking-Info.plist" afterPath="$PROJECT_DIR$/platforms/ios/Trucking/Trucking-Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcshareddata/Trucking.xccheckout" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.xcworkspace/xcshareddata/Trucking.xccheckout" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js" afterPath="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/app.js" afterPath="$PROJECT_DIR$/www/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batches.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batches.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batches.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batches.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/batches/batches.html" afterPath="$PROJECT_DIR$/www/app/ticket/batches/batches.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batchesMenu.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/batches/batchesMenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" afterPath="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking/config.xml" afterPath="$PROJECT_DIR$/platforms/ios/Trucking/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/despachos/despachos.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js" afterPath="$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/ios.json" afterPath="$PROJECT_DIR$/plugins/ios.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photos.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/photos/photos.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/platforms/ios/Trucking.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.html" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/sideMenu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/sideMenu.html" afterPath="$PROJECT_DIR$/www/app/ticket/sideMenu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/ticket.service.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/ticket.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/ticket.service.js" afterPath="$PROJECT_DIR$/www/app/ticket/ticket.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.ctrl.js" afterPath="$PROJECT_DIR$/platforms/ios/www/app/ticket/truck/truck.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" afterPath="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" />
     </list>
     <ignored path="Trucking.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,28 +163,28 @@
       <file leaf-file-name="batches.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="360">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="270">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="batchesMenu.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="batchesMenu.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63829786" vertical-offset="0" max-vertical-offset="752">
-              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="405">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="batches.ctrl.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="batches.ctrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state vertical-scroll-proportion="1.483871" vertical-offset="223" max-vertical-offset="1095">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,23 +193,14 @@
       <file leaf-file-name="ticket.service.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3943" max-vertical-offset="4470">
-              <caret line="299" column="4" selection-start-line="299" selection-start-column="4" selection-end-line="299" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2610">
+              <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="23" />
               <folding>
+                <element signature="e#77#3159#0" expanded="false" />
                 <element signature="e#100#389#0" expanded="false" />
-                <element signature="e#8289#10288#0" expanded="false" />
-                <element signature="e#10345#12647#0" expanded="false" />
+                <element signature="e#9242#11241#0" expanded="false" />
+                <element signature="e#11298#13600#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="barcodescanner.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="1425">
-              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -155,11 +219,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/www/app/despachos/despachos-menu.html" />
-        <option value="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/app/filters.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html" />
-        <option value="$PROJECT_DIR$/www/app/app.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/photos/photos.html" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/www/app/ticket/sideMenu.html" />
@@ -167,10 +229,13 @@
         <option value="$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDK.mm" />
         <option value="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js" />
         <option value="$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js" />
-        <option value="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/ios/CDVBarcodeScanner.mm" />
+        <option value="$PROJECT_DIR$/www/app/app.js" />
+        <option value="$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/ticket.service.js" />
         <option value="$PROJECT_DIR$/www/app/ticket/batches/batches.html" />
+        <option value="$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html" />
         <option value="$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js" />
+        <option value="$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/ios/CDVBarcodeScanner.mm" />
       </list>
     </option>
   </component>
@@ -253,7 +318,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,15 +332,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticket" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,19 +346,59 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="com.phonegap.plugins.barcodescanner" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ticket" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="batches" />
+              <option name="myItemId" value="com.phonegap.plugins.barcodescanner" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ios" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trucking" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.phonegap.plugins.barcodescanner" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,6 +428,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/img" />
       <recent name="$PROJECT_DIR$/www/lib/ionic" />
     </key>
   </component>
@@ -718,7 +816,7 @@
       <created>1402489955634</created>
       <updated>1402489955634</updated>
       <workItem from="1402489956213" duration="3095000" />
-      <workItem from="1402559258710" duration="55874000" />
+      <workItem from="1402559258710" duration="66209000" />
     </task>
     <task id="LOCAL-00001" summary="Grouped Fotos">
       <created>1402741848779</created>
@@ -728,7 +826,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58969000" />
+    <option name="totallyTimeSpent" value="69304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -738,7 +836,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3097015" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3097015" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -753,7 +851,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15450644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -893,14 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3060">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.708334" vertical-offset="88" max-vertical-offset="855">
@@ -917,81 +1007,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/RELEASE_NOTES.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1326531" vertical-offset="555" max-vertical-offset="3510">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="2310">
-          <caret line="90" column="43" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
-          <folding>
-            <element signature="e#380#439#0" expanded="false" />
-            <element signature="e#513#549#0" expanded="false" />
-            <element signature="e#4397#4561#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/ScanditSDKOverlayController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02918288" vertical-offset="0" max-vertical-offset="12450">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDKRotatingBarcodePicker.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4210527" vertical-offset="1625" max-vertical-offset="2100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDKRotatingBarcodePicker.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13851993" vertical-offset="73" max-vertical-offset="600">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDK.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88235295" vertical-offset="0" max-vertical-offset="3315">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/scanditsdk-community-ios_4.0.1/ScanditSDK/ScanditSDKBarcodePicker.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15369262" vertical-offset="4603" max-vertical-offset="10455">
-          <caret line="312" column="14" selection-start-line="312" selection-start-column="10" selection-end-line="312" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photosMenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="435">
           <caret line="11" column="54" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.mirasense.scanditsdk.plugin/src/ios/ScanditSDK.mm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.670082" vertical-offset="6048" max-vertical-offset="7380">
-          <caret line="425" column="38" selection-start-line="425" selection-start-column="38" selection-end-line="425" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1014,14 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/ios/CDVBarcodeScanner.mm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5163934" vertical-offset="4068" max-vertical-offset="13050">
-          <caret line="288" column="15" selection-start-line="288" selection-start-column="15" selection-end-line="288" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/sideMenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2862823" vertical-offset="223" max-vertical-offset="1020">
@@ -1038,18 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3943" max-vertical-offset="4470">
-          <caret line="299" column="4" selection-start-line="299" selection-start-column="4" selection-end-line="299" selection-end-column="4" />
-          <folding>
-            <element signature="e#100#389#0" expanded="false" />
-            <element signature="e#8289#10288#0" expanded="false" />
-            <element signature="e#10345#12647#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/app/despachos/despachos.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37937742" vertical-offset="570" max-vertical-offset="1200">
@@ -1058,26 +1057,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js">
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/photos/photos.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.11795544" vertical-offset="0" max-vertical-offset="2310">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#380#439#0" expanded="false" />
+            <element signature="e#513#549#0" expanded="false" />
+            <element signature="e#4397#4561#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="3060">
+          <caret line="154" column="36" selection-start-line="154" selection-start-column="36" selection-end-line="154" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/truck/truck.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.753866" vertical-offset="1579" max-vertical-offset="3360">
+          <caret line="196" column="25" selection-start-line="196" selection-start-column="25" selection-end-line="196" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="360">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="270">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/ios.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.82653064" vertical-offset="405" max-vertical-offset="2565">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batchesMenu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63829786" vertical-offset="0" max-vertical-offset="752">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="405">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/ticket.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2610">
+          <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="23" />
+          <folding>
+            <element signature="e#77#3159#0" expanded="false" />
+            <element signature="e#100#389#0" expanded="false" />
+            <element signature="e#9242#11241#0" expanded="false" />
+            <element signature="e#11298#13600#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/com.phonegap.plugins.barcodescanner/src/ios/CDVBarcodeScanner.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94163424" vertical-offset="12596" max-vertical-offset="13170">
+          <caret line="872" column="0" selection-start-line="872" selection-start-column="0" selection-end-line="872" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/ticket/batches/batches.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.483871" vertical-offset="223" max-vertical-offset="1095">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>

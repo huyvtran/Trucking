@@ -1,59 +1,69 @@
-// TODO: Use SEQ number to obtain initial values
-// TODO: Update info to MySql server, on loss of focus
-// TODO: Create init function for each controller
-// TODO: Validation with tab icons
-// TODO: Implement photos
-// TODO: Exit and Clear button for each header
-// TODO: Implement barcode / QR scanner
-// TODO: Copy MySQL data into the form, save the data when you FINALIZE
-
 angular.module('ticket.batches.ctrl', [])
 
-  .controller('BatchesCtrl', function ($scope, $ionicPlatform, Scandit, Barcode, Ticket) {
+  .controller('BatchesCtrl', function ($scope, $stateParams, BatchUnidad, DespachoBatchUnidad, $ionicPlatform, Ticket) {
+
+    var despacho_SEQ = $stateParams.SEQ;
+
+    var successMP3 = 'img/successBeep.mp3';
+
+    window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
+    }, function (error) {
+      console.log(error);
+    });
+
 
     $scope.scan = function () {
-      var options = {
-        "beep": true,
-        "1DScanning": true,
-        "2DScanning": true
-      };
+      cordova.plugins.barcodeScanner.scan(function (code) {
 
-      Scandit.scan(options).then(function (success) {
-          console.log(success);
-          $scope.response = success[0];
-          $scope.code = success[1];
-          alert(success[0] + ' ' + success[1]);
-        },
-        function (error) {
-          console.log(error);
-          alert(error);
-        })
-    };
+          console.log(code);
+
+          if (code.text != '' && code.cancelled != 1) {
+            window.plugins.LowLatencyAudio.play(successMP3);
+            window.plugins.toast.showLongTop('Success' + code.text);
 
 
-    $scope.scanOther = function () {
+            BatchUnidad.getOne({SEQ: code.text}).$promise.then(function (data) {
+              var newUnidad = {
+                'despacho_SEQ': despacho_SEQ,
+                'despacho_batch_SEQ': 4,
+                'batch_SEQ': data.batch_SEQ,
+                'batch_unidad_SEQ': code.text
+              };
 
-      cordova.plugins.barcodeScanner.scan(function (success) {
-          console.log(success);
+              DespachoBatchUnidad.addNew(newUnidad).$promise.then(function (success) {
+                console.log(success);
+              }, function (error) {
+                console.log(error);
+              });
+
+            }, function (error) {
+              console.log(error);
+            });
+          }
         },
         function (error) {
           console.log(error);
         });
+    };
+  })
 
-      /*Barcode.scan().then(function (result) {
-       console.log(result);
-       alert(result);
 
-       },
-       function (error) {
-       alert(error);
-       console.log(error);
-       },
-       function (notify) {
-       console.log(notify);
-       alert(notify);
-       }
-       );
-       */
-    }
+  .controller('BatchesMenuCtrl', function ($scope, $stateParams, DespachoBatch, DespachoBatchUnidad, Ticket) {
+
+    var despacho_SEQ = $stateParams.SEQ;
+
+    DespachoBatch.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
+      $scope.despachoBatch = data;
+    }, function (error) {
+      console.log(error);
+    });
+
+    DespachoBatchUnidad.getAll().$promise.then(function (data) {
+      $scope.despachoBatchUnidad = data;
+    }, function (error) {
+      console.log(error);
+    })
+
   });
+
+

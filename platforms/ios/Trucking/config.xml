@@ -25,6 +25,9 @@
     <feature name="BarcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
+    <feature name="LowLatencyAudio">
+        <param name="ios-package" value="LowLatencyAudio" />
+    </feature>
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
@@ -47,8 +50,8 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
-    <feature name="ScanditSDK">
-        <param name="ios-package" value="ScanditSDK" />
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
     </feature>
     <name>Trucking</name>
     <description>

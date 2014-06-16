@@ -70,6 +70,7 @@
 - (id)initWithPlugin:(CDVBarcodeScanner*)plugin callback:(NSString*)callback parentViewController:(UIViewController*)parentViewController alterateOverlayXib:(NSString *)alternateXib;
 - (void)scanBarcode;
 - (void)barcodeScanSucceeded:(NSString*)text format:(NSString*)format;
+- (void)restartCapture:(NSTimer*)timer;
 - (void)barcodeScanFailed:(NSString*)message;
 - (void)barcodeScanCancelled;
 - (void)openDialog;
@@ -169,7 +170,7 @@
                                resultWithStatus: CDVCommandStatus_OK
                                messageAsDictionary: resultDict
                                ];
-    
+
     [result setKeepCallbackAsBool:true];
     //NSString* js = [result toSuccessCallbackString:callback];
     [self.commandDelegate sendPluginResult:result callbackId:callback];
@@ -282,12 +283,19 @@ parentViewController:(UIViewController*)parentViewController
 //--------------------------------------------------------------------------
 - (void)barcodeScanSucceeded:(NSString*)text format:(NSString*)format {
     //[self barcodeScanDone];
+
     self.capturing = NO;
     [self.captureSession stopRunning];
     [self.plugin returnSuccess:text format:format cancelled:FALSE callback:self.callback];
+    
+    NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(restartCapture:) userInfo:nil repeats:NO];
+}
 
+- (void) restartCapture:(NSTimer*)timer {
     self.capturing = YES;
     [self.captureSession startRunning];
+    [timer invalidate];
+    timer = nil;
 }
 
 //--------------------------------------------------------------------------
@@ -827,17 +835,17 @@ parentViewController:(UIViewController*)parentViewController
 
 - (BOOL)shouldAutorotate
 {   
-    return NO;
+    return YES;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationPortrait;
+    return UIInterfaceOrientationLandscapeRight;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

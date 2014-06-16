@@ -188,6 +188,18 @@ angular.module('ticket.service', [])
     );
   })
 
+  .factory('DespachoBatchUnidad', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'despacho_batch_unidad/:SEQ:verb', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
+        update: {method: 'POST', params: {SEQ: '@SEQ'}},
+        addNew: {method: 'POST', params: {verb: 'X'}},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
   .factory('DespachoFoto', function ($rootScope, $resource) {
     return $resource($rootScope.DB_URL + 'despacho_foto/:SEQ:verb', {}, {
         getAll: {method: 'GET', isArray: true},
@@ -212,6 +224,17 @@ angular.module('ticket.service', [])
 
   .factory('Batch', function ($rootScope, $resource) {
     return $resource($rootScope.DB_URL + 'batch/:SEQ', {}, {
+        getAll: {method: 'GET', isArray: true},
+        getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        update: {method: 'POST', params: {SEQ: '@SEQ'}},
+        new: {method: 'POST'},
+        delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
+      }
+    );
+  })
+
+  .factory('BatchUnidad', function ($rootScope, $resource) {
+    return $resource($rootScope.DB_URL + 'batch_unidad/:SEQ', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         update: {method: 'POST', params: {SEQ: '@SEQ'}},
@@ -296,42 +319,6 @@ angular.module('ticket.service', [])
 
         return q.promise;
       }
-    }
-  })
-
-  .factory('Scandit', function ($q) {
-    return {
-      scan: function (options) {
-        var q = $q.defer();
-        cordova.exec(function (success) {
-          q.resolve(success);
-        }, function (error) {
-          q.reject(error);
-        }, "ScanditSDK", "scan", ["j13JlvSDEeOY9maB1RAvKJj9AcdELToZNhvvSgkjrZo", options]);
-        return q.promise;
-      }
-    }
-  })
-
-  .factory('Barcode', function ($q) {
-
-    return {
-      scan: function () {
-        var q = $q.defer();
-
-        cordova.plugins.barcodeScanner.scan(
-          function (result) {
-            q.notify(result);
-            q.resolve(result);
-          },
-          function (error) {
-            q.reject(error);
-          }
-        );
-
-        return q.promise;
-      }
-
     }
   })
 

@@ -15,6 +15,7 @@ angular.module('ticket.truck.ctrl', [])
 
     Despacho.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
       $scope.despacho = d;
+
       Empresa.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
         $scope.empresa = d;
       });
