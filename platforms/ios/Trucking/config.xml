@@ -47,6 +47,9 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
+    <feature name="ScanditSDK">
+        <param name="ios-package" value="ScanditSDK" />
+    </feature>
     <name>Trucking</name>
     <description>
         An app for Tracking and Digitalizing Exports.

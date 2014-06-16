@@ -6,12 +6,19 @@
 			<div class="col">
 				<div class="card" style="margin: 0">
 					<div class="item item-button-right">
-						Scan QR Code
+						Scan Scandit
 						<button class="button button-positive button-clear" ng-click="scan()">Scan QR</button>
 					</div>
+					<div class="item item-button-right">
+						Scan Cordova Plugin
+						<button class="button button-positive button-clear" ng-click="scanOther()">Scan QR</button>
+					</div>
 
-					<div class="item item-image">
-						<img src="http://placehold.it/500x600">
+					<div class="card">
+						<div class="item">
+							<p>{{response}}</p>
+							<p>{{code}}</p>
+						</div>
 					</div>
 
 				</div>

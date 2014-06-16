@@ -282,7 +282,25 @@ angular.module('ticket.service', [])
   })
 
 
-  .factory('Photo', function ($http, $q) {
+  .factory('Camera', function ($q) {
+
+    return {
+      capture: function (options) {
+        var q = $q.defer();
+
+        navigator.camera.getPicture(function (success) {
+          q.resolve(success);
+        }, function (error) {
+          q.reject(error);
+        }, options);
+
+        return q.promise;
+      }
+    }
+  })
+
+
+  .factory('Photo', function ($http, $rootScope, $q) {
 
     return {
       upload: function (imageData, options) {

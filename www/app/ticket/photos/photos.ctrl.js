@@ -1,7 +1,7 @@
 angular.module('ticket.photos.ctrl', [])
 
   // main photo controller
-  .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, DespachoFoto, DespachoFotoTipo, Blob) {
+  .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
 
     // get global despacho SEQ
     var despacho_SEQ = $stateParams.SEQ;
@@ -50,17 +50,17 @@ angular.module('ticket.photos.ctrl', [])
     $scope.expandPhotos = function (photo) {
       $scope.modal.show();
 
-        $scope.slidePhotos = [];
-        DespachoFoto.getWithTipoSEQ({tipo_SEQ: photo.SEQ}).$promise.then(function (data) {
-          angular.forEach(data, function (d) {
-            $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
-            $timeout(function () {
-              $ionicSlideBoxDelegate.slide(0);
-              $ionicSlideBoxDelegate.update();
-            }, 500);
-          });
-
+      $scope.slidePhotos = [];
+      DespachoFoto.getWithTipoSEQ({tipo_SEQ: photo.SEQ}).$promise.then(function (data) {
+        angular.forEach(data, function (d) {
+          $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
+          $timeout(function () {
+            $ionicSlideBoxDelegate.slide(0);
+            $ionicSlideBoxDelegate.update();
+          }, 500);
         });
+
+      });
     };
 
     $ionicModal.fromTemplateUrl('viewPhotos.html', {
@@ -75,70 +75,66 @@ angular.module('ticket.photos.ctrl', [])
     // capture + upload + mysql record
     $scope.capturePhoto = function (photo) {
 
-      // photo success
-      function cameraSuccess(imageData) {
-        $scope.$apply(photo.photo = imageData);
-        photo.progress = 0;
+      var cameraOptions = { quality: 10,
+        allowEdit: false,
+        encodingType: 0, //JPEG
+        targetWidth: 600,
+        targetHeight: 600,
+        saveToPhotoAlbum: false,
+        correctOrientation: false,
+        sourceType: 1, // Camera
+        destinationType: 1 // File Uri
+      };
 
-        // upload options
-        var options = new FileUploadOptions();
-        console.log(FileUploadOptions);
-        options.fileKey = "file";
-        options.fileName = 'filename';
-        options.mimeType = "image/jpeg";
-        options.chunkedMode = false;
-        options.headers = {Connection: "close"};
-        options.params = {
-          despacho_SEQ: despacho_SEQ,
-          categoria: photo.categoria,
-          detaille: photo.detaille,
-          filetype: 'JPG',
-          db: 'desanet',
-          tabla: 'despacho_foto',
-          tipo_SEQ: photo.SEQ,
-          producto: photo.requerido,
-          etapa: photo.etapa
-        };
+      Camera.capture(cameraOptions).then(function (imageData) {
 
+          alert('imageData: ' + imageData);
 
-        // upload photo w/ imageData
-        Photo.upload(imageData, options).then(
-          function (result) {
-            alert('Code: ' + result.responseCode + '  Response:  ' + result.response);
-          },
-          function (error) {
-            alert('ERROR:   Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
-          },
-          // progress of upload
-          function (progress) {
-            photo.progress = progress;
-          });
-      }
+          $scope.$apply(photo.photo = imageData);
 
-      // photo error
-      function cameraError(message) {
-        alert('Failed because: ' + message);
-      }
+          // upload options
+          var options = new FileUploadOptions();
+          options.fileKey = "file";
+          options.fileName = 'filename';
+          options.mimeType = "image/jpeg";
+          options.chunkedMode = false;
+          options.headers = {Connection: "close"};
+          options.params = {
+            despacho_SEQ: despacho_SEQ,
+            categoria: photo.categoria,
+            detaille: photo.detaille,
+            filetype: 'JPG',
+            db: 'desanet',
+            tabla: 'despacho_foto',
+            tipo_SEQ: photo.SEQ,
+            producto: photo.producto,
+            etapa: photo.etapa
+          };
 
-      // take picture
-      navigator.camera.getPicture(cameraSuccess, cameraError,
-        // options
-        { quality: 10,
-          allowEdit: true,
-          encodingType: Camera.EncodingType.JPEG,
-          targetWidth: 600,
-          targetHeight: 600,
-          saveToPhotoAlbum: false,
-          correctOrientation: false,
-          sourceType: Camera.PictureSourceType.CAMERA,
-          destinationType: Camera.DestinationType.FILE_URI
+          Photo.upload(imageData, options).then(
+            function (result) {
+              console.log('upload success');
+              alert('Code: ' + result.responseCode + '  Response:  ' + result.response);
+            },
+            function (error) {
+              console.log('upload error');
+              alert('ERROR:   Code: ' + error.code + 'Source: ' + error.source + 'http: ' + error.http_status);
+            },
+            // progress of upload
+            function (progress) {
+              //photo.progress = progress;
+            });
+
+        },
+        function (error) {
+          alert('camera error: ' + error);
         });
     }
 
   })
 
 
-  .controller('ViewPhotosCtrl', function ($scope, $timeout, $stateParams, $ionicLoading, Photo, DespachoFotoTipo) {
+  .controller('ViewPhotosCtrl', function ($scope) {
 
     $scope.closeModal = function () {
       $scope.slidePhotos.length = 0;

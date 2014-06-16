@@ -282,7 +282,61 @@ angular.module('ticket.service', [])
   })
 
 
-  .factory('Photo', function ($http, $q) {
+  .factory('Camera', function ($q) {
+
+    return {
+      capture: function (options) {
+        var q = $q.defer();
+
+        navigator.camera.getPicture(function (success) {
+          q.resolve(success);
+        }, function (error) {
+          q.reject(error);
+        }, options);
+
+        return q.promise;
+      }
+    }
+  })
+
+  .factory('Scandit', function ($q) {
+    return {
+      scan: function (options) {
+        var q = $q.defer();
+        cordova.exec(function (success) {
+          q.resolve(success);
+        }, function (error) {
+          q.reject(error);
+        }, "ScanditSDK", "scan", ["j13JlvSDEeOY9maB1RAvKJj9AcdELToZNhvvSgkjrZo", options]);
+        return q.promise;
+      }
+    }
+  })
+
+  .factory('Barcode', function ($q) {
+
+    return {
+      scan: function () {
+        var q = $q.defer();
+
+        cordova.plugins.barcodeScanner.scan(
+          function (result) {
+            q.notify(result);
+            q.resolve(result);
+          },
+          function (error) {
+            q.reject(error);
+          }
+        );
+
+        return q.promise;
+      }
+
+    }
+  })
+
+
+  .factory('Photo', function ($http, $rootScope, $q) {
 
     return {
       upload: function (imageData, options) {

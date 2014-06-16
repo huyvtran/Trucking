@@ -233,6 +233,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "com.ionic.keyboard": "0.0.1",
+    "com.mirasense.scanditsdk.plugin": "1.1.0",
     "com.phonegap.plugins.barcodescanner": "1.0.1",
     "org.apache.cordova.camera": "0.2.10-dev",
     "org.apache.cordova.console": "0.2.8",

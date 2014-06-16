@@ -170,9 +170,10 @@
                                messageAsDictionary: resultDict
                                ];
     
-    NSString* js = [result toSuccessCallbackString:callback];
-    
-    [self writeJavascript:js];
+    [result setKeepCallbackAsBool:true];
+    //NSString* js = [result toSuccessCallbackString:callback];
+    [self.commandDelegate sendPluginResult:result callbackId:callback];
+    //[self writeJavascript:js];
 }
 
 //--------------------------------------------------------------------------
@@ -280,8 +281,13 @@ parentViewController:(UIViewController*)parentViewController
 
 //--------------------------------------------------------------------------
 - (void)barcodeScanSucceeded:(NSString*)text format:(NSString*)format {
-    [self barcodeScanDone];
+    //[self barcodeScanDone];
+    self.capturing = NO;
+    [self.captureSession stopRunning];
     [self.plugin returnSuccess:text format:format cancelled:FALSE callback:self.callback];
+
+    self.capturing = YES;
+    [self.captureSession startRunning];
 }
 
 //--------------------------------------------------------------------------
@@ -414,7 +420,7 @@ parentViewController:(UIViewController*)parentViewController
         
         
         const char* cString      = resultText->getText().c_str();
-        NSString*   resultString = [[[NSString alloc] initWithCString:cString encoding:NSUTF8StringEncoding] autorelease];
+        NSString*   resultString = [[NSString alloc] initWithCString:cString encoding:NSUTF8StringEncoding];
         
         [self barcodeScanSucceeded:resultString format:format];
         
