@@ -288,8 +288,10 @@ parentViewController:(UIViewController*)parentViewController
     [self.captureSession stopRunning];
     [self.plugin returnSuccess:text format:format cancelled:FALSE callback:self.callback];
     
-    NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(restartCapture:) userInfo:nil repeats:NO];
+    NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(restartCapture:) userInfo:nil repeats:NO];
 }
+
+//--------------------------------------------------------------------------
 
 - (void) restartCapture:(NSTimer*)timer {
     self.capturing = YES;

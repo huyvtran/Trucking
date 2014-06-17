@@ -189,10 +189,11 @@ angular.module('ticket.service', [])
   })
 
   .factory('DespachoBatchUnidad', function ($rootScope, $resource) {
-    return $resource($rootScope.DB_URL + 'despacho_batch_unidad/:SEQ:verb', {}, {
+    return $resource($rootScope.DB_URL + 'despacho_batch_unidad/:SEQ:verb:verb2:verb3', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
+        getWithMany: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho',verb2: 'get', batch_SEQ: '@batch', verb3: 'get', batch_unidad_SEQ: '@unidad'}, isArray: true},
         update: {method: 'POST', params: {SEQ: '@SEQ'}},
         addNew: {method: 'POST', params: {verb: 'X'}},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
@@ -383,112 +384,4 @@ angular.module('ticket.service', [])
 
       }
     }
-  })
-
-
-  .factory('PhotoRequirements', function ($resource) {
-
-    var photoRequirements = [
-      {
-        tipo: 'Truck',
-        detaille: 'Empty',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Full',
-        status: 0,
-        obligatorio: 2,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Front',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'License',
-        status: 0,
-        obligatorio: 2,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Driver',
-        detaille: 'Person',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Driver',
-        detaille: 'License',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Right',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Right',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Right',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Right',
-        status: 0,
-        obligatorio: 0,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Right',
-        status: 0,
-        obligatorio: 1,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      },
-      { tipo: 'Truck',
-        detaille: 'Right',
-        status: 0,
-        obligatorio: 0,
-        progress: 0,
-        image: './img/blank_img.jpg'
-      }
-    ];
-
-    return {
-
-      getAll: function () {
-        return photoRequirements;
-      },
-
-      setImage: function (tipo, detaille) {
-        angular.forEach(photoRequirements, function (res) {
-          if (res.tipo === tipo && res.detaille === detaille) {
-            res.image = 'HELLO';
-          }
-        });
-      }
-    }
-  })
-;
+  });

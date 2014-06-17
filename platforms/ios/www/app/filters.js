@@ -40,6 +40,7 @@ angular.module('app.filters', [])
     return filter;
   })
 
+
   .filter('obligatorioFilter', function () {
     return function (input) {
       if (input === 0) {

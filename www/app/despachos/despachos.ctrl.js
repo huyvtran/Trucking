@@ -10,16 +10,17 @@ angular.module('despachos.ctrl', [])
 
     Despacho.getAll().$promise.then(function (d) {
       $scope.despachos = d;
+      $scope.lastUpdate = moment().format('D/M - H:mm');
       //$ionicLoading.hide();
     });
 
     $scope.doRefresh = function () {
       Despacho.getAll().$promise.then(function (d) {
         $scope.despachos = d;
-      })
-        .finally(function () {
-          $scope.$broadcast('scroll.refreshComplete');
-        });
+      }).finally(function () {
+        $scope.$broadcast('scroll.refreshComplete');
+        $scope.lastUpdate = moment().format('D/M - H:mm');
+      });
     };
 
     $scope.clearSearch = function () {
@@ -48,7 +49,6 @@ angular.module('despachos.ctrl', [])
     $scope.batches = [];
 
     $ionicLoading.show({template: 'Loading Despacho #' + SEQ});
-
 
 
     Despacho.getOne({SEQ: SEQ}).$promise.then(function (d) {
