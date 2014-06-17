@@ -1,6 +1,6 @@
-<ion-view title="">
+<ion-view title="batches Sub Menu">
 	<ion-nav-buttons side="left">
-		<button class="button button-positive button-clear" ui-sref="ticket.batches.menu">
+		<button class="button button-positive button-clear" ui-sref="ticket.muestras.menu">
 			<i class="icon ion-ios7-arrow-back"></i>
 			Back
 		</button>
@@ -12,7 +12,7 @@
 				<div class="item item-stable item-icon-left" ng-click="toggleGroup(batch)" ng-class="{active: isGroupShown(batch)}">
 					<i class="icon" ng-class="isGroupShown(batch) ? 'ion-ios7-arrow-up' : 'ion-ios7-arrow-down'"></i>
 					<span class="align-left">Batch #{{batch.batch_SEQ}}</span>
-					<span class="align-right">{{batch.taken}} / {{batch.cantidad}}</span>
+					<span class="align-right">{{item.count}} / {{batch.cantidad}}</span>
 				</div>
 				<a class="item item-accordion item-icon-right"
 				   ng-show="isGroupShown(batch)"

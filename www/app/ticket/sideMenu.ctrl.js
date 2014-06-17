@@ -17,6 +17,7 @@ angular.module('ticket.sideMenu.ctrl', [])
       truck: 0,
       weight: 1,
       batches: 2,
+      muestras: 2,
       photos: 1,
       finalize: 0
     };
