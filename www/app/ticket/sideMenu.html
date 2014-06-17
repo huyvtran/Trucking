@@ -7,7 +7,7 @@
 	<ion-content has-header="true" padding="true">
 
 		<div class="card">
-			<a class=" item item-icon-right" ui-sref="ticket.truck"
+			<a class=" item item-icon-right" ui-sref="ticket.truck.submenu"
 			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.truck]">
 				<i class="icon ion-document-text"></i>
 				Truck
@@ -17,7 +17,7 @@
 
 		<!-- Weight Tab -->
 		<div class="card">
-			<a class=" item item-icon-right" ui-sref="ticket.weight"
+			<a class=" item item-icon-right" ui-sref="ticket.weight.submenu"
 			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.weight]">
 				<i class="icon ion-speedometer"></i>
 				Weight
@@ -27,7 +27,7 @@
 
 		<!-- Batches Tab -->
 		<div class="card">
-			<a class=" item item-icon-right" ui-sref="ticket.batches"
+			<a class=" item item-icon-right" ui-sref="ticket.batches.submenu"
 			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.batches]">
 				<i class="icon ion-ios7-browsers"></i>
 				Batches
@@ -36,7 +36,7 @@
 
 		<!-- Photos Tab -->
 		<div class="card">
-			<a class=" item item-icon-right" ui-sref="ticket.photos"
+			<a class=" item item-icon-right" ui-sref="ticket.photos.submenu"
 			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.photos]">
 				<i class="icon ion-images"></i>
 				Photos
@@ -46,7 +46,7 @@
 
 		<!-- Finalize Tab -->
 		<div class="card">
-			<a class=" item item-icon-right" ui-sref="ticket.finalize"
+			<a class=" item item-icon-right" ui-sref="ticket.finalize.submenu"
 			   ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.finalize]">
 				<i class="icon ion-ios7-checkmark"></i>
 				Finalize
@@ -57,7 +57,6 @@
 		<!-- Finalize Tab -->
 		<div class="padding-horizontal">
 			<button class="button button-positive button-block" ng-disabled="true">DONE</button>
-
 		</div>
 	</ion-content>
 </ion-view>

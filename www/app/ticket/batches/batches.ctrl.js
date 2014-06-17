@@ -1,6 +1,6 @@
 angular.module('ticket.batches.ctrl', [])
 
-  .controller('BatchesCtrl', function ($scope, $rootScope, $stateParams, BatchUnidad, DespachoBatch, DespachoBatchUnidad) {
+  .controller('BatchesCtrl', function ($scope, $rootScope, $stateParams, $ionicPlatform, BatchUnidad, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
     var batch_SEQs = [];
@@ -13,14 +13,20 @@ angular.module('ticket.batches.ctrl', [])
     });
 
     // load mp3 for success beep
-    var successMP3 = 'img/successBeep.mp3';
-    window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
-    }, function (error) {
-      console.log(error);
+
+    $ionicPlatform.ready(function () {
+      if (window.plugins) {
+        var successMP3 = 'img/successBeep.mp3';
+        window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
+        }, function (error) {
+          console.log(error);
+        });
+      }
     });
 
 
     $scope.scan = function () {
+
       cordova.plugins.barcodeScanner.scan(function (code) {
 
           if (code.text != '' && code.cancelled != 1) {
@@ -65,7 +71,7 @@ angular.module('ticket.batches.ctrl', [])
   })
 
 
-  .controller('BatchesMenuCtrl', function ($scope,$rootScope, $stateParams, DespachoBatch, DespachoBatchUnidad) {
+  .controller('BatchesMenuCtrl', function ($scope, $rootScope, $stateParams, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
 
@@ -74,6 +80,17 @@ angular.module('ticket.batches.ctrl', [])
       console.log('refresh menu data called');
       init();
     });
+
+    $scope.toggleGroup = function (group) {
+      if ($scope.isGroupShown(group)) {
+        $scope.shownGroup = null;
+      } else {
+        $scope.shownGroup = group;
+      }
+    };
+    $scope.isGroupShown = function (group) {
+      return $scope.shownGroup === group;
+    };
 
     function init() {
 

@@ -93,23 +93,12 @@ angular.module('trucking', [
       })
 
 
-      .state('ticket.menu', {
-        url: '/menu',
-        views: {
-          'side-view': {
-            templateUrl: 'app/ticket/sideMenu.html',
-            controller: 'SideMenuCtrl'
-          }
-        }
-      })
-
       .state('ticket.start', {
         url: '/start',
         views: {
           'side-view': {
             templateUrl: 'app/ticket/sideMenu.html',
             controller: 'SideMenuCtrl'
-
           },
           'content-view': {
             templateUrl: 'app/ticket/start/start.html',
@@ -122,8 +111,7 @@ angular.module('trucking', [
         url: '/truck',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/truck/truckMenu.html',
-            controller: 'TruckMenuCtrl'
+            template: '<ui-view>'
           },
           'content-view': {
             templateUrl: 'app/ticket/truck/truck.html',
@@ -131,28 +119,47 @@ angular.module('trucking', [
           }
         }
       })
+      .state('ticket.truck.menu', {
+        url: '/menu',
+        templateUrl: 'app/ticket/sideMenu.html',
+        controller: 'SideMenuCtrl'
+      })
+      .state('ticket.truck.submenu', {
+        url: '/submenu',
+        templateUrl: 'app/ticket/truck/truckMenu.html',
+        controller: 'TruckMenuCtrl'
+      })
+
 
       .state('ticket.weight', {
         url: '/weight',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/weight/weightMenu.html',
-            controller: 'WeightCtrl'
+            template: '<ui-view>'
           },
-
           'content-view': {
             templateUrl: 'app/ticket/weight/weight.html',
             controller: 'WeightCtrl'
           }
         }
       })
+      .state('ticket.weight.menu', {
+        url: '/menu',
+        templateUrl: 'app/ticket/sideMenu.html',
+        controller: 'SideMenuCtrl'
+      })
+      .state('ticket.weight.submenu', {
+        url: '/submenu',
+        templateUrl: 'app/ticket/weight/weightMenu.html',
+        controller: 'WeightCtrl'
+      })
+
 
       .state('ticket.batches', {
         url: '/batches',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/batches/batchesMenu.html',
-            controller: 'BatchesMenuCtrl'
+            template: '<ui-view>'
           },
           'content-view': {
             templateUrl: 'app/ticket/batches/batches.html',
@@ -160,13 +167,23 @@ angular.module('trucking', [
           }
         }
       })
+      .state('ticket.batches.menu', {
+        url: '/menu',
+        templateUrl: 'app/ticket/sideMenu.html',
+        controller: 'SideMenuCtrl'
+      })
+      .state('ticket.batches.submenu', {
+        url: '/submenu',
+        templateUrl: 'app/ticket/batches/batchesMenu.html',
+        controller: 'BatchesMenuCtrl'
+      })
+
 
       .state('ticket.photos', {
         url: '/photos',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/photos/photosMenu.html',
-            controller: 'PhotosMenuCtrl'
+            template: '<ui-view>'
           },
           'content-view': {
             templateUrl: 'app/ticket/photos/photos.html',
@@ -175,19 +192,41 @@ angular.module('trucking', [
         }
       })
 
+      .state('ticket.photos.menu', {
+        url: '/menu',
+        templateUrl: 'app/ticket/sideMenu.html',
+        controller: 'SideMenuCtrl'
+      })
+
+      .state('ticket.photos.submenu', {
+        url: '/submenu',
+        templateUrl: 'app/ticket/photos/photosMenu.html',
+        controller: 'PhotosMenuCtrl'
+      })
+
 
       .state('ticket.finalize', {
         url: '/finalize',
         views: {
           'side-view': {
-            templateUrl: 'app/ticket/finalize/finalizeMenu.html',
-            controller: 'FinalizeCtrl'
+            template: '<ui-view>'
           },
           'content-view': {
             templateUrl: 'app/ticket/finalize/finalize.html',
             controller: 'FinalizeCtrl'
           }
         }
+      })
+      .state('ticket.finalize.menu', {
+        url: '/menu',
+        templateUrl: 'app/ticket/sideMenu.html',
+        controller: 'SideMenuCtrl'
+      })
+
+      .state('ticket.finalize.submenu', {
+        url: '/submenu',
+        templateUrl: 'app/ticket/finalize/finalizeMenu.html',
+        controller: 'FinalizeCtrl'
       });
 
 

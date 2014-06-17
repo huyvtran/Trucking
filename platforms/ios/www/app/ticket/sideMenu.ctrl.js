@@ -21,6 +21,7 @@ angular.module('ticket.sideMenu.ctrl', [])
       finalize: 0
     };
 
+
     $scope.exit = function () {
       $state.go('despachosMenu.start')
     };
