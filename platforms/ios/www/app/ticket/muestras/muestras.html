@@ -1,4 +1,4 @@
-<ion-view title="Batches">
+<ion-view title="muestras">
 	<ion-nav-buttons side="right">
 		<button class="button button-positive button-clear" ng-click="scan()">
 			SCAN
@@ -8,10 +8,12 @@
 	</ion-nav-buttons>
 	<ion-content class="has-header padding">
 
-		<div ui-view="batchDetail" ng-show="showBatchDetail">
+		<div class="card" ng-show="showBatchDetail">
+			<div ui-view="batchDetail"></div>
 		</div>
 
-		<div ui-view="unidadDetail" ng-show="showUnidadDetail">
+		<div class="card" ng-show="showUnidadDetail">
+			<div ui-view="unidadDetail"></div>
 		</div>
 
 

@@ -3,20 +3,12 @@ angular.module('ticket.photos.ctrl', [])
   // main photo controller
   .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
 
-    // get global despacho SEQ
     var despacho_SEQ = $stateParams.SEQ;
 
-    // set progress with width
     $scope.progressStyle = function (photo) {
       return {'width': ' ' + photo.progress + '%'};
     };
 
-    // get all blobs
-    Blob.getAll().$promise.then(function (result) {
-      //console.log(result);
-    }, function (error) {
-      console.log(error);
-    });
 
     // get foto requirements
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
@@ -27,15 +19,13 @@ angular.module('ticket.photos.ctrl', [])
 
         var groupedDespachoFoto = _.groupBy(data, 'tipo_SEQ');
 
-
-        // TODO: get number of photos taken
-        // TODO: set net = required - taken
-
         // set foto id for each to latest photo
         angular.forEach($scope.fotoTipos, function (each) {
+          each.taken = 0;
           angular.forEach(groupedDespachoFoto, function (d) {
             if (each.SEQ == d[0].tipo_SEQ) {
               each.photo = 'http://www.desa-net.com/TOTAI/db/blob/get?id=' + d[d.length - 1].foto_id;
+              each.taken = d.length;
             }
           });
         });
@@ -144,11 +134,33 @@ angular.module('ticket.photos.ctrl', [])
   })
 
   // photo sidemenu controller
-  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFotoTipo) {
+  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFoto, DespachoFotoTipo) {
 
+    var despacho_SEQ = $stateParams.SEQ;
     // get all foto requirements
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
       $scope.fotoTipos = data;
+
+      // get fotos stored in db
+      DespachoFoto.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
+
+        var groupedDespachoFoto = _.groupBy(data, 'tipo_SEQ');
+
+        // set foto id for each to latest photo
+        angular.forEach($scope.fotoTipos, function (each) {
+          each.taken = 0;
+          angular.forEach(groupedDespachoFoto, function (d) {
+            if (each.SEQ == d[0].tipo_SEQ) {
+              each.taken = d.length;
+            }
+          });
+        });
+
+      }, function (error) {
+        console.log(error);
+      });
+    }, function (error) {
+      console.log(error);
     });
   })
 ;

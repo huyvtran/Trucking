@@ -6,6 +6,7 @@ angular.module('trucking', [
   'app.filters',
   //'ngCordova',
   'ngStorage',
+  'monospaced.qrcode',
 
   // Login
   'login.ctrl',
@@ -20,6 +21,7 @@ angular.module('trucking', [
   'ticket.truck.ctrl',
   'ticket.weight.ctrl',
   'ticket.batches.ctrl',
+  'ticket.muestras.ctrl',
   'ticket.photos.ctrl',
   'ticket.finalize.ctrl',
   'ticket.sideMenu.ctrl',
@@ -164,6 +166,15 @@ angular.module('trucking', [
           'content-view': {
             templateUrl: 'app/ticket/batches/batches.html',
             controller: 'BatchesCtrl'
+
+          },
+          'batchDetail@ticket.batches': {
+            templateUrl: "app/ticket/batches/batchDetail.html",
+            controller: "BatchDetailCtrl"
+          },
+          'unidadDetail@ticket.batches': {
+            templateUrl: "app/ticket/batches/unidadDetail.html",
+            controller: "UnidadDetailCtrl"
           }
         }
       })
@@ -177,6 +188,40 @@ angular.module('trucking', [
         templateUrl: 'app/ticket/batches/batchesMenu.html',
         controller: 'BatchesMenuCtrl'
       })
+
+
+      .state('ticket.muestras', {
+        url: '/muestras',
+        views: {
+          'side-view': {
+            template: '<ui-view>'
+          },
+          'content-view': {
+            templateUrl: 'app/ticket/muestras/muestras.html',
+            controller: 'MuestrasCtrl'
+
+          },
+          'batchDetail@ticket.muestras': {
+            templateUrl: "app/ticket/muestras/muestrasDetail.html",
+            controller: "MuestrasDetailCtrl"
+          },
+          'unidadDetail@ticket.muestras': {
+            templateUrl: "app/ticket/muestras/unidadDetail.html",
+            controller: "UnidadDetailCtrl"
+          }
+        }
+      })
+      .state('ticket.muestras.menu', {
+        url: '/menu',
+        templateUrl: 'app/ticket/sideMenu.html',
+        controller: 'SideMenuCtrl'
+      })
+      .state('ticket.muestras.submenu', {
+        url: '/submenu',
+        templateUrl: 'app/ticket/muestras/muestrasMenu.html',
+        controller: 'MuestrasMenuCtrl'
+      })
+
 
 
       .state('ticket.photos', {

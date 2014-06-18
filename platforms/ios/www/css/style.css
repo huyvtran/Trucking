@@ -182,3 +182,22 @@
 .list .item.item-accordion.ng-hide-remove {
     display: block !important;
 }
+
+
+.bar-align-left {
+    position: absolute;
+    top: 12px;
+    font-size: 15px;
+    left: 10px;
+    float: left;
+}
+
+
+.bar-align-right {
+    position: absolute;
+    top: 12px;
+    font-size: 15px;
+    right: 10px;
+    float: right;
+
+}

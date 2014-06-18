@@ -1,5 +1,6 @@
 angular.module('ticket.batches.ctrl', [])
 
+  // MAIN
   .controller('BatchesCtrl', function ($scope, $rootScope, $stateParams, $ionicPlatform, BatchUnidad, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
@@ -12,18 +13,20 @@ angular.module('ticket.batches.ctrl', [])
       })
     });
 
-    // load mp3 for success beep
-
-    $ionicPlatform.ready(function () {
-      if (window.plugins) {
-        var successMP3 = 'img/successBeep.mp3';
-        window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
-        }, function (error) {
-          console.log(error);
-        });
-      }
+    $rootScope.$on('updateBatchDetail', function () {
+      $scope.showBatchDetail = true;
     });
 
+    $rootScope.$on('updateUnidadDetail', function () {
+      $scope.showUnidadDetail = true;
+    });
+
+    // load mp3 for success beep
+    var successMP3 = 'img/successBeep.mp3';
+    window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
+    }, function (error) {
+      console.log(error);
+    });
 
     $scope.scan = function () {
 
@@ -59,9 +62,7 @@ angular.module('ticket.batches.ctrl', [])
           }
 
           if (code.cancelled == 1) { // close scanner && refresh controller
-            $rootScope.$emit('refreshMenuData');
             $rootScope.$broadcast('refreshMenuData');
-            console.log('cancelled');
           }
         },
         function (error) {  // barcode scan()
@@ -71,13 +72,12 @@ angular.module('ticket.batches.ctrl', [])
   })
 
 
-  .controller('BatchesMenuCtrl', function ($scope, $rootScope, $stateParams, DespachoBatch, DespachoBatchUnidad) {
+  // MENU
+  .controller('BatchesMenuCtrl', function ($scope, $rootScope, $stateParams, $state, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
 
-    $rootScope.$on('refreshMenuData', function (event) {
-      console.log(event);
-      console.log('refresh menu data called');
+    $rootScope.$on('refreshMenuData', function () {
       init();
     });
 
@@ -87,10 +87,18 @@ angular.module('ticket.batches.ctrl', [])
       } else {
         $scope.shownGroup = group;
       }
+      $rootScope.$broadcast('updateBatchDetail', group);
     };
+
     $scope.isGroupShown = function (group) {
       return $scope.shownGroup === group;
     };
+
+    $scope.updateUnidad = function (batch) {
+      $rootScope.$broadcast('updateUnidadDetail', batch);
+      $scope.activeClass = batch.SEQ;
+    };
+
 
     function init() {
 
@@ -110,6 +118,16 @@ angular.module('ticket.batches.ctrl', [])
         // get all desp batch unidad with desp SEQ
         DespachoBatchUnidad.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (response) {
           $scope.despachoBatchUnidad = response;
+          var groupedDespBatchUnidad = _.groupBy(response, 'batch_SEQ');
+
+          angular.forEach($scope.despachoBatch, function (each) {
+            each.taken = 0;
+            angular.forEach(groupedDespBatchUnidad, function (d) {
+              if (each.batch_SEQ == d[0].batch_SEQ) {
+                each.taken = d.length;
+              }
+            });
+          });
 
           $scope.unidadCount = response.length;
 
@@ -124,8 +142,28 @@ angular.module('ticket.batches.ctrl', [])
     }
 
     init();
+  })
 
 
+  .controller('BatchDetailCtrl', function ($scope, $rootScope, Batch) {
+    $rootScope.$on('updateBatchDetail', function (event, args) {
+
+      Batch.getOne({SEQ: args.batch_SEQ}).$promise.then(function (data) {
+        $scope.batchDetail = data;
+      })
+    });
+  })
+
+
+  .controller('UnidadDetailCtrl', function ($scope, $rootScope, BatchUnidad) {
+
+    $rootScope.$on('updateUnidadDetail', function (event, args) {
+      BatchUnidad.getOne({SEQ: args.batch_unidad_SEQ}).$promise.then(function (data) {
+        $scope.unidadDetail = data;
+      })
+
+
+    });
   });
 
 
