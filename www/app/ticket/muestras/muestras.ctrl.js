@@ -4,6 +4,7 @@ angular.module('ticket.muestras.ctrl', [])
   .controller('MuestrasCtrl', function ($scope, $rootScope, $stateParams, $ionicPlatform, BatchUnidad, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
     var batch_SEQs = [];
 
     DespachoBatch.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
@@ -85,6 +86,7 @@ angular.module('ticket.muestras.ctrl', [])
   .controller('MuestrasMenuCtrl', function ($scope, $rootScope, $stateParams, $state, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
 
     $rootScope.$on('refreshMenuData', function () {
       console.log('refresh menu data called');

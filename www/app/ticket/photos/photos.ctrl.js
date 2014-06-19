@@ -4,6 +4,7 @@ angular.module('ticket.photos.ctrl', [])
   .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
 
     $scope.progressStyle = function (photo) {
       return {'width': ' ' + photo.progress + '%'};
@@ -139,6 +140,8 @@ angular.module('ticket.photos.ctrl', [])
   .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFoto, DespachoFotoTipo) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
+
     // get all foto requirements
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
       $scope.fotoTipos = data;

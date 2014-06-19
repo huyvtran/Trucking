@@ -12,6 +12,7 @@ angular.module('ticket.truck.ctrl', [])
 
   .controller('TruckMenuCtrl', function ($scope, $state, $stateParams, Despacho, Empresa, Camion, Chofer) {
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
 
     Despacho.getOne({SEQ: despacho_SEQ}).$promise.then(function (d) {
       $scope.despacho = d;

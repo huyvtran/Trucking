@@ -201,3 +201,8 @@
     float: right;
 
 }
+
+.button-bar-fixed-bottom {
+    bottom: 100px;
+    position: absolute !important;
+}
