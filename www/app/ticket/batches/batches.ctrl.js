@@ -22,13 +22,14 @@ angular.module('ticket.batches.ctrl', [])
     });
 
     // load mp3 for success beep
-    var successMP3 = 'img/successBeep.mp3';
-    window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
-    }, function (error) {
-      console.log(error);
-    });
+
 
     $scope.scan = function () {
+      var successMP3 = 'img/successBeep.mp3';
+      window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
+      }, function (error) {
+        console.log(error);
+      });
 
       cordova.plugins.barcodeScanner.scan(function (code) {
 

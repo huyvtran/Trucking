@@ -61,8 +61,29 @@ angular.module('despachos.ctrl', [])
     });
 
 
-    $scope.selectDespacho = function () {
-      $state.go('ticket.start', {SEQ: SEQ});
+    $scope.selectDespacho = function (loc) {
+      switch (loc) {
+        case 'truck':
+          $state.go('ticket.truck', {SEQ: SEQ});
+          $state.go('ticket.truck.submenu', {SEQ: SEQ});
+          break;
+        case 'batches':
+          $state.go('ticket.batches', {SEQ: SEQ});
+          $state.go('ticket.batches.submenu', {SEQ: SEQ});
+          break;
+        case 'muestras':
+          $state.go('ticket.muestras', {SEQ: SEQ});
+          $state.go('ticket.muestras.submenu', {SEQ: SEQ});
+          break;
+        case 'fotos':
+          $state.go('ticket.photos', {SEQ: SEQ});
+          $state.go('ticket.photos.submenu', {SEQ: SEQ});
+          break;
+        case 'otras':
+          $state.go('ticket.otras', {SEQ: SEQ});
+          $state.go('ticket.otras.submenu', {SEQ: SEQ});
+          break;
+      }
     };
 
   });

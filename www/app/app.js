@@ -24,7 +24,6 @@ angular.module('trucking', [
 
   // truck
   'ticket.truck.ctrl',
-  'ticket.weight.ctrl',
   'ticket.batches.ctrl',
   'ticket.muestras.ctrl',
   'ticket.photos.ctrl',
@@ -135,30 +134,6 @@ angular.module('trucking', [
         url: '/submenu',
         templateUrl: 'app/ticket/truck/truckMenu.html',
         controller: 'TruckMenuCtrl'
-      })
-
-
-      .state('ticket.weight', {
-        url: '/weight',
-        views: {
-          'side-view': {
-            template: '<ui-view>'
-          },
-          'content-view': {
-            templateUrl: 'app/ticket/weight/weight.html',
-            controller: 'WeightCtrl'
-          }
-        }
-      })
-      .state('ticket.weight.menu', {
-        url: '/menu',
-        templateUrl: 'app/ticket/sideMenu.html',
-        controller: 'SideMenuCtrl'
-      })
-      .state('ticket.weight.submenu', {
-        url: '/submenu',
-        templateUrl: 'app/ticket/weight/weightMenu.html',
-        controller: 'WeightCtrl'
       })
 
 
