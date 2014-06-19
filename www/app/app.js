@@ -1,12 +1,18 @@
 angular.module('trucking', [
+  // Libraries
   'ionic',
   'ngResource',
   'autocomplete',
-  'app.directives',
-  'app.filters',
-  //'ngCordova',
   'ngStorage',
   'monospaced.qrcode',
+  //'ngCordova',
+
+
+  // App
+  'app.directives',
+  'app.filters',
+  'app.services',
+
 
   // Login
   'login.ctrl',
@@ -14,7 +20,6 @@ angular.module('trucking', [
 
   // Despachos
   'despachos.ctrl',
-  'despachos.service',
 
 
   // truck
@@ -26,7 +31,7 @@ angular.module('trucking', [
   'ticket.finalize.ctrl',
   'ticket.sideMenu.ctrl',
   'ticket.ctrl',
-  'ticket.service'
+  'app.services'
 ])
 
   .run(function ($rootScope, $ionicPlatform) {
@@ -221,7 +226,6 @@ angular.module('trucking', [
         templateUrl: 'app/ticket/muestras/muestrasMenu.html',
         controller: 'MuestrasMenuCtrl'
       })
-
 
 
       .state('ticket.photos', {

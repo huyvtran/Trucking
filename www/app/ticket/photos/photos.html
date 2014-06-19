@@ -18,10 +18,11 @@
 
 						<div class="item item-image image-empty">
 							<img ng-src="{{item.photo}}">
+
 						</div>
 
 						<div class="item tabs tabs-secondary">
-							<div class="tab-item" ng-click="expandPhotos(item)">
+							<div class="tab-item" ng-click="expandPhotos(item)" ng-disabled="item.taken == 0">
 								<i class="icon ion-arrow-expand"></i>
 							</div>
 							<div class="tab-item" ng-click="capturePhoto(item)">

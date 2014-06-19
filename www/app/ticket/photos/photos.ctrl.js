@@ -43,11 +43,13 @@ angular.module('ticket.photos.ctrl', [])
       $scope.slidePhotos = [];
       DespachoFoto.getWithTipoSEQ({tipo_SEQ: photo.SEQ}).$promise.then(function (data) {
         angular.forEach(data, function (d) {
-          $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
-          $timeout(function () {
-            $ionicSlideBoxDelegate.slide(0);
-            $ionicSlideBoxDelegate.update();
-          }, 500);
+          if (d.despacho_SEQ == despacho_SEQ) {
+            $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
+            $timeout(function () {
+              $ionicSlideBoxDelegate.slide(0);
+              $ionicSlideBoxDelegate.update();
+            }, 500);
+          }
         });
 
       });

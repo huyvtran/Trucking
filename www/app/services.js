@@ -1,169 +1,4 @@
-angular.module('ticket.service', [])
-
-
-  .service('Ticket', function ($http) {
-
-
-    var despacho = {
-      SEQ: '',
-      venta_SEQ: '',
-      export_SEQ: '',
-      cliente_SEQ: '',
-      factura_num: '',
-      fecha_pedido: '',
-      fecha_despacho: '',
-      fecha_llegado: '',
-      contenador_num: '',
-      precintos: '',
-      puerto: '',
-      frontera: '',
-      destino: ''
-    };
-
-    var transport_empresa = {
-      SEQ: '',
-      codigo: '',
-      nombre: '',
-      contacto: '',
-      direccion: '',
-      telefono: ''
-    };
-
-    var transport_camion = {
-      SEQ: '',
-      placa_numero: '',
-      placa_pais: '',
-      empresa_SEQ: '',
-      marca: '',
-      tipo: '',
-      max_kg: '',
-      tara_kg: '',
-      ejes: '',
-      ejes_trailer: ''
-    };
-
-    var transport_chofer = {
-      SEQ: '',
-      codigo: '',
-      nombre: '',
-      contacto: '',
-      direccion: '',
-      telefono: ''
-    };
-
-    var ticket = {
-      truck: {
-        license: {
-          number: '',
-          country: ''
-        },
-        marca: '',
-        tipo: '',
-        ejes: ''
-      },
-
-      driver: {
-        apellido: '',
-        nombre: '',
-        telefono: '',
-        patente: ''
-      },
-
-      peso: {
-        tara: null,
-        total: null,
-        net: null
-      },
-
-      photos: {
-        truck: {
-          empty: {
-            title: 'Empty Truck',
-            status: 1,
-            required: 0,
-            image: './img/blank_img.jpg'
-          },
-          full: {
-            title: 'Full Truck',
-            status: 2,
-            required: 0,
-            image: './img/blank_img.jpg'
-          },
-          side_left: {
-            title: 'Truck Sideview Left',
-            status: 1,
-            required: 0,
-            image: './img/blank_img.jpg'
-          },
-          side_right: {
-            title: 'Truck Sideview Right',
-            status: 0,
-            required: 0,
-            image: './img/blank_img.jpg'
-          }
-        },
-        driver: {
-          face: {
-            title: 'Driver Face',
-            status: 1,
-            required: 0,
-            image: './img/blank_img.jpg'
-          },
-          license_front: {
-            title: 'License Front',
-            status: 1,
-            required: 0,
-            image: './img/blank_img.jpg'
-          },
-          license_back: {
-            title: 'License Back',
-            status: 1,
-            required: 0,
-            image: './img/blank_img.jpg'
-          },
-          driver_something: {
-            title: 'Something Here',
-            status: 1,
-            required: 0,
-            image: './img/blank_img.jpg'
-          }
-        }
-      }
-    };
-
-    var icons = {
-      truck: 1,
-      driver: 0,
-      weight: 0,
-      batches: 1,
-      photos: 2,
-      finalize: 0
-    };
-
-    return {
-      setDespachoSEQ: function (SEQ) {
-        despachoSEQ = SEQ;
-      },
-
-      getDespachoSEQ: function () {
-        return despachoSEQ;
-      },
-
-
-      saveTruck: function (t) {
-        ticket.truck = t;
-      },
-
-      getIcons: function () {
-        return icons;
-      },
-
-      getTicket: function () {
-        return ticket;
-      }
-    }
-  })
-
+angular.module('app.services', [])
 
   .factory('Despacho', function ($rootScope, $resource) {
     return $resource($rootScope.DB_URL + 'despacho/:SEQ', {}, {
@@ -193,7 +28,7 @@ angular.module('ticket.service', [])
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
         getWithDespacho: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho'}, isArray: true},
-        getWithMany: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho',verb2: 'get', batch_SEQ: '@batch', verb3: 'get', batch_unidad_SEQ: '@unidad'}, isArray: true},
+        getWithMany: {method: 'GET', params: {verb: 'get', despacho_SEQ: '@despacho', verb2: 'get', batch_SEQ: '@batch', verb3: 'get', batch_unidad_SEQ: '@unidad'}, isArray: true},
         update: {method: 'POST', params: {SEQ: '@SEQ'}},
         addNew: {method: 'POST', params: {verb: 'X'}},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}
@@ -307,7 +142,6 @@ angular.module('ticket.service', [])
 
 
   .factory('Camera', function ($q) {
-
     return {
       capture: function (options) {
         var q = $q.defer();
@@ -317,7 +151,6 @@ angular.module('ticket.service', [])
         }, function (error) {
           q.reject(error);
         }, options);
-
         return q.promise;
       }
     }
@@ -334,8 +167,8 @@ angular.module('ticket.service', [])
 
         ft.onprogress = function (progressEvent) {
           if (progressEvent.lengthComputable) {
-            var perc = Math.floor(progressEvent.loaded / progressEvent.total * 100);
-            q.notify(perc);
+            var percent = Math.floor(progressEvent.loaded / progressEvent.total * 100);
+            q.notify(percent);
           }
           else {
             console.log('error');
@@ -349,39 +182,6 @@ angular.module('ticket.service', [])
         }, options);
 
         return q.promise;
-      },
-
-      donwload: function (url) {
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, fileSystemSuccess, fileSystemFail);
-
-        function fileSystemSuccess(fileSystem) {
-          var download_link = encodeURI(URL);
-          ext = download_link.substr(download_link.lastIndexOf('.') + 1); //Get extension of URL
-
-          var directoryEntry = fileSystem.root; // to get root path of directory
-          directoryEntry.getDirectory(Folder_Name, { create: true, exclusive: false }, onDirectorySuccess, onDirectoryFail); // creating folder in sdcard
-          var rootdir = fileSystem.root;
-          var fp = rootdir.fullPath; // Returns Fulpath of local directory
-
-          fp = fp + "/" + Folder_Name + "/" + File_Name + "." + ext; // fullpath and name of the file which we want to give
-          // download function call
-          filetransfer(download_link, fp);
-        }
-
-        function onDirectorySuccess(parent) {
-          // Directory created successfuly
-        }
-
-        function onDirectoryFail(error) {
-          //Error while creating directory
-          alert("Unable to create new directory: " + error.code);
-        }
-
-        function fileSystemFail(evt) {
-          //Unable to access file system
-          alert(evt.target.error.code);
-        }
-
       }
     }
   });

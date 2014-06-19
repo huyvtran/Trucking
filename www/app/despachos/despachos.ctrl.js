@@ -32,14 +32,7 @@ angular.module('despachos.ctrl', [])
 
 
   //  START
-  .controller('DespachosStartCtrl', function ($scope, $state, Despacho) {
-    $scope.go = function () {
-      $state.go('ticket.truck');
-    };
-
-    $scope.goSidemenu = function () {
-      $state.go('');
-    }
+  .controller('DespachosStartCtrl', function ($scope, $state) {
   })
 
 
