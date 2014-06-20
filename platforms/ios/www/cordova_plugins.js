@@ -241,6 +241,13 @@ module.exports = [
         "clobbers": [
             "window.plugins.toast"
         ]
+    },
+    {
+        "file": "plugins/uk.co.whiteoctober.cordova.AppVersion/www/AppVersionPlugin.js",
+        "id": "uk.co.whiteoctober.cordova.AppVersion.AppVersionPlugin",
+        "clobbers": [
+            "cordova.getAppVersion"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -256,7 +263,8 @@ module.exports.metadata =
     "org.apache.cordova.file": "1.1.0",
     "org.apache.cordova.file-transfer": "0.4.3",
     "org.apache.cordova.network-information": "0.2.8",
-    "nl.x-services.plugins.toast": "2.0"
+    "nl.x-services.plugins.toast": "2.0",
+    "uk.co.whiteoctober.cordova.AppVersion": "0.1.3"
 }
 // BOTTOM OF METADATA
 });

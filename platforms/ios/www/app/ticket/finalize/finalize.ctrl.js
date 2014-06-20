@@ -12,6 +12,7 @@ angular.module('ticket.finalize.ctrl', [])
   .controller('FinalizeCtrl', function ($scope, $stateParams, $ionicLoading, Despacho, DespachoBatch, Empresa, Camion, Chofer) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
     $ionicLoading.show({template: 'Loading Data'});
 
 

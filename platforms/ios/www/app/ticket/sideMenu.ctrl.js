@@ -9,7 +9,7 @@
 
 angular.module('ticket.sideMenu.ctrl', [])
 
-  .controller('SideMenuCtrl', function ($scope, $state, $stateParams, Ticket) {
+  .controller('SideMenuCtrl', function ($scope, $state, $stateParams) {
 
     $scope.despacho_SEQ = $stateParams.SEQ;
 
@@ -27,6 +27,6 @@ angular.module('ticket.sideMenu.ctrl', [])
       $state.go('despachosMenu.start')
     };
 
-    $scope.icons = Ticket.getIcons();
+   // $scope.icons = Ticket.getIcons();
 
   });

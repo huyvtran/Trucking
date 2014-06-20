@@ -51,6 +51,10 @@
                         {
                             "xml": "<feature name=\"Toast\"><param name=\"ios-package\" value=\"Toast\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppVersion\"><param name=\"ios-package\" value=\"AppVersion\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -159,6 +163,9 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "nl.x-services.plugins.toast": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "uk.co.whiteoctober.cordova.AppVersion": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         }
     },

@@ -4,6 +4,7 @@ angular.module('ticket.photos.ctrl', [])
   .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
 
     $scope.progressStyle = function (photo) {
       return {'width': ' ' + photo.progress + '%'};
@@ -43,11 +44,13 @@ angular.module('ticket.photos.ctrl', [])
       $scope.slidePhotos = [];
       DespachoFoto.getWithTipoSEQ({tipo_SEQ: photo.SEQ}).$promise.then(function (data) {
         angular.forEach(data, function (d) {
-          $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
-          $timeout(function () {
-            $ionicSlideBoxDelegate.slide(0);
-            $ionicSlideBoxDelegate.update();
-          }, 500);
+          if (d.despacho_SEQ == despacho_SEQ) {
+            $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
+            $timeout(function () {
+              $ionicSlideBoxDelegate.slide(0);
+              $ionicSlideBoxDelegate.update();
+            }, 500);
+          }
         });
 
       });
@@ -137,6 +140,8 @@ angular.module('ticket.photos.ctrl', [])
   .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFoto, DespachoFotoTipo) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
+
     // get all foto requirements
     DespachoFotoTipo.getWithCliente({cliente_SEQ: 0}).$promise.then(function (data) {
       $scope.fotoTipos = data;

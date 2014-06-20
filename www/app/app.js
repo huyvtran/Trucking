@@ -33,17 +33,44 @@ angular.module('trucking', [
   'app.services'
 ])
 
-  .run(function ($rootScope, $ionicPlatform) {
+  .run(function ($rootScope, $timeout, $ionicPlatform, Apps) {
+
+    // globals
+    $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
+    $rootScope.appName = 'Despacho';
+
+
+    Apps.findByName({query: $rootScope.appName}).$promise.then(function (data) {
+      console.log(data);
+    }, function (error) {
+      console.log(error);
+    });
+
+    // load default plugin values
     $ionicPlatform.ready(function () {
-      if (window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      }
       if (window.StatusBar) {
         StatusBar.styleDefault();
       }
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.getAppVersion(function (version) {
+          $rootScope.appVersion = version;
+
+
+        })
+
+      }
     });
 
-    $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
+    // check version with DB
+
+
+
+    if ('0.0.1' < '0.0.2') {
+
+    }
+
+
   })
 
   .config(function ($stateProvider, $urlRouterProvider) {

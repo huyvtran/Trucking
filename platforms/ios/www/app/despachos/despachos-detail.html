@@ -1,5 +1,5 @@
 <ion-view title="{{despacho.SEQ}}">
-	<ion-content has-header="true" padding="true" class="padding">
+	<ion-content has-header="true" padding="true">
 
 		<div class="card">
 			<div class="item item-divider">
@@ -25,7 +25,7 @@
 						<div class="item item-divider">
 							Batch: {{batch.prod_codigo}}
 						</div>
-						<div class="item ">
+						<div class="item">
 							SEQ: {{batch.SEQ}} <br>
 							Producto: {{batch.prod_cat}}<br>
 							Envase: {{batch.envase}}<br>
@@ -38,10 +38,13 @@
 			</div>
 		</div>
 
-
-		<div class="row row-bottom">
-			<button class="button button-dark button-bottom-left" ng-click="selectDespacho(detail.SEQ)">Complete Despacho</button>
-		</div>
-
 	</ion-content>
+
+	<div class="button-bar padding button-bar-fixed-bottom">
+		<a class="button" ng-class="'button-assertive'" ng-click="selectDespacho('truck')">Truck</a>
+		<a class="button" ng-class="'button-balanced'" ng-click="selectDespacho('batches')">Batches</a>
+		<a class="button" ng-class="'button-energized'" ng-click="selectDespacho('muestras')">Muestras</a>
+		<a class="button" ng-class="'button-assertive'" ng-click="selectDespacho('fotos')">Fotos</a>
+		<a class="button" ng-class="'button-balanced'" ng-click="selectDespacho('otras')">Otras</a>
+	</div>
 </ion-view>

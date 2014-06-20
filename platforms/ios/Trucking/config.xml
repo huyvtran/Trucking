@@ -53,6 +53,9 @@
     <feature name="Toast">
         <param name="ios-package" value="Toast" />
     </feature>
+    <feature name="AppVersion">
+        <param name="ios-package" value="AppVersion" />
+    </feature>
     <name>Trucking</name>
     <description>
         An app for Tracking and Digitalizing Exports.

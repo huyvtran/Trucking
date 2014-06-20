@@ -1,12 +1,18 @@
 angular.module('trucking', [
+  // Libraries
   'ionic',
   'ngResource',
   'autocomplete',
-  'app.directives',
-  'app.filters',
-  //'ngCordova',
   'ngStorage',
   'monospaced.qrcode',
+  //'ngCordova',
+
+
+  // App
+  'app.directives',
+  'app.filters',
+  'app.services',
+
 
   // Login
   'login.ctrl',
@@ -14,29 +20,33 @@ angular.module('trucking', [
 
   // Despachos
   'despachos.ctrl',
-  'despachos.service',
 
 
   // truck
   'ticket.truck.ctrl',
-  'ticket.weight.ctrl',
   'ticket.batches.ctrl',
   'ticket.muestras.ctrl',
   'ticket.photos.ctrl',
   'ticket.finalize.ctrl',
   'ticket.sideMenu.ctrl',
   'ticket.ctrl',
-  'ticket.service'
+  'app.services'
 ])
 
   .run(function ($rootScope, $ionicPlatform) {
     $ionicPlatform.ready(function () {
       if (window.cordova && window.cordova.plugins.Keyboard) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.getAppVersion(function (version) {
+          alert(version);
+        })
+        
       }
       if (window.StatusBar) {
         StatusBar.styleDefault();
       }
+
+
     });
 
     $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
@@ -133,30 +143,6 @@ angular.module('trucking', [
       })
 
 
-      .state('ticket.weight', {
-        url: '/weight',
-        views: {
-          'side-view': {
-            template: '<ui-view>'
-          },
-          'content-view': {
-            templateUrl: 'app/ticket/weight/weight.html',
-            controller: 'WeightCtrl'
-          }
-        }
-      })
-      .state('ticket.weight.menu', {
-        url: '/menu',
-        templateUrl: 'app/ticket/sideMenu.html',
-        controller: 'SideMenuCtrl'
-      })
-      .state('ticket.weight.submenu', {
-        url: '/submenu',
-        templateUrl: 'app/ticket/weight/weightMenu.html',
-        controller: 'WeightCtrl'
-      })
-
-
       .state('ticket.batches', {
         url: '/batches',
         views: {
@@ -221,7 +207,6 @@ angular.module('trucking', [
         templateUrl: 'app/ticket/muestras/muestrasMenu.html',
         controller: 'MuestrasMenuCtrl'
       })
-
 
 
       .state('ticket.photos', {

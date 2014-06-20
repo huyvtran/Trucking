@@ -4,6 +4,7 @@ angular.module('ticket.batches.ctrl', [])
   .controller('BatchesCtrl', function ($scope, $rootScope, $stateParams, $ionicPlatform, BatchUnidad, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
     var batch_SEQs = [];
 
     DespachoBatch.getWithDespacho({despacho_SEQ: despacho_SEQ}).$promise.then(function (data) {
@@ -22,13 +23,14 @@ angular.module('ticket.batches.ctrl', [])
     });
 
     // load mp3 for success beep
-    var successMP3 = 'img/successBeep.mp3';
-    window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
-    }, function (error) {
-      console.log(error);
-    });
+
 
     $scope.scan = function () {
+      var successMP3 = 'img/successBeep.mp3';
+      window.plugins.LowLatencyAudio.preloadFX(successMP3, successMP3, function (msg) {
+      }, function (error) {
+        console.log(error);
+      });
 
       cordova.plugins.barcodeScanner.scan(function (code) {
 
@@ -76,6 +78,8 @@ angular.module('ticket.batches.ctrl', [])
   .controller('BatchesMenuCtrl', function ($scope, $rootScope, $stateParams, $state, DespachoBatch, DespachoBatchUnidad) {
 
     var despacho_SEQ = $stateParams.SEQ;
+    $scope.despacho_SEQ = despacho_SEQ;
+
 
     $rootScope.$on('refreshMenuData', function () {
       init();

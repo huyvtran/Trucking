@@ -27,7 +27,6 @@ angular.module('despachos.ctrl', [])
       $scope.search.SEQ = '';
     };
 
-
   })
 
 
