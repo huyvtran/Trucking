@@ -248,6 +248,13 @@ module.exports = [
         "clobbers": [
             "cordova.getAppVersion"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -264,7 +271,8 @@ module.exports.metadata =
     "org.apache.cordova.file-transfer": "0.4.3",
     "org.apache.cordova.network-information": "0.2.8",
     "nl.x-services.plugins.toast": "2.0",
-    "uk.co.whiteoctober.cordova.AppVersion": "0.1.3"
+    "uk.co.whiteoctober.cordova.AppVersion": "0.1.3",
+    "org.apache.cordova.inappbrowser": "0.5.1-dev"
 }
 // BOTTOM OF METADATA
 });

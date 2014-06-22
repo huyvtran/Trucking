@@ -56,6 +56,9 @@
     <feature name="AppVersion">
         <param name="ios-package" value="AppVersion" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <name>Trucking</name>
     <description>
         An app for Tracking and Digitalizing Exports.

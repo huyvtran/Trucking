@@ -2,9 +2,10 @@ angular.module('app.services', [])
 
 
   .factory('Apps', function ($rootScope, $resource) {
-    return $resource($rootScope.DB_URL + 'apps/:SEQ', {}, {
+    return $resource('http://www.desa-net.com/TOTAI/db/apps/:SEQ/search/:query', {}, {
         getAll: {method: 'GET', isArray: true},
         getOne: {method: 'GET', params: {SEQ: '@SEQ'}},
+        findByName: {method: 'GET', params: {query: '@query'}, isArray: true},
         update: {method: 'POST', params: {SEQ: '@SEQ'}},
         new: {method: 'POST'},
         delete: {method: 'DELETE', params: {SEQ: '@SEQ'}}

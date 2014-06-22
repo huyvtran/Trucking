@@ -68,6 +68,7 @@
 		DAECCB9AF31F4066B9FB3A1F /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C49E755C5384939B1542BCD /* CDVConnection.m */; };
 		E6096FDC904F4EA19AE04AD1 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78F71E90269E4441BB0A94FD /* CDVNotification.bundle */; };
 		E9BB622FABF4490EAB1C9C31 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2424C04CF1694E01B2CDDD85 /* CDVDevice.m */; };
+		BDD2CA6779BC4E27A6F83A82 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FCB9B06624D5CAB06E63C /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +183,8 @@
 		EFBF6020F511479AAE707D76 /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVJpegHeaderWriter.m; path = org.apache.cordova.camera/CDVJpegHeaderWriter.m; sourceTree = "<group>"; };
 		F03B3ADFFC45474AB672E198 /* CDVCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVCamera.m; path = org.apache.cordova.camera/CDVCamera.m; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Trucking/config.xml; sourceTree = "<group>"; };
+		240FCB9B06624D5CAB06E63C /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		F545F77D286E4EA9A0EBD715 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +362,8 @@
 				99284BC9B2BA43769C8CD954 /* Toast.h */,
 				0E72861EBC1C435BBA28CC27 /* AppVersion.m */,
 				2C433FDF0BC044B9BBE3B31B /* AppVersion.h */,
+				240FCB9B06624D5CAB06E63C /* CDVInAppBrowser.m */,
+				F545F77D286E4EA9A0EBD715 /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = Trucking/Plugins;
@@ -581,6 +586,7 @@
 				C543D18A20AD4D8480D800C6 /* Toast+UIView.m in Sources */,
 				3B667FEAA86946BC8BE2A3AA /* Toast.m in Sources */,
 				4FE1C71388C2426C9B98B490 /* AppVersion.m in Sources */,
+				BDD2CA6779BC4E27A6F83A82 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,23 +33,39 @@ angular.module('trucking', [
   'app.services'
 ])
 
-  .run(function ($rootScope, $ionicPlatform) {
+  .run(function ($rootScope, $timeout, $ionicPlatform, Apps) {
+
+    // globals
+    $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
+    $rootScope.totaiAppStore = 'http://desa-net.com/totaiAppStore/';
+    $rootScope.appName = 'Despacho';
+    var newVersion = '';
+
+    // load default plugin values
     $ionicPlatform.ready(function () {
-      if (window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        cordova.getAppVersion(function (version) {
-          alert(version);
-        })
-        
-      }
       if (window.StatusBar) {
         StatusBar.styleDefault();
       }
+      if (window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.getAppVersion(function (version) {
+          $rootScope.appVersion = version;
+
+          Apps.findByName({query: $rootScope.appName}).$promise.then(function (data) {
+            newVersion = data[0].version;
+            if (newVersion > $rootScope.appVersion) {
+              navigator.notification.alert('A New Version is Available', function () {
+                window.open($rootScope.totaiAppStore, '_system');
+              }, 'Update Required', 'update');
+            }
+          }, function (error) {
+            console.log(error);
+          });
 
 
+        })
+      }
     });
-
-    $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
   })
 
   .config(function ($stateProvider, $urlRouterProvider) {
