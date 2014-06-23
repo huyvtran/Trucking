@@ -1,6 +1,5 @@
 angular.module('despachos.ctrl', [])
 
-
   //  MENU
   .controller('DespachosMenuCtrl', function ($scope, $ionicLoading, $location, Despacho) {
 
