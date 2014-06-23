@@ -1,7 +1,7 @@
 angular.module('ticket.photos.ctrl', [])
 
   // main photo controller
-  .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
+  .controller('PhotosCtrl', function ($rootScope, $scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
 
     var despacho_SEQ = $stateParams.SEQ;
     $scope.despacho_SEQ = despacho_SEQ;
@@ -25,7 +25,8 @@ angular.module('ticket.photos.ctrl', [])
           each.taken = 0;
           angular.forEach(groupedDespachoFoto, function (d) {
             if (each.SEQ == d[0].tipo_SEQ) {
-              each.photo = 'http://www.desa-net.com/TOTAI/db/blob/get?id=' + d[d.length - 1].foto_id;
+            // uses $ rootScope DB_URL
+              each.photo = $rootScope.DB_URL + 'blob/get?id=' + d[d.length - 1].foto_id;
               each.taken = d.length;
             }
           });
