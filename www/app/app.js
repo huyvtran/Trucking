@@ -39,7 +39,7 @@ angular.module('trucking', [
     // access DESA-NET.COM server
     // $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
     // access any WEB HOSTING server for "db" and "www"
-    $rootScope.DB_URL = '../TOTAI/db/';
+    $rootScope.DB_URL = '../../TOTAI/db/';
     
     // globals
     $rootScope.totaiAppStore = 'http://desa-net.com/totaiAppStore/';
