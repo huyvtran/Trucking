@@ -2,7 +2,7 @@ angular.module('despachos.ctrl', [])
 
 
   //  MENU
-  .controller('DespachosMenuCtrl', function ($scope, $ionicLoading, $location, Despacho) {
+  .controller('DespachosMenuCtrl', function ($scope,$state, $ionicLoading, $location, Despacho) {
 
     $scope.search = { SEQ: '' };
     //$ionicLoading.show({template: 'Loading Despachos'});
@@ -27,6 +27,11 @@ angular.module('despachos.ctrl', [])
       $scope.search.SEQ = '';
     };
 
+
+    $scope.logout = function () {
+      console.log('logged out now');
+      $state.go('login')
+    }
   })
 
 

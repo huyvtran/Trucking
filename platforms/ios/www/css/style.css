@@ -206,3 +206,10 @@
     bottom: 100px;
     position: absolute !important;
 }
+
+.login-form {
+    position: absolute !important;
+    bottom: 30%;
+    right: 30%;
+    left: 30%;
+}

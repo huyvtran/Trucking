@@ -61,8 +61,6 @@ angular.module('trucking', [
           }, function (error) {
             console.log(error);
           });
-
-
         })
       }
     });
@@ -75,7 +73,7 @@ angular.module('trucking', [
 
       .state('login', {
         url: "/login",
-        templateUrl: "login.html",
+        templateUrl: "app/login/login.html",
         controller: 'LoginCtrl'
       })
 
@@ -276,8 +274,8 @@ angular.module('trucking', [
       });
 
 
-    $urlRouterProvider.otherwise('/despachos/start');
-    //$urlRouterProvider.otherwise('/ticket/truck');
+    //$urlRouterProvider.otherwise('/despachos/start');
+    $urlRouterProvider.otherwise('/login');
 
   });
 
