@@ -1,0 +1,21 @@
+<ion-view title="muestras">
+	<ion-nav-buttons side="right">
+		<button class="button button-positive button-clear" ng-click="scan()">
+			SCAN
+			<i class="icon ion-ios7-barcode-outline"></i>
+
+		</button>
+	</ion-nav-buttons>
+	<ion-content class="has-header padding">
+
+		<div class="card" ng-show="showBatchDetail">
+			<div ui-view="batchDetail"></div>
+		</div>
+
+		<div class="card" ng-show="showUnidadDetail">
+			<div ui-view="unidadDetail"></div>
+		</div>
+
+
+	</ion-content>
+</ion-view>

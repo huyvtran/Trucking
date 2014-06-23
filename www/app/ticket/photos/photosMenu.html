@@ -1,0 +1,26 @@
+<ion-view title="{{despacho_SEQ}}">
+<ion-nav-buttons side="left">
+		<button class="button button-positive button-clear " ui-sref="ticket.photos.menu">
+			<i class="icon ion-ios7-arrow-back"></i>
+			MENU
+		</button>
+	</ion-nav-buttons>
+	<ion-content has-header="true">
+		<ion-list>
+			<div class="item item-divider">
+					<div class="align-left">Title</div>
+					<div class="align-right">Status</div>
+				</div>
+			</div>
+			<ion-item class="item-icon-right" ng-repeat="photo in fotoTipos">
+				{{photo.categoria + ' - ' + photo.detaille}}
+				<i class="icon" ng-class="{true : 'ion-ios7-checkmark-outline balanced', false : 'ion-ios7-close-outline assertive'}[photo.taken >= photo.requerido]"></i>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+
+	<ion-footer-bar class="bar-dark">
+		<h1 class="title">Missing: </h1>
+	</ion-footer-bar>
+</ion-view>

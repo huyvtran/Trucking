@@ -1,0 +1,19 @@
+<ion-view title="Batches">
+	<ion-nav-buttons side="right">
+		<button class="button button-positive button-clear" ng-click="scan()">
+			SCAN
+			<i class="icon ion-ios7-barcode-outline"></i>
+
+		</button>
+	</ion-nav-buttons>
+	<ion-content class="has-header padding">
+
+		<div ui-view="batchDetail" ng-show="showBatchDetail">
+		</div>
+
+		<div ui-view="unidadDetail" ng-show="showUnidadDetail">
+		</div>
+
+
+	</ion-content>
+</ion-view>

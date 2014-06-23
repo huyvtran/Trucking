@@ -1,0 +1,159 @@
+<ion-view title="Truck">
+
+	<ion-content class="has-header padding">
+
+		<div class="row">
+			<div class="col">
+				<div class="list">
+					<div class="item list-header">
+						<span class="list-header-title">Camion</span>
+						<button class="button button-positive button-clear icon-right ion-ios7-plus-empty list-header-button" ng-click="createNewCamion()">
+							Nuevo Camion
+						</button>
+					</div>
+					<label class="item item-input item-autocomplete">
+						<span class="input-label">Placa #</span>
+						<!--<autocomplete ng-model="camion.placa_numero" attr-placeholder="VD 102 203" data="placa_numeros" on-type="updateNumeros" on-select="select"></autocomplete>-->
+						<input type="text" placeholder="VD 102 203" ng-model="camion.placa_numero" ng-blur="offFocus(0)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Placa Pais</span>
+						<input type="text" placeholder="BOL" ng-model="camion.placa_pais" ng-blur="offFocus(0)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Marca</span>
+						<input type="text" placeholder="Mercedes" ng-model="camion.marca" ng-blur="offFocus(0)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Tipo</span>
+						<input type="text" placeholder="X5" ng-model="camion.tipo" ng-blur="offFocus(0)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Ejes</span>
+						<input type="text" placeholder="4" ng-model="camion.ejes" ng-blur="offFocus(0)">
+					</label>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="list">
+					<div class="item list-header">
+						<span class="list-header-title">Chofer</span>
+						<button class="button button-positive button-clear icon-right ion-ios7-plus-empty list-header-button" ng-click="createNewChofer()">
+							Nuevo Chofer
+						</button>
+					</div>
+					<label class="item item-input">
+						<span class="input-label">Apellido</span>
+						<input type="text" placeholder="Paolo" ng-model="chofer.apellido" ng-blur="offFocus(1)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="Bernasconi" ng-model="chofer.nombre" ng-blur="offFocus(1)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Telefono</span>
+						<input type="text" placeholder="Mercedes" ng-model="chofer.telefono" ng-blur="offFocus(1)">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">License</span>
+						<input type="text" placeholder="X203A495" ng-model="chofer.patente" ng-blur="offFocus(1)">
+					</label>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row padding-top">
+			<div class="col-50">
+				<div class="item list-header">
+					<span class="list-header-title">Chofer</span>
+					<button class="button button-positive button-clear icon-right ion-ios7-plus-empty list-header-button" ng-click="createNewChofer()">
+						Nuevo Chofer
+					</button>
+				</div>
+				<div class="list">
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">TARA</span>
+						<input type="number" placeholder="13000kg" ng-model="peso.tara">
+					</label>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">TOTAL</span>
+						<input type="number" placeholder="43000kg" ng-model="peso.total">
+					</label>
+					<label class="item item-input item-stacked-label">
+						<span class="input-label">NET</span>
+						<input type="number" placeholder="2000kg" ng-model="peso.net">
+					</label>
+				</div>
+			</div>
+		</div>
+
+
+	</ion-content>
+
+	<script id="newCamion.html" type="text/ng-template">
+		<div class="modal" ng-controller="NewCamionModalCtrl">
+			<ion-header-bar>
+				<button class="button button-assertive button-clear" ng-click="closeCamionModal()">CANCEL</button>
+				<h1 class="title">New Camion</h1>
+				<button class="button button-positive button-clear" ng-disabled="disable(newCamion)" ng-click="saveNewTruck()">SAVE</button>
+			</ion-header-bar>
+			<ion-content class="has-header padding">
+				<div class="list">
+					<label class="item item-input">
+						<span class="input-label">License #</span>
+						<input type="text" placeholder="SD203 230" ng-model="newCamion.placa_numero">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">License Country</span>
+						<input type="text" placeholder="BOL" ng-model="newCamion.placa_pais">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Marca</span>
+						<input type="text" placeholder="Mercedes" ng-model="newCamion.marca">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Tipo</span>
+						<input type="text" placeholder="X5" ng-model="newCamion.tipo">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Ejes</span>
+						<input type="text" placeholder="4" ng-model="newCamion.ejes">
+					</label>
+				</div>
+			</ion-content>
+		</div>
+	</script>
+
+
+	<script id="newChofer.html" type="text/ng-template">
+		<div class="modal" ng-controller="NewChoferModalCtrl">
+			<ion-header-bar>
+				<button class="button button-assertive button-clear" ng-click="closeChoferModal()">CANCEL</button>
+				<h1 class="title">New Chofer</h1>
+				<button class="button button-positive button-clear" ng-disabled="disable(newChofer)" ng-click="saveNewChofer()">SAVE</button>
+			</ion-header-bar>
+			<ion-content class="has-header padding">
+				<div class="list">
+					<label class="item item-input">
+						<span class="input-label">Apellido</span>
+						<input type="text" placeholder="Paolo" ng-model="newChofer.apellido">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Nombre</span>
+						<input type="text" placeholder="Bernasconi" ng-model="newChofer.nombre">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Telefono</span>
+						<input type="text" placeholder="Mercedes" ng-model="newChofer.telefono">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">License</span>
+						<input type="text" placeholder="X203A495" ng-model="newChofer.patente">
+					</label>
+				</div>
+			</ion-content>
+		</div>
+	</script>
+</ion-view>

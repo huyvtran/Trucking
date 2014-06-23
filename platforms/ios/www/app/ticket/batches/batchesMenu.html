@@ -1,0 +1,35 @@
+<ion-view title="{{despacho_SEQ}}">
+	<ion-nav-buttons side="left">
+		<button class="button button-positive button-clear" ui-sref="ticket.batches.menu">
+			<i class="icon ion-ios7-arrow-back"></i>
+			MENU
+		</button>
+	</ion-nav-buttons>
+	<ion-content has-header="true">
+
+		<div class="list">
+			<div ng-repeat="batch in despachoBatch">
+				<div class="item item-stable item-icon-left" ng-click="toggleGroup(batch)" ng-class="{active: isGroupShown(batch)}">
+					<i class="icon" ng-class="isGroupShown(batch) ? 'ion-ios7-arrow-up' : 'ion-ios7-arrow-down'"></i>
+					<span class="align-left">Batch #{{batch.batch_SEQ}}</span>
+					<span class="align-right">{{batch.taken}} / {{batch.cantidad}}</span>
+				</div>
+				<a class="item item-accordion item-icon-right"
+				   ng-show="isGroupShown(batch)"
+				   ng-click="updateUnidad(item)"
+				   ng-class="{active : item.SEQ == activeClass}"
+				   ng-repeat="item in despachoBatchUnidad | filter:{batch_SEQ: batch.batch_SEQ} | orderBy: 'batch_unidad_SEQ'">
+					Unidad # {{item.batch_unidad_SEQ}}
+					<i class="icon ion-ios7-checkmark-outline balanced"></i>
+				</a>
+			</div>
+		</div>
+
+	</ion-content>
+
+	<ion-footer-bar class="bar bar-dark">
+		<div class="bar-align-left">2000kg / 3000kg</div>
+		<div class="bar-align-right">{{unidadCount}} / {{unidadTotal}}</div>
+	</ion-footer-bar>
+
+</ion-view>

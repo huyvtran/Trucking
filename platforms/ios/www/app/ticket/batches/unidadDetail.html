@@ -1,0 +1,23 @@
+
+<div class="row">
+	<div class="col col-50">
+		<div class="card">
+			<div class="item item-divider">
+				<h2>Unidad  # {{unidadDetail.SEQ}}</h2>
+			</div>
+			<div class="item item-text-wrap">
+				<p>SEQ : {{unidadDetail.SEQ}}</p>
+				<p>Producto : {{unidadDetail.producto}}</p>
+				<p>Fecha Hora : {{unidadDetail.fecha_hora}}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col col-34 col-center col-offset-10">
+		<div class="padding">
+			<qrcode version="2" error-correction-level="M" size="200" data="{{unidadDetail.SEQ}}"></qrcode>
+		</div>
+	</div>
+</div>
+
+
