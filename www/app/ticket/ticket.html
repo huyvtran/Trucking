@@ -1,7 +1,6 @@
 <ion-side-menus>
 
 	<!-- Side Menu -->
-
 	<ion-side-menu side="left">
 		<ion-nav-bar type="bar-negative" animation="nav-title-slide-ios7"></ion-nav-bar>
 		<ion-nav-view name="side-view" animation="slide-left-right-ios7"></ion-nav-view>
@@ -9,9 +8,15 @@
 
 
 	<!-- Main Content -->
-
 	<ion-pane ion-side-menu-content>
-		<ion-nav-bar type="bar-positive"></ion-nav-bar>
+		<ion-nav-bar type="bar-positive">
+			<ion-nav-buttons side="right">
+				<button class="button button-clear button-assertive button-icon" ng-click="logout()">
+					LOG OUT
+					<i class="icon ion-log-out"></i>
+				</button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
 
 		<ion-nav-view name="content-view" animation="none"></ion-nav-view>
 	</ion-pane>
