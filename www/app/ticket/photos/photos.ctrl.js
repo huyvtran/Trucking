@@ -1,7 +1,7 @@
 angular.module('ticket.photos.ctrl', [])
 
   // main photo controller
-  .controller('PhotosCtrl', function ($scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
+  .controller('PhotosCtrl', function ($rootScope, $scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
 
     var despacho_SEQ = $stateParams.SEQ;
     $scope.despacho_SEQ = despacho_SEQ;
