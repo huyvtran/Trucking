@@ -25,6 +25,7 @@ angular.module('ticket.photos.ctrl', [])
           each.taken = 0;
           angular.forEach(groupedDespachoFoto, function (d) {
             if (each.SEQ == d[0].tipo_SEQ) {
+            // uses $ rootScope DB_URL
               each.photo = $rootScope.DB_URL + 'blob/get?id=' + d[d.length - 1].foto_id;
               each.taken = d.length;
             }
