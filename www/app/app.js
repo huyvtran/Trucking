@@ -33,6 +33,7 @@ angular.module('trucking', [
   'app.services'
 ])
 
+
   .run(function ($rootScope, $timeout, $ionicPlatform, Apps) {
 
     // globals
