@@ -37,9 +37,9 @@ angular.module('trucking', [
   .run(function ($rootScope, $timeout, $ionicPlatform, Apps) {
 
     // access DESA-NET.COM server
-    // $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
+     $rootScope.DB_URL = 'http://www.desa-net.com/TOTAI/db/';
     // access any WEB HOSTING server for "db" and "www"
-    $rootScope.DB_URL = '../../TOTAI/db/';
+    // $rootScope.DB_URL = '../../TOTAI/db/';
     
     // globals
     $rootScope.totaiAppStore = 'http://desa-net.com/totaiAppStore/';
@@ -83,7 +83,6 @@ angular.module('trucking', [
         templateUrl: "login.html",
         controller: 'LoginCtrl'
       })
-
 
       // DESPACHOS - split view
 
