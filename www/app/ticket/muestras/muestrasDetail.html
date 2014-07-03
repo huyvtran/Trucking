@@ -1,10 +1,10 @@
 <div class="item item-divider">
-	<h2>Batch # {{batchDetail.SEQ}}</h2>
+	<h2>Batch: {{batchDetail.SEQ |zeroPad:5}}</h2>
 </div>
 <div class="item item-text-wrap">
 	<div class="row">
 		<div class="col">
-			SEQ: {{batchDetail.SEQ}}<br>
+			SEQ: {{batchDetail.SEQ |zeroPad:4}}<br>
 			Codigo: {{batchDetail.codigo}}<br>
 			Producto: {{batchDetail.prod_cat}}<br>
 			Calidad: {{batchDetail.calidad}}<br>

@@ -153,48 +153,45 @@ angular.module('app.services', [])
     );
   })
 
-
   .factory('Camera', function ($q) {
     return {
       capture: function (options) {
-        var q = $q.defer();
-
+        var q = $q.defer()
         navigator.camera.getPicture(function (success) {
-          q.resolve(success);
+          q.resolve(success)
         }, function (error) {
-          q.reject(error);
-        }, options);
-        return q.promise;
+          q.reject(error)
+        }, options)
+        return q.promise
       }
     }
   })
-
 
   .factory('Photo', function ($http, $rootScope, $q) {
 
     return {
       upload: function (imageData, options) {
-        var q = $q.defer();
-        var url = $rootScope.DB_URL + 'despacho_foto/';
-        var ft = new FileTransfer();
+        var q = $q.defer()
+        var url = $rootScope.DB_URL + 'despacho_foto/'
+        var ft = new FileTransfer()
 
         ft.onprogress = function (progressEvent) {
           if (progressEvent.lengthComputable) {
-            var percent = Math.floor(progressEvent.loaded / progressEvent.total * 100);
-            q.notify(percent);
+            var percent = Math.floor(progressEvent.loaded / progressEvent.total * 100)
+            q.notify(percent)
           }
           else {
-            console.log('error');
+            console.log('error')
           }
-        };
+        }
 
         ft.upload(imageData, encodeURI(url), function (response) {
-          q.resolve(response);
+          q.resolve(response)
         }, function (error) {
-          q.reject(error);
-        }, options);
+          q.reject(error)
+        }, options)
 
-        return q.promise;
+        return q.promise
       }
     }
-  });
+  })

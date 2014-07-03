@@ -1,4 +1,4 @@
-<ion-view title="Photos">
+<ion-view title="Fotos">
 	<ion-content class="has-header">
 
 		<div ng-repeat="cat in fotoTipos | orderBy: 'orden' | category">
@@ -38,9 +38,9 @@
 
 
 <script id="viewPhotos.html" type="text/ng-template">
-	<div class="modal modal-photo" ng-controller="ViewPhotosCtrl">
+	<div class="modal modal-photo" ng-controller="ViewFotosCtrl">
 		<ion-header-bar class="bar-secondary">
-			<h1 class="title">Photos</h1>
+			<h1 class="title">Fotos</h1>
 			<button class="button button-clear button-positive" ng-click="closeModal()">Cancel</button>
 		</ion-header-bar>
 		<ion-slide-box class="content">

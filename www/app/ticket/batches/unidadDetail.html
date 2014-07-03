@@ -3,12 +3,13 @@
 	<div class="col col-50">
 		<div class="card">
 			<div class="item item-divider">
-				<h2>Unidad  # {{unidadDetail.SEQ}}</h2>
+				<h2>Unidad : {{unidadDetail.SEQ |zeroPad:5}} &nbsp / &nbsp Batch : {{unidadDetail.batch_SEQ |zeroPad:4}}</h2>
 			</div>
 			<div class="item item-text-wrap">
-				<p>SEQ : {{unidadDetail.SEQ}}</p>
+				<p>SEQ : {{unidadDetail.SEQ |zeroPad:5}}</p>
 				<p>Producto : {{unidadDetail.producto}}</p>
-				<p>Fecha Hora : {{unidadDetail.fecha_hora}}</p>
+				<p>Producido : {{unidadDetail.fecha_hora}}</p>
+                {{unidadDetail}}
 			</div>
 		</div>
 	</div>

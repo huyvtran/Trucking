@@ -1,16 +1,16 @@
 <div class="card">
 	<div class="item item-divider">
-		<h2>Batch # {{batchDetail.SEQ}}</h2>
+		<h2>Batch: {{batchDetail.SEQ |zeroPad:4}}</h2>
 	</div>
 	<div class="item item-text-wrap">
 		<div class="row">
 			<div class="col">
-				SEQ: {{batchDetail.SEQ}}<br>
+				SEQ: {{batchDetail.SEQ |zeroPad:4}}<br>
 				Codigo: {{batchDetail.codigo}}<br>
 				Producto: {{batchDetail.prod_cat}}<br>
 				Calidad: {{batchDetail.calidad}}<br>
 				Envase: {{batchDetail.envase}}<br>
-				Almacen Codigo: {{batchDetail.almacen_codigo}}<br>
+				Almacen : {{batchDetail.almacen_codigo}}<br>
 			</div>
 			<div class="col">
 				Total KG: {{batchDetail.total_kg}}<br>
@@ -25,7 +25,7 @@
 
 	<div class="item item-icon-left">
 		<i class="icon ion-ios7-chatbubble"></i>
-		<textarea placeholder="Commentario" ng-modal="commentario"></textarea>
+		<textarea rows="6" placeholder="Commentario" ng-modal="commentario"></textarea>
 	</div>
 </div>
 

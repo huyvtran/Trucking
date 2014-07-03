@@ -1,7 +1,7 @@
-<ion-view title="{{despacho_SEQ}}">
+<ion-view title="Despacho: {{despacho_SEQ|zeroPad:4}}">
 
 	<ion-nav-buttons>
-		<button class="button button-assertive button-clear" ng-click="exit()"> SALIR</button>
+		<button class="button button-positive button-clear" ng-click="returnHome()"><i class="icon ion-ios7-home"></i></button>
 	</ion-nav-buttons>
 
 	<ion-content has-header="true" padding="true">
@@ -9,8 +9,8 @@
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.truck.submenu">
 				<!-- ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.truck]">-->
-				<i class="icon ion-document-text"></i>
-				Camion
+				<i class="icon ion-ios7-cart"></i>
+				Camión
 			</a>
 		</div>
 
@@ -19,7 +19,7 @@
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.batches.submenu">
 				<!-- ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.batches]">-->
-				<i class="icon ion-ios7-albums"></i>
+				<i class="icon ion-ios7-keypad"></i>
 				Batches
 			</a>
 		</div>
@@ -28,27 +28,26 @@
 		<div class="card">
 			<a class=" item item-icon-right" ui-sref="ticket.muestras.submenu">
 				<!--ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.muestras]">-->
-				<i class="icon ion-ios7-keypad"></i>
+				<i class="icon ion-ios7-keypad-outline"></i>
 				Muestras
 			</a>
 		</div>
 
+        <!-- OTRAS Tab -->
+        <div class="card">
+            <a class=" item item-icon-right" ui-sref="ticket.muestras.submenu">
+                <!--  ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.muestras]">-->
+                <i class="icon ion-navicon"></i>
+                Otros...
+            </a>
+        </div>
+
 		<!-- Photos Tab -->
 		<div class="card">
-			<a class=" item item-icon-right" ui-sref="ticket.photos.submenu">
-				<!--ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.photos]"> -->
+			<a class=" item item-icon-right" ui-sref="ticket.fotos.submenu">
+				<!--ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.fotos]"> -->
 				<i class="icon ion-images"></i>
 				Fotos
-			</a>
-		</div>
-
-
-		<!-- OTRAS Tab -->
-		<div class="card">
-			<a class=" item item-icon-right" ui-sref="ticket.muestras.submenu">
-				<!--  ng-class="{0:'assertive-border', 1:'balanced-border', 2:'energized-border'}[item.muestras]">-->
-				<i class="icon ion-navicon"></i>
-				Otras
 			</a>
 		</div>
 
@@ -61,14 +60,13 @@
 			</a>
 		</div>
 
-
 		<!-- DONE -->
 		<div class="padding-horizontal">
-			<button class="button button-positive button-block" ng-disabled="true">LISTO</button>
+			<button class="button button-positive button-block" ng-disabled="true">Completo</button>
 		</div>
 	</ion-content>
 
-	<ion-footer-bar class="bar bar-dark">
+	<ion-footer-bar class="bar bar-balanced">
 		<div class="bar-align-left">Despacho</div>
 		<div class="bar-align-right">FECHA</div>
 	</ion-footer-bar>

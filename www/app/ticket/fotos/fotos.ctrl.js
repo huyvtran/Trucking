@@ -1,7 +1,7 @@
 angular.module('ticket.photos.ctrl', [])
 
   // main photo controller
-  .controller('PhotosCtrl', function ($rootScope, $scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
+  .controller('FotosCtrl', function ($rootScope, $scope, $stateParams, $timeout, $ionicModal, $ionicSlideBoxDelegate, Photo, Camera, DespachoFoto, DespachoFotoTipo, Blob) {
 
     var despacho_SEQ = $stateParams.SEQ;
     $scope.despacho_SEQ = despacho_SEQ;
@@ -46,7 +46,7 @@ angular.module('ticket.photos.ctrl', [])
       DespachoFoto.getWithTipoSEQ({tipo_SEQ: photo.SEQ}).$promise.then(function (data) {
         angular.forEach(data, function (d) {
           if (d.despacho_SEQ == despacho_SEQ) {
-            $scope.slidePhotos.push('http://www.desa-net.com/TOTAI/db/blob/get?id=' + d.foto_id);
+            $scope.slidePhotos.push($rootScope.DB_URL + 'blob/get?id=' + d.foto_id);
             $timeout(function () {
               $ionicSlideBoxDelegate.slide(0);
               $ionicSlideBoxDelegate.update();
@@ -128,7 +128,7 @@ angular.module('ticket.photos.ctrl', [])
   })
 
 
-  .controller('ViewPhotosCtrl', function ($scope) {
+  .controller('ViewFotosCtrl', function ($scope) {
 
     $scope.closeModal = function () {
       $scope.slidePhotos.length = 0;
@@ -138,7 +138,7 @@ angular.module('ticket.photos.ctrl', [])
   })
 
   // photo sidemenu controller
-  .controller('PhotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFoto, DespachoFotoTipo) {
+  .controller('FotosMenuCtrl', function ($scope, $stateParams, $ionicLoading, Photo, DespachoFoto, DespachoFotoTipo) {
 
     var despacho_SEQ = $stateParams.SEQ;
     $scope.despacho_SEQ = despacho_SEQ;
