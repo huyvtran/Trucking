@@ -27,8 +27,7 @@ angular.module('trucking', [
    'ticket.photos.ctrl',
    'ticket.finalize.ctrl',
    'ticket.sideMenu.ctrl',
-   'ticket.ctrl',
-   'app.services'
+   'ticket.ctrl'
 ])
 
    .run(function ($rootScope, $timeout, $ionicPlatform, Apps) {
